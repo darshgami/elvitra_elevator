@@ -1,0 +1,158 @@
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { ArrowRight, ChevronDown } from 'lucide-react'
+import { company } from '../../data/brochure'
+import ElevatorDoors from '../animations/ElevatorDoors'
+import FloorIndicator from '../animations/FloorIndicator'
+import ScrollReveal from '../animations/ScrollReveal'
+import Button from '../ui/Button'
+
+function scrollToSection(id: string) {
+  const el = document.getElementById(id)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' })
+  }
+}
+
+const cableLines = [
+  { left: '8%', height: '70%', top: '0%', delay: 0 },
+  { left: '15%', height: '50%', top: '10%', delay: 0.3 },
+  { left: '85%', height: '60%', top: '5%', delay: 0.6 },
+  { left: '92%', height: '45%', top: '15%', delay: 0.2 },
+]
+
+export default function Hero() {
+  const [doorsOpen, setDoorsOpen] = useState(false)
+  const [currentFloor, setCurrentFloor] = useState(1)
+
+  useEffect(() => {
+    const openTimer = setTimeout(() => setDoorsOpen(true), 800)
+    const closeTimer = setTimeout(() => setDoorsOpen(false), 4000)
+    const floorInterval = setInterval(() => {
+      setCurrentFloor((prev) => (prev >= 15 ? 1 : prev + 1))
+    }, 3000)
+    return () => {
+      clearTimeout(openTimer)
+      clearTimeout(closeTimer)
+      clearInterval(floorInterval)
+    }
+  }, [])
+
+  return (
+    <section
+      id="home"
+      className="relative flex min-h-screen items-center overflow-hidden bg-elvitra-dark"
+    >
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage: `
+            repeating-linear-gradient(90deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px),
+            repeating-linear-gradient(0deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px)
+          `,
+        }}
+      />
+
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: 'radial-gradient(circle, #c9a84c 1px, transparent 1px)',
+          backgroundSize: '50px 50px',
+        }}
+      />
+
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-elvitra-dark/0 via-elvitra-dark/50 to-elvitra-dark" />
+
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-1/2 bg-gradient-to-r from-elvitra-gold/[0.02] to-transparent" />
+
+      {cableLines.map((line, i) => (
+        <motion.div
+          key={i}
+          className="pointer-events-none absolute w-px bg-gradient-to-b from-transparent via-elvitra-gold/10 to-transparent"
+          style={{ left: line.left, top: line.top, height: line.height }}
+          animate={{ opacity: [0.3, 0.6, 0.3], scaleY: [1, 1.02, 1] }}
+          transition={{
+            duration: 3,
+            delay: line.delay,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
+      ))}
+
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-6 lg:flex-row lg:px-12">
+        <div className="flex-1 text-center lg:text-left">
+          <ScrollReveal direction="up" delay={0.2}>
+            <motion.p
+              className="mb-4 font-sans text-sm font-semibold tracking-[0.25em] text-elvitra-gold uppercase"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              Since {company.founded}
+            </motion.p>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={0.4}>
+            <h1 className="font-serif text-5xl font-bold leading-tight tracking-tight text-elvitra-white md:text-6xl lg:text-7xl">
+              {company.tagline}{' '}
+              <span className="text-elvitra-gold">Excellence</span>
+            </h1>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={0.6}>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-elvitra-text-light lg:mx-0">
+              {company.description}
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={0.8}>
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
+              <Button
+                variant="primary"
+                size="lg"
+                onClick={() => scrollToSection('elevators')}
+              >
+                <span className="flex items-center gap-2">
+                  Explore Our Solutions
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Button>
+              <Button
+                variant="ghost"
+                size="lg"
+                className="border border-elvitra-white/20 text-elvitra-white hover:border-elvitra-gold/50 hover:text-elvitra-gold"
+                onClick={() => scrollToSection('contact')}
+              >
+                Get in Touch
+              </Button>
+            </div>
+          </ScrollReveal>
+        </div>
+
+        <div className="mt-16 flex flex-col items-center gap-8 lg:mt-0 lg:ml-16">
+          <ScrollReveal direction="right" delay={0.6}>
+            <ElevatorDoors isOpen={doorsOpen} className="drop-shadow-[0_0_40px_rgba(201,168,76,0.15)]" />
+          </ScrollReveal>
+
+          <ScrollReveal direction="right" delay={0.9}>
+            <FloorIndicator
+              currentFloor={currentFloor}
+              totalFloors={15}
+            />
+          </ScrollReveal>
+        </div>
+      </div>
+
+      <motion.button
+        onClick={() => scrollToSection('elevators')}
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-elvitra-gold/60"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+        aria-label="Scroll down"
+      >
+        <ChevronDown className="h-8 w-8" />
+      </motion.button>
+    </section>
+  )
+}
