@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
+import { type ReactNode } from 'react'
 
 interface CardProps {
-  children: React.ReactNode
+  children: ReactNode
   className?: string
   hoverable?: boolean
   onClick?: () => void
@@ -13,7 +14,7 @@ export default function Card({
   hoverable = false,
   onClick,
 }: CardProps) {
-  const Component = onClick ? 'button' : motion.div
+
 
   const motionProps = hoverable
     ? {

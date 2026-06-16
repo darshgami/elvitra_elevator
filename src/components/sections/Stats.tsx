@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { useInView } from 'framer-motion'
 import { stats } from '../../data/brochure'
 import ScrollReveal from '../animations/ScrollReveal'
 

@@ -12,16 +12,16 @@ import Contact from '../components/sections/Contact'
 function Home() {
   return (
     <main>
-      <Hero id="hero" />
-      <Stats id="stats" />
-      <AboutSection id="about" />
-      <ElevatorCategories id="elevators" />
-      <Features id="features" />
-      <Services id="services" />
-      <Specifications id="specifications" />
-      <Safety id="safety" />
-      <Certifications id="certifications" />
-      <Contact id="contact" />
+      <Hero />
+      <Stats />
+      <AboutSection />
+      <ElevatorCategories />
+      <Features />
+      <Services />
+      <Specifications />
+      <Safety />
+      <Certifications />
+      <Contact />
     </main>
   )
 }

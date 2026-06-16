@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 interface FloorIndicatorProps {
   currentFloor: number
@@ -11,80 +11,129 @@ export default function FloorIndicator({
   totalFloors,
   className = '',
 }: FloorIndicatorProps) {
+  // Show only 5 floors at a time centered on current floor
+  const visibleCount = 7
+  const halfVisible = Math.floor(visibleCount / 2)
+  const startFloor = Math.max(1, Math.min(currentFloor - halfVisible, totalFloors - visibleCount + 1))
+  const endFloor = Math.min(totalFloors, startFloor + visibleCount - 1)
+
+  const visibleFloors = []
+  for (let i = endFloor; i >= startFloor; i--) {
+    visibleFloors.push(i)
+  }
+
   return (
-    <div
-      className={`flex flex-col items-center gap-6 ${className}`}
-    >
+    <div className={`flex items-center gap-4 ${className}`}>
+      {/* Compact floor panel */}
       <div
-        className="relative flex items-center justify-center rounded"
+        className="relative flex flex-col items-center gap-0.5 rounded-lg"
         style={{
-          width: 80,
-          height: 56,
-          background: 'linear-gradient(180deg, #1a1a2e, #0f0f1a)',
-          border: '2px solid #c9a84c',
-          boxShadow: 'inset 0 0 12px rgba(0,0,0,0.6), 0 0 8px rgba(201,168,76,0.3)',
+          padding: '8px 6px',
+          background: 'linear-gradient(180deg, #161626 0%, #0d0d18 100%)',
+          border: '1px solid rgba(201,168,76,0.25)',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(201,168,76,0.1)',
         }}
       >
-        <motion.span
-          key={currentFloor}
-          className="font-serif font-bold tracking-widest"
-          style={{
-            fontSize: 28,
-            color: '#c9a84c',
-            textShadow: '0 0 8px rgba(201,168,76,0.5), 0 0 20px rgba(201,168,76,0.2)',
-          }}
-          initial={{ opacity: 0, y: -8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          {String(currentFloor).padStart(2, '0')}
-        </motion.span>
-      </div>
+        {/* Top arrow indicator */}
+        {startFloor > 1 && (
+          <motion.div
+            className="mb-1"
+            animate={{ opacity: [0.3, 0.7, 0.3] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          >
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="none">
+              <path d="M4 0L8 5H0L4 0Z" fill="rgba(201,168,76,0.4)" />
+            </svg>
+          </motion.div>
+        )}
 
-      <div
-        className="relative flex flex-col items-center gap-1.5 rounded-full"
-        style={{
-          padding: '10px 8px',
-          background: 'linear-gradient(180deg, #1a1a2e, #0f0f1a)',
-          border: '1px solid rgba(201,168,76,0.3)',
-        }}
-      >
-        {Array.from({ length: totalFloors }, (_, i) => {
-          const floorNumber = totalFloors - i
-          const isActive = floorNumber === currentFloor
+        <AnimatePresence mode="popLayout">
+          {visibleFloors.map((floorNumber) => {
+            const isActive = floorNumber === currentFloor
 
-          return (
-            <div key={floorNumber} className="flex items-center gap-2">
+            return (
               <motion.div
-                className="rounded-full"
-                style={{
-                  width: 8,
-                  height: 8,
-                  backgroundColor: isActive ? '#c9a84c' : 'rgba(138,138,154,0.3)',
-                  boxShadow: isActive
-                    ? '0 0 6px rgba(201,168,76,0.6)'
-                    : 'none',
-                }}
-                animate={isActive ? { scale: [1, 1.3, 1] } : { scale: 1 }}
-                transition={{
-                  duration: 1.5,
-                  repeat: isActive ? Infinity : 0,
-                  ease: 'easeInOut',
-                }}
-              />
-
-              <span
-                className="font-sans text-xs leading-none"
-                style={{
-                  color: isActive ? '#c9a84c' : 'rgba(138,138,154,0.5)',
-                  fontFamily: 'Inter, sans-serif',
-                }}
+                key={floorNumber}
+                className="flex items-center gap-1.5"
+                style={{ padding: '2px 4px' }}
+                layout
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.3 }}
               >
-                {floorNumber}
-              </span>
-            </div>
-          )
-        })}
+                <motion.div
+                  className="rounded-full"
+                  style={{
+                    width: 5,
+                    height: 5,
+                    backgroundColor: isActive ? '#c9a84c' : 'rgba(138,138,154,0.25)',
+                    boxShadow: isActive
+                      ? '0 0 6px rgba(201,168,76,0.6), 0 0 12px rgba(201,168,76,0.3)'
+                      : 'none',
+                  }}
+                  animate={isActive ? { scale: [1, 1.4, 1] } : { scale: 1 }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: isActive ? Infinity : 0,
+                    ease: 'easeInOut',
+                  }}
+                />
+
+                <span
+                  className="font-sans leading-none"
+                  style={{
+                    fontSize: 9,
+                    fontWeight: isActive ? 700 : 400,
+                    color: isActive ? '#c9a84c' : 'rgba(138,138,154,0.4)',
+                    textShadow: isActive ? '0 0 4px rgba(201,168,76,0.4)' : 'none',
+                    transition: 'all 0.3s ease',
+                    fontFamily: 'Inter, sans-serif',
+                    minWidth: 12,
+                    textAlign: 'right',
+                  }}
+                >
+                  {floorNumber}
+                </span>
+              </motion.div>
+            )
+          })}
+        </AnimatePresence>
+
+        {/* Bottom arrow indicator */}
+        {endFloor < totalFloors && (
+          <motion.div
+            className="mt-1"
+            animate={{ opacity: [0.3, 0.7, 0.3] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          >
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="none">
+              <path d="M0 0H8L4 5L0 0Z" fill="rgba(201,168,76,0.4)" />
+            </svg>
+          </motion.div>
+        )}
+
+        {/* Subtle side accent lines */}
+        <div
+          className="absolute"
+          style={{
+            top: '20%',
+            left: -1,
+            bottom: '20%',
+            width: 1,
+            background: 'linear-gradient(180deg, transparent, rgba(201,168,76,0.3), transparent)',
+          }}
+        />
+        <div
+          className="absolute"
+          style={{
+            top: '20%',
+            right: -1,
+            bottom: '20%',
+            width: 1,
+            background: 'linear-gradient(180deg, transparent, rgba(201,168,76,0.3), transparent)',
+          }}
+        />
       </div>
     </div>
   )

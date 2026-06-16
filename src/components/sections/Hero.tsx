@@ -26,14 +26,21 @@ export default function Hero() {
   const [currentFloor, setCurrentFloor] = useState(1)
 
   useEffect(() => {
-    const openTimer = setTimeout(() => setDoorsOpen(true), 800)
-    const closeTimer = setTimeout(() => setDoorsOpen(false), 4000)
+    // Continuous door open/close cycle
+    const doorCycle = () => {
+      setDoorsOpen(true)
+      setTimeout(() => setDoorsOpen(false), 3000)
+    }
+    const openTimer = setTimeout(doorCycle, 800)
+    const doorInterval = setInterval(doorCycle, 6000)
+
     const floorInterval = setInterval(() => {
       setCurrentFloor((prev) => (prev >= 15 ? 1 : prev + 1))
     }, 3000)
+
     return () => {
       clearTimeout(openTimer)
-      clearTimeout(closeTimer)
+      clearInterval(doorInterval)
       clearInterval(floorInterval)
     }
   }, [])
@@ -80,7 +87,7 @@ export default function Hero() {
         />
       ))}
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-6 lg:flex-row lg:px-12">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-6 lg:flex-row lg:items-center lg:justify-between lg:px-12">
         <div className="flex-1 text-center lg:text-left">
           <ScrollReveal direction="up" delay={0.2}>
             <motion.p
@@ -130,16 +137,78 @@ export default function Hero() {
           </ScrollReveal>
         </div>
 
-        <div className="mt-16 flex flex-col items-center gap-8 lg:mt-0 lg:ml-16">
+        {/* Elevator visualization */}
+        <div className="mt-16 flex-shrink-0 lg:mt-0 lg:ml-6">
           <ScrollReveal direction="right" delay={0.6}>
-            <ElevatorDoors isOpen={doorsOpen} className="drop-shadow-[0_0_40px_rgba(201,168,76,0.15)]" />
-          </ScrollReveal>
+            <div className="flex items-start gap-3">
+              {/* Floor indicator panel - left side */}
+              <div className="pt-10">
+                <FloorIndicator
+                  currentFloor={currentFloor}
+                  totalFloors={15}
+                />
+              </div>
 
-          <ScrollReveal direction="right" delay={0.9}>
-            <FloorIndicator
-              currentFloor={currentFloor}
-              totalFloors={15}
-            />
+              {/* Elevator shaft assembly */}
+              <div className="relative flex flex-col items-center">
+                {/* Cable lines above elevator */}
+                <div className="relative mb-2" style={{ width: 200, height: 40 }}>
+                  {/* Left cable */}
+                  <motion.div
+                    className="absolute"
+                    style={{
+                      left: '30%',
+                      top: 0,
+                      bottom: 0,
+                      width: 1,
+                      background: 'linear-gradient(180deg, rgba(201,168,76,0.1), rgba(201,168,76,0.3))',
+                    }}
+                    animate={{ opacity: [0.5, 1, 0.5] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                  />
+                  {/* Right cable */}
+                  <motion.div
+                    className="absolute"
+                    style={{
+                      right: '30%',
+                      top: 0,
+                      bottom: 0,
+                      width: 1,
+                      background: 'linear-gradient(180deg, rgba(201,168,76,0.1), rgba(201,168,76,0.3))',
+                    }}
+                    animate={{ opacity: [0.5, 1, 0.5] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+                  />
+                </div>
+
+                {/* Elevator doors */}
+                <ElevatorDoors
+                  isOpen={doorsOpen}
+                  currentFloor={currentFloor}
+                />
+
+                {/* Floor base / landing */}
+                <div
+                  className="mt-1"
+                  style={{
+                    width: 220,
+                    height: 3,
+                    background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.3), rgba(201,168,76,0.5), rgba(201,168,76,0.3), transparent)',
+                    borderRadius: 2,
+                  }}
+                />
+
+                {/* Ambient glow beneath */}
+                <div
+                  style={{
+                    width: 180,
+                    height: 20,
+                    background: 'radial-gradient(ellipse at top, rgba(201,168,76,0.08), transparent)',
+                    marginTop: -2,
+                  }}
+                />
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </div>

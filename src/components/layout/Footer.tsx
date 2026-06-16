@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, ChevronRight, Globe, Link, Camera, Play } from 'lucide-react'
-import { company, contact, services, categories } from '../../data/brochure'
+import { company, contact, services } from '../../data/brochure'
 
 function scrollToSection(id: string) {
   const el = document.getElementById(id)

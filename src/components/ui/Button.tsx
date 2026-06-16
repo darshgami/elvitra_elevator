@@ -56,7 +56,7 @@ export default function Button(props: ButtonProps) {
         className={classes}
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
-        {...(anchorRest as AnchorHTMLAttributes<HTMLAnchorElement>)}
+        {...(anchorRest as any)}
       >
         {children}
       </motion.a>
@@ -69,7 +69,7 @@ export default function Button(props: ButtonProps) {
       className={classes}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
-      {...buttonRest}
+      {...(buttonRest as any)}
     >
       {children}
     </motion.button>

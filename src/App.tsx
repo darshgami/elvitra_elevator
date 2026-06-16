@@ -5,6 +5,7 @@ import Footer from './components/layout/Footer'
 import Home from './pages/Home'
 import ComparePage from './pages/ComparePage'
 import ElevatorsPage from './pages/ElevatorsPage'
+import ServicesPage from './pages/ServicesPage'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -31,7 +32,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/elevators" element={<ElevatorsPage />} />
+          <Route path="/elevators/:id?" element={<ElevatorsPage />} />
+          <Route path="/services/:id?" element={<ServicesPage />} />
           <Route path="/compare" element={<ComparePage />} />
         </Routes>
         <Footer />

@@ -1,76 +1,10 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Menu,
-  X,
-  ArrowUpFromLine,
-  ChevronDown,
-  ArrowUpDown,
-  Building2,
-  Home,
-  Truck,
-  Gauge,
-  Eye,
-  Box,
-  Package,
-  HardHat,
-  Wrench,
-  FileCheck,
-  RefreshCw,
-} from 'lucide-react'
-import { categories, services } from '../../data/brochure'
+import { Menu, X, ArrowUpFromLine } from 'lucide-react'
 import Button from '../ui/Button'
 
-function slugify(text: string) {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '')
-}
-
-const elevatorIconMap: Record<string, React.ElementType> = {
-  passenger: ArrowUpDown,
-  hospital: Building2,
-  home: Home,
-  freight: Truck,
-  hydraulic: Gauge,
-  capsule: Eye,
-  mrl: Box,
-  goods: Package,
-}
-
-const serviceIconMap: Record<string, React.ElementType> = {
-  HardHat,
-  Wrench,
-  FileCheck,
-  RefreshCw,
-}
-
-const elevatorGroups = [
-  { label: 'Passenger & Healthcare', ids: ['passenger', 'hospital'] },
-  { label: 'Residential & Luxury', ids: ['home', 'capsule'] },
-  { label: 'Industrial & Cargo', ids: ['freight', 'goods'] },
-  { label: 'Technology & Efficiency', ids: ['hydraulic', 'mrl'] },
-]
-
-const megaPanelVariants = {
-  hidden: { opacity: 0, y: 16, scale: 0.97 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { duration: 0.25, ease: [0.4, 0, 0.2, 1] },
-  },
-  exit: {
-    opacity: 0,
-    y: 12,
-    scale: 0.98,
-    transition: { duration: 0.15, ease: 'easeIn' },
-  },
-}
-
-const linkVariants = {
+const linkVariants: any = {
   hidden: { opacity: 0, y: 12 },
   visible: (i: number) => ({
     opacity: 1,
@@ -79,12 +13,23 @@ const linkVariants = {
   }),
 }
 
+const menuVariants: any = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.97,
+    transition: { duration: 0.2, ease: 'easeIn' },
+  },
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [activeMega, setActiveMega] = useState<'elevators' | 'services' | null>(null)
-  const [mobileAccordion, setMobileAccordion] = useState<'elevators' | 'services' | null>(null)
-  const megaTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const navigate = useNavigate()
   const location = useLocation()
   const isHome = location.pathname === '/'
@@ -98,12 +43,10 @@ export default function Navbar() {
 
   useEffect(() => {
     setMenuOpen(false)
-    setMobileAccordion(null)
   }, [location.pathname])
 
   function handleNav(href: string) {
     setMenuOpen(false)
-    setMobileAccordion(null)
     if (isHome && href.startsWith('/#')) {
       const id = href.replace('/#', '')
       const el = document.getElementById(id)
@@ -111,19 +54,6 @@ export default function Navbar() {
     } else {
       navigate(href)
     }
-  }
-
-  function handleMegaEnter(type: 'elevators' | 'services') {
-    if (megaTimer.current) clearTimeout(megaTimer.current)
-    setActiveMega(type)
-  }
-
-  function handleMegaLeave() {
-    megaTimer.current = setTimeout(() => setActiveMega(null), 120)
-  }
-
-  function closeMega() {
-    setActiveMega(null)
   }
 
   return (
@@ -139,6 +69,7 @@ export default function Navbar() {
         }`}
       >
         <div className="mx-auto flex h-full max-w-7xl items-center justify-between">
+          {/* Logo */}
           <Link to="/" className="group flex items-center gap-2">
             <ArrowUpFromLine className="h-6 w-6 text-elvitra-gold transition-transform duration-300 group-hover:-translate-y-0.5" />
             <span className="font-serif text-2xl font-bold tracking-[0.15em] text-elvitra-gold">
@@ -146,169 +77,40 @@ export default function Navbar() {
             </span>
           </Link>
 
+          {/* Desktop Navigation */}
           <div className="hidden items-center gap-1 lg:flex">
             <button
               onClick={() => handleNav('/')}
-              className="px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-gold"
+              className={`px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
+                isHome
+                  ? 'text-elvitra-gold'
+                  : 'text-elvitra-white/80 hover:text-elvitra-gold'
+              }`}
             >
               Home
             </button>
 
-            <div
-              className="relative"
-              onMouseEnter={() => handleMegaEnter('elevators')}
-              onMouseLeave={handleMegaLeave}
+            <button
+              onClick={() => handleNav('/elevators')}
+              className={`px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
+                location.pathname.startsWith('/elevators')
+                  ? 'text-elvitra-gold'
+                  : 'text-elvitra-white/80 hover:text-elvitra-gold'
+              }`}
             >
-              <button
-                className={`flex items-center gap-1 px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
-                  activeMega === 'elevators'
-                    ? 'text-elvitra-gold'
-                    : 'text-elvitra-white/80 hover:text-elvitra-gold'
-                }`}
-              >
-                Elevators
-                <ChevronDown
-                  className={`h-3 w-3 transition-transform duration-300 ${
-                    activeMega === 'elevators' ? 'rotate-180' : ''
-                  }`}
-                />
-              </button>
+              Elevators
+            </button>
 
-              <AnimatePresence>
-                {activeMega === 'elevators' && (
-                  <motion.div
-                    variants={megaPanelVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    className="absolute left-1/2 top-full -translate-x-1/2 pt-4"
-                    onMouseEnter={() => handleMegaEnter('elevators')}
-                    onMouseLeave={handleMegaLeave}
-                  >
-                    <div className="w-[860px] overflow-hidden rounded-xl border border-elvitra-gold/20 bg-elvitra-dark/98 shadow-2xl backdrop-blur-2xl">
-                      <div className="h-[3px] bg-gradient-to-r from-transparent via-elvitra-gold to-transparent" />
-                      <div className="p-7">
-                        <div className="mb-5 flex items-center gap-2 border-b border-elvitra-gold/10 pb-3">
-                          <ArrowUpDown className="h-4 w-4 text-elvitra-gold" />
-                          <span className="font-serif text-xs font-semibold tracking-[0.2em] text-elvitra-gold uppercase">
-                            Premium Elevator Range
-                          </span>
-                        </div>
-
-                        <div className="grid grid-cols-4 gap-x-4 gap-y-6">
-                          {elevatorGroups.map((group) => (
-                            <div key={group.label} className="col-span-1">
-                              <p className="mb-2 text-[10px] font-semibold tracking-[0.15em] text-elvitra-gold/60 uppercase">
-                                {group.label}
-                              </p>
-                              <div className="space-y-1">
-                                {group.ids.map((id) => {
-                                  const cat = categories.find((c) => c.id === id)
-                                  if (!cat) return null
-                                  const IconComp = elevatorIconMap[cat.id] || ArrowUpDown
-                                  return (
-                                    <Link
-                                      key={cat.id}
-                                      to={`/elevators/${cat.id}`}
-                                      onClick={closeMega}
-                                      className="group/item flex items-center gap-3 rounded-lg px-3 py-2.5 transition-all duration-300 hover:scale-[1.02] hover:bg-elvitra-gold/5"
-                                    >
-                                      <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-elvitra-gold/10 transition-colors duration-300 group-hover/item:bg-elvitra-gold/20">
-                                        <IconComp className="h-4 w-4 text-elvitra-gold" />
-                                      </div>
-                                      <div className="min-w-0">
-                                        <p className="truncate text-sm font-semibold text-elvitra-white transition-colors duration-300 group-hover/item:text-elvitra-gold">
-                                          {cat.title}
-                                        </p>
-                                        <p className="truncate text-[10px] text-elvitra-white/40">
-                                          {cat.subtitle}
-                                        </p>
-                                      </div>
-                                    </Link>
-                                  )
-                                })}
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            <div
-              className="relative"
-              onMouseEnter={() => handleMegaEnter('services')}
-              onMouseLeave={handleMegaLeave}
+            <button
+              onClick={() => handleNav('/services')}
+              className={`px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
+                location.pathname.startsWith('/services')
+                  ? 'text-elvitra-gold'
+                  : 'text-elvitra-white/80 hover:text-elvitra-gold'
+              }`}
             >
-              <button
-                className={`flex items-center gap-1 px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
-                  activeMega === 'services'
-                    ? 'text-elvitra-gold'
-                    : 'text-elvitra-white/80 hover:text-elvitra-gold'
-                }`}
-              >
-                Services
-                <ChevronDown
-                  className={`h-3 w-3 transition-transform duration-300 ${
-                    activeMega === 'services' ? 'rotate-180' : ''
-                  }`}
-                />
-              </button>
-
-              <AnimatePresence>
-                {activeMega === 'services' && (
-                  <motion.div
-                    variants={megaPanelVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    className="absolute left-1/2 top-full -translate-x-1/2 pt-4"
-                    onMouseEnter={() => handleMegaEnter('services')}
-                    onMouseLeave={handleMegaLeave}
-                  >
-                    <div className="w-[580px] overflow-hidden rounded-xl border border-elvitra-gold/20 bg-elvitra-dark/98 shadow-2xl backdrop-blur-2xl">
-                      <div className="h-[3px] bg-gradient-to-r from-transparent via-elvitra-gold to-transparent" />
-                      <div className="p-7">
-                        <div className="mb-5 flex items-center gap-2 border-b border-elvitra-gold/10 pb-3">
-                          <HardHat className="h-4 w-4 text-elvitra-gold" />
-                          <span className="font-serif text-xs font-semibold tracking-[0.2em] text-elvitra-gold uppercase">
-                            Our Services
-                          </span>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-3">
-                          {services.map((svc) => {
-                            const IconComp = serviceIconMap[svc.icon] || Wrench
-                            const slug = slugify(svc.title)
-                            return (
-                              <Link
-                                key={svc.title}
-                                to={`/services/${slug}`}
-                                onClick={closeMega}
-                                className="group/item rounded-lg p-4 transition-all duration-300 hover:scale-[1.02] hover:bg-elvitra-gold/5"
-                              >
-                                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-elvitra-gold/10 transition-colors duration-300 group-hover/item:bg-elvitra-gold/20">
-                                  <IconComp className="h-5 w-5 text-elvitra-gold" />
-                                </div>
-                                <h4 className="font-serif text-sm font-bold text-elvitra-white transition-colors duration-300 group-hover/item:text-elvitra-gold">
-                                  {svc.title}
-                                </h4>
-                                <p className="mt-0.5 text-[11px] leading-relaxed text-elvitra-white/50 line-clamp-2">
-                                  {svc.description}
-                                </p>
-                              </Link>
-                            )
-                          })}
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+              Services
+            </button>
 
             <button
               onClick={() => handleNav('/#features')}
@@ -342,10 +144,10 @@ export default function Navbar() {
             </div>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             className="relative z-50 flex h-10 w-10 items-center justify-center text-elvitra-white lg:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >
             <AnimatePresence mode="wait">
               {menuOpen ? (
@@ -374,16 +176,28 @@ export default function Navbar() {
         </div>
       </motion.nav>
 
+      {/* Mobile Menu Panel */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 flex flex-col overflow-y-auto bg-elvitra-dark/98 backdrop-blur-2xl lg:hidden"
+            variants={menuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="fixed inset-0 z-45 flex flex-col justify-center bg-elvitra-dark/98 px-6 py-20 backdrop-blur-2xl lg:hidden"
           >
-            <div className="flex flex-1 flex-col items-center justify-center gap-5 px-6 py-28">
+            {/* Background Grid Accent */}
+            <div
+              className="pointer-events-none absolute inset-0 opacity-[0.03]"
+              style={{
+                backgroundImage: `
+                  repeating-linear-gradient(90deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px),
+                  repeating-linear-gradient(0deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px)
+                `,
+              }}
+            />
+
+            <div className="relative z-10 flex flex-col items-center gap-6 text-center">
               <motion.button
                 custom={0}
                 variants={linkVariants}
@@ -391,125 +205,44 @@ export default function Navbar() {
                 animate="visible"
                 exit="hidden"
                 onClick={() => handleNav('/')}
-                className="font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-gold"
+                className={`font-serif text-3xl font-medium tracking-wider transition-colors duration-300 ${
+                  isHome ? 'text-elvitra-gold' : 'text-elvitra-white/90 hover:text-elvitra-gold'
+                }`}
               >
                 Home
               </motion.button>
 
-              <motion.div
+              <motion.button
                 custom={1}
                 variants={linkVariants}
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
-                className="w-full max-w-xs"
+                onClick={() => handleNav('/elevators')}
+                className={`font-serif text-3xl font-medium tracking-wider transition-colors duration-300 ${
+                  location.pathname.startsWith('/elevators')
+                    ? 'text-elvitra-gold'
+                    : 'text-elvitra-white/90 hover:text-elvitra-gold'
+                }`}
               >
-                <button
-                  onClick={() =>
-                    setMobileAccordion(
-                      mobileAccordion === 'elevators' ? null : 'elevators'
-                    )
-                  }
-                  className="flex w-full items-center justify-center gap-2 font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-gold"
-                >
-                  Elevators
-                  <ChevronDown
-                    className={`h-5 w-5 transition-transform duration-300 ${
-                      mobileAccordion === 'elevators' ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-                <AnimatePresence>
-                  {mobileAccordion === 'elevators' && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.35, ease: 'easeInOut' }}
-                      className="overflow-hidden"
-                    >
-                      <div className="mt-5 grid grid-cols-2 gap-2">
-                        {categories.map((cat) => {
-                          const IconComp = elevatorIconMap[cat.id] || ArrowUpDown
-                          return (
-                            <Link
-                              key={cat.id}
-                              to={`/elevators/${cat.id}`}
-                              onClick={() => handleNav(`/elevators/${cat.id}`)}
-                              className="flex items-center gap-3 rounded-lg p-3 transition-colors duration-300 hover:bg-elvitra-gold/10"
-                            >
-                              <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-elvitra-gold/10">
-                                <IconComp className="h-4 w-4 text-elvitra-gold" />
-                              </div>
-                              <span className="text-left text-sm font-medium leading-tight text-elvitra-white/80">
-                                {cat.title}
-                              </span>
-                            </Link>
-                          )
-                        })}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
+                Elevators
+              </motion.button>
 
-              <motion.div
+              <motion.button
                 custom={2}
                 variants={linkVariants}
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
-                className="w-full max-w-xs"
+                onClick={() => handleNav('/services')}
+                className={`font-serif text-3xl font-medium tracking-wider transition-colors duration-300 ${
+                  location.pathname.startsWith('/services')
+                    ? 'text-elvitra-gold'
+                    : 'text-elvitra-white/90 hover:text-elvitra-gold'
+                }`}
               >
-                <button
-                  onClick={() =>
-                    setMobileAccordion(
-                      mobileAccordion === 'services' ? null : 'services'
-                    )
-                  }
-                  className="flex w-full items-center justify-center gap-2 font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-gold"
-                >
-                  Services
-                  <ChevronDown
-                    className={`h-5 w-5 transition-transform duration-300 ${
-                      mobileAccordion === 'services' ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-                <AnimatePresence>
-                  {mobileAccordion === 'services' && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.35, ease: 'easeInOut' }}
-                      className="overflow-hidden"
-                    >
-                      <div className="mt-5 space-y-1">
-                        {services.map((svc) => {
-                          const IconComp = serviceIconMap[svc.icon] || Wrench
-                          const slug = slugify(svc.title)
-                          return (
-                            <Link
-                              key={svc.title}
-                              to={`/services/${slug}`}
-                              onClick={() => handleNav(`/services/${slug}`)}
-                              className="flex items-center gap-3 rounded-lg p-3 transition-colors duration-300 hover:bg-elvitra-gold/10"
-                            >
-                              <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-elvitra-gold/10">
-                                <IconComp className="h-4 w-4 text-elvitra-gold" />
-                              </div>
-                              <span className="text-left text-sm font-medium leading-tight text-elvitra-white/80">
-                                {svc.title}
-                              </span>
-                            </Link>
-                          )
-                        })}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
+                Services
+              </motion.button>
 
               <motion.button
                 custom={3}
