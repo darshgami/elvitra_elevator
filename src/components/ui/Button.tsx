@@ -24,11 +24,11 @@ type ButtonProps = ButtonAsButton | ButtonAsLink
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-elvitra-gold text-elvitra-dark hover:bg-elvitra-gold-light border border-transparent',
+    'bg-elvitra-pink-dark text-elvitra-dark hover:bg-elvitra-pink-light border border-transparent',
   outline:
-    'bg-transparent text-elvitra-gold border border-elvitra-gold hover:bg-elvitra-gold hover:text-elvitra-dark',
+    'bg-transparent text-elvitra-pink-dark border border-elvitra-pink-dark hover:bg-elvitra-pink-dark hover:text-elvitra-dark',
   ghost:
-    'bg-transparent text-elvitra-white border border-transparent hover:text-elvitra-gold',
+    'bg-transparent text-elvitra-white border border-transparent hover:text-elvitra-pink-dark',
 }
 
 const sizeStyles = {

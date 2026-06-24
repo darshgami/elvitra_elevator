@@ -28,22 +28,22 @@ const socialIcons = [
 export default function Footer() {
   return (
     <footer className="relative bg-elvitra-dark">
-      <div className="h-px bg-gradient-to-r from-transparent via-elvitra-gold/40 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-elvitra-pink-dark/40 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 lg:pt-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="font-serif text-2xl font-bold tracking-[0.15em] text-elvitra-gold">
+            <h3 className="font-serif text-2xl font-bold tracking-[0.15em] text-elvitra-pink-dark">
               {company.name.split(' ')[0]}
             </h3>
-            <p className="mt-2 font-serif text-lg italic text-elvitra-gold/70">
+            {/* <p className="mt-2 font-serif text-lg italic text-elvitra-pink-dark/70">
               {company.tagline}
-            </p>
+            </p> */}
             <p className="mt-4 text-sm leading-relaxed text-elvitra-text-light">
               {company.description}
             </p>
             <div className="mt-6 flex items-start gap-3">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-elvitra-gold" />
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-elvitra-pink-dark" />
               <p className="text-sm text-elvitra-text-light">
                 {contact.address.line1}, {contact.address.line2}
                 <br />
@@ -61,9 +61,9 @@ export default function Footer() {
                 <li key={link.label}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="flex items-center gap-2 text-sm text-elvitra-text-light transition-colors duration-300 hover:text-elvitra-gold"
+                    className="flex items-center gap-2 text-sm text-elvitra-text-light transition-colors duration-300 hover:text-elvitra-pink-dark"
                   >
-                    <ChevronRight className="h-3 w-3 text-elvitra-gold/60" />
+                    <ChevronRight className="h-3 w-3 text-elvitra-pink-dark/60" />
                     {link.label}
                   </button>
                 </li>
@@ -79,9 +79,9 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => scrollToSection('elevators')}
-                  className="flex items-center gap-2 text-sm text-elvitra-text-light transition-colors duration-300 hover:text-elvitra-gold"
+                  className="flex items-center gap-2 text-sm text-elvitra-text-light transition-colors duration-300 hover:text-elvitra-pink-dark"
                 >
-                  <ChevronRight className="h-3 w-3 text-elvitra-gold/60" />
+                  <ChevronRight className="h-3 w-3 text-elvitra-pink-dark/60" />
                   All Elevators
                 </button>
               </li>
@@ -89,9 +89,9 @@ export default function Footer() {
                 <li key={service.title}>
                   <button
                     onClick={() => scrollToSection('services')}
-                    className="flex items-center gap-2 text-sm text-elvitra-text-light transition-colors duration-300 hover:text-elvitra-gold"
+                    className="flex items-center gap-2 text-sm text-elvitra-text-light transition-colors duration-300 hover:text-elvitra-pink-dark"
                   >
-                    <ChevronRight className="h-3 w-3 text-elvitra-gold/60" />
+                    <ChevronRight className="h-3 w-3 text-elvitra-pink-dark/60" />
                     {service.title}
                   </button>
                 </li>
@@ -108,9 +108,9 @@ export default function Footer() {
                 <li key={p.label}>
                   <a
                     href={`tel:${p.number.replace(/\s/g, '')}`}
-                    className="flex items-center gap-3 text-sm text-elvitra-text-light transition-colors duration-300 hover:text-elvitra-gold"
+                    className="flex items-center gap-3 text-sm text-elvitra-text-light transition-colors duration-300 hover:text-elvitra-pink-dark"
                   >
-                    <Phone className="h-4 w-4 shrink-0 text-elvitra-gold" />
+                    <Phone className="h-4 w-4 shrink-0 text-elvitra-pink-dark" />
                     <span>
                       <span className="block text-xs text-elvitra-text-light/60">{p.label}</span>
                       {p.number}
@@ -119,15 +119,15 @@ export default function Footer() {
                 </li>
               ))}
               <li className="pt-2">
-                <div className="h-px bg-elvitra-gold/20" />
+                <div className="h-px bg-elvitra-pink-dark/20" />
               </li>
               {contact.email.map((e) => (
                 <li key={e.label}>
                   <a
                     href={`mailto:${e.address}`}
-                    className="flex items-center gap-3 text-sm text-elvitra-text-light transition-colors duration-300 hover:text-elvitra-gold"
+                    className="flex items-center gap-3 text-sm text-elvitra-text-light transition-colors duration-300 hover:text-elvitra-pink-dark"
                   >
-                    <Mail className="h-4 w-4 shrink-0 text-elvitra-gold" />
+                    <Mail className="h-4 w-4 shrink-0 text-elvitra-pink-dark" />
                     <span>
                       <span className="block text-xs text-elvitra-text-light/60">{e.label}</span>
                       {e.address}
@@ -140,7 +140,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 pt-8">
-          <div className="h-px bg-gradient-to-r from-transparent via-elvitra-gold/20 to-transparent" />
+          <div className="h-px bg-gradient-to-r from-transparent via-elvitra-pink-dark/20 to-transparent" />
           <div className="mt-8 flex flex-col items-center justify-between gap-6 md:flex-row">
             <p className="text-sm text-elvitra-text-light">
               &copy; {new Date().getFullYear()} {company.name}. All rights reserved.
@@ -153,7 +153,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  whileHover={{ scale: 1.15, color: '#c9a84c' }}
+                  whileHover={{ scale: 1.15, color: '#d67a92' }}
                   className="text-elvitra-text-light transition-colors duration-300"
                 >
                   <social.icon className="h-5 w-5" />

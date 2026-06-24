@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import {
   ArrowUpDown,
   Building2,
@@ -8,6 +9,7 @@ import {
   Eye,
   Box,
   Package,
+  ChevronDown,
 } from 'lucide-react'
 import type { Elevator } from '../../data/elevators'
 
@@ -33,6 +35,9 @@ export default function ElevatorSidebar({
   activeId,
   onSelect,
 }: ElevatorSidebarProps) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const activeElevator = elevators.find(e => e.id === activeId) || elevators[0]
+  const ActiveIcon = iconMap[activeElevator.id] || ArrowUpDown
   return (
     <>
       {/* Desktop / Tablet Sidebar */}
@@ -41,8 +46,8 @@ export default function ElevatorSidebar({
           className="sticky top-[100px] w-[280px] overflow-hidden rounded-2xl"
           style={{
             background: 'linear-gradient(180deg, rgba(26,26,46,0.95) 0%, rgba(15,15,26,0.98) 100%)',
-            border: '1px solid rgba(201,168,76,0.15)',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(201,168,76,0.1)',
+            border: '1px solid rgba(214,122,146,0.15)',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(214,122,146,0.1)',
             backdropFilter: 'blur(20px)',
           }}
         >
@@ -50,11 +55,11 @@ export default function ElevatorSidebar({
           <div
             className="px-6 py-5"
             style={{
-              borderBottom: '1px solid rgba(201,168,76,0.1)',
-              background: 'linear-gradient(180deg, rgba(201,168,76,0.06) 0%, transparent 100%)',
+              borderBottom: '1px solid rgba(214,122,146,0.1)',
+              background: 'linear-gradient(180deg, rgba(214,122,146,0.06) 0%, transparent 100%)',
             }}
           >
-            <p className="font-sans text-[10px] font-semibold tracking-[0.2em] text-elvitra-gold/60 uppercase">
+            <p className="font-sans text-[10px] font-semibold tracking-[0.2em] text-elvitra-pink-dark/60 uppercase">
               Browse Collection
             </p>
             <h3 className="mt-1 font-serif text-lg font-bold text-elvitra-white">
@@ -75,11 +80,11 @@ export default function ElevatorSidebar({
                   className="relative flex w-full items-center gap-3 rounded-xl px-4 py-3.5 text-left transition-all duration-300"
                   style={{
                     background: isActive
-                      ? 'linear-gradient(135deg, rgba(201,168,76,0.12) 0%, rgba(201,168,76,0.05) 100%)'
+                      ? 'linear-gradient(135deg, rgba(214,122,146,0.12) 0%, rgba(214,122,146,0.05) 100%)'
                       : 'transparent',
                   }}
                   whileHover={{
-                    backgroundColor: isActive ? undefined : 'rgba(201,168,76,0.05)',
+                    backgroundColor: isActive ? undefined : 'rgba(214,122,146,0.05)',
                     x: isActive ? 0 : 4,
                   }}
                   whileTap={{ scale: 0.98 }}
@@ -91,8 +96,8 @@ export default function ElevatorSidebar({
                       layoutId="sidebar-indicator"
                       className="absolute left-0 top-2 bottom-2 w-[3px] rounded-full"
                       style={{
-                        background: 'linear-gradient(180deg, #dfc173, #c9a84c, #b8953a)',
-                        boxShadow: '0 0 8px rgba(201,168,76,0.4), 0 0 16px rgba(201,168,76,0.2)',
+                        background: 'linear-gradient(180deg, #f4d0d9, #d67a92, #d67a92)',
+                        boxShadow: '0 0 8px rgba(214,122,146,0.4), 0 0 16px rgba(214,122,146,0.2)',
                       }}
                       transition={{
                         type: 'spring',
@@ -107,13 +112,13 @@ export default function ElevatorSidebar({
                     className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg"
                     style={{
                       background: isActive
-                        ? 'linear-gradient(135deg, rgba(201,168,76,0.2), rgba(201,168,76,0.1))'
-                        : 'rgba(201,168,76,0.06)',
+                        ? 'linear-gradient(135deg, rgba(214,122,146,0.2), rgba(214,122,146,0.1))'
+                        : 'rgba(214,122,146,0.06)',
                       border: isActive
-                        ? '1px solid rgba(201,168,76,0.3)'
-                        : '1px solid rgba(201,168,76,0.08)',
+                        ? '1px solid rgba(214,122,146,0.3)'
+                        : '1px solid rgba(214,122,146,0.08)',
                       boxShadow: isActive
-                        ? '0 0 12px rgba(201,168,76,0.15)'
+                        ? '0 0 12px rgba(214,122,146,0.15)'
                         : 'none',
                     }}
                     animate={{
@@ -128,7 +133,7 @@ export default function ElevatorSidebar({
                     <IconComponent
                       className="h-4.5 w-4.5 transition-colors duration-300"
                       style={{
-                        color: isActive ? '#c9a84c' : 'rgba(138,138,154,0.6)',
+                        color: isActive ? '#d67a92' : 'rgba(138,138,154,0.6)',
                       }}
                     />
                   </motion.div>
@@ -138,7 +143,7 @@ export default function ElevatorSidebar({
                     <p
                       className="truncate font-sans text-sm font-semibold transition-colors duration-300"
                       style={{
-                        color: isActive ? '#c9a84c' : 'rgba(255,255,255,0.7)',
+                        color: isActive ? '#d67a92' : 'rgba(255,255,255,0.7)',
                       }}
                     >
                       {elevator.title}
@@ -146,7 +151,7 @@ export default function ElevatorSidebar({
                     <p
                       className="truncate text-[11px] transition-colors duration-300"
                       style={{
-                        color: isActive ? 'rgba(201,168,76,0.6)' : 'rgba(138,138,154,0.4)',
+                        color: isActive ? 'rgba(214,122,146,0.6)' : 'rgba(138,138,154,0.4)',
                       }}
                     >
                       {elevator.subtitle}
@@ -160,8 +165,8 @@ export default function ElevatorSidebar({
                       animate={{ scale: 1 }}
                       className="h-2 w-2 flex-shrink-0 rounded-full"
                       style={{
-                        backgroundColor: '#c9a84c',
-                        boxShadow: '0 0 6px rgba(201,168,76,0.6)',
+                        backgroundColor: '#d67a92',
+                        boxShadow: '0 0 6px rgba(214,122,146,0.6)',
                       }}
                     />
                   )}
@@ -174,7 +179,7 @@ export default function ElevatorSidebar({
           <div
             className="h-px"
             style={{
-              background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent)',
+              background: 'linear-gradient(90deg, transparent, rgba(214,122,146,0.2), transparent)',
             }}
           />
           <div className="px-6 py-4">
@@ -185,41 +190,88 @@ export default function ElevatorSidebar({
         </div>
       </aside>
 
-      {/* Mobile horizontal scroll */}
+      {/* Mobile Dropdown */}
       <div className="mb-6 md:hidden">
-        <div className="flex gap-2 overflow-x-auto pb-3 scrollbar-hide" style={{ scrollbarWidth: 'none' }}>
-          {elevators.map((elevator) => {
-            const isActive = elevator.id === activeId
-            const IconComponent = iconMap[elevator.id] || ArrowUpDown
-
-            return (
-              <motion.button
-                key={elevator.id}
-                onClick={() => onSelect(elevator.id)}
-                className="relative flex flex-shrink-0 items-center gap-2 rounded-full px-4 py-2.5"
-                style={{
-                  background: isActive
-                    ? 'linear-gradient(135deg, rgba(201,168,76,0.2), rgba(201,168,76,0.08))'
-                    : 'rgba(26,26,46,0.8)',
-                  border: isActive
-                    ? '1px solid rgba(201,168,76,0.4)'
-                    : '1px solid rgba(201,168,76,0.1)',
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <IconComponent
-                  className="h-4 w-4"
-                  style={{ color: isActive ? '#c9a84c' : 'rgba(138,138,154,0.6)' }}
-                />
-                <span
-                  className="whitespace-nowrap text-xs font-semibold"
-                  style={{ color: isActive ? '#c9a84c' : 'rgba(255,255,255,0.6)' }}
-                >
-                  {elevator.title}
+        <div className="relative">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="flex w-full items-center justify-between rounded-xl px-4 py-3"
+            style={{
+              background: 'linear-gradient(135deg, rgba(214,122,146,0.15), rgba(214,122,146,0.05))',
+              border: '1px solid rgba(214,122,146,0.3)',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.2)'
+            }}
+          >
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-elvitra-pink-dark/10">
+                <ActiveIcon className="h-5 w-5 text-elvitra-pink-dark" />
+              </div>
+              <div className="flex flex-col items-start text-left">
+                <span className="font-sans text-[10px] font-bold uppercase tracking-widest text-elvitra-pink-dark/70">
+                  Elevator Types
                 </span>
-              </motion.button>
-            )
-          })}
+                <span className="font-serif text-sm font-bold text-elvitra-white">
+                  {activeElevator.title}
+                </span>
+              </div>
+            </div>
+            <motion.div
+              animate={{ rotate: isMobileMenuOpen ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ChevronDown className="h-5 w-5 text-elvitra-pink-dark" />
+            </motion.div>
+          </button>
+
+          <AnimatePresence>
+            {isMobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                className="absolute left-0 right-0 top-full z-50 mt-2 overflow-hidden rounded-xl"
+                style={{
+                  background: 'rgba(15,15,26,0.98)',
+                  border: '1px solid rgba(214,122,146,0.2)',
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+                  backdropFilter: 'blur(20px)'
+                }}
+              >
+                <div className="max-h-[300px] overflow-y-auto p-2">
+                  {elevators.map((elevator) => {
+                    const isActive = elevator.id === activeId
+                    const IconComponent = iconMap[elevator.id] || ArrowUpDown
+
+                    return (
+                      <button
+                        key={elevator.id}
+                        onClick={() => {
+                          onSelect(elevator.id)
+                          setIsMobileMenuOpen(false)
+                        }}
+                        className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition-colors"
+                        style={{
+                          backgroundColor: isActive ? 'rgba(214,122,146,0.1)' : 'transparent',
+                        }}
+                      >
+                        <IconComponent
+                          className="h-4 w-4"
+                          style={{ color: isActive ? '#d67a92' : 'rgba(138,138,154,0.6)' }}
+                        />
+                        <span
+                          className="text-sm font-medium"
+                          style={{ color: isActive ? '#d67a92' : 'rgba(255,255,255,0.7)' }}
+                        >
+                          {elevator.title}
+                        </span>
+                      </button>
+                    )
+                  })}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </>

@@ -27,7 +27,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-elvitra-white">
+      <div className="min-h-screen bg-elvitra-white overflow-x-hidden">
         <ScrollToTop />
         <Navbar />
         <Routes>

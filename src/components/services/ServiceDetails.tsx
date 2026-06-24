@@ -20,7 +20,7 @@ interface ServiceDetailsProps {
 const serviceVisuals: Record<string, { gradient: string; accent: string; icon: React.ElementType }> = {
   installation: {
     gradient: 'linear-gradient(135deg, #1a1a2e 0%, #1c273a 50%, #0f0f1a 100%)',
-    accent: '#c9a84c',
+    accent: '#d67a92',
     icon: HardHat,
   },
   maintenance: {
@@ -85,7 +85,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
           className="relative overflow-hidden rounded-2xl p-8 md:p-12"
           style={{
             background: visual.gradient,
-            border: '1px solid rgba(201,168,76,0.12)',
+            border: '1px solid rgba(214,122,146,0.12)',
             boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
           }}
         >
@@ -139,7 +139,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
 
             {/* Title Block */}
             <div>
-              <p className="font-sans text-xs font-semibold tracking-[0.25em] text-elvitra-gold uppercase">
+              <p className="font-sans text-xs font-semibold tracking-[0.25em] text-elvitra-pink-dark uppercase">
                 Service Domain
               </p>
               <h2 className="mt-1 font-serif text-2xl font-bold text-elvitra-white md:text-3xl">
@@ -157,7 +157,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
           <div className="flex items-center gap-2">
             <div
               className="h-5 w-1 rounded-full"
-              style={{ background: 'linear-gradient(180deg, #dfc173, #c9a84c)' }}
+              style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
             />
             <h3 className="font-serif text-lg font-bold text-elvitra-white">
               Service Overview
@@ -173,7 +173,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
           <div className="flex items-center gap-2">
             <div
               className="h-5 w-1 rounded-full"
-              style={{ background: 'linear-gradient(180deg, #dfc173, #c9a84c)' }}
+              style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
             />
             <h3 className="font-serif text-lg font-bold text-elvitra-white">
               Key Benefits & Commitments
@@ -190,7 +190,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
                 className="flex items-start gap-3 rounded-xl p-4"
                 style={{
                   background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-                  border: '1px solid rgba(201,168,76,0.08)',
+                  border: '1px solid rgba(214,122,146,0.08)',
                 }}
               >
                 <CheckCircle2
@@ -210,14 +210,14 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
           <div className="flex items-center gap-2">
             <div
               className="h-5 w-1 rounded-full"
-              style={{ background: 'linear-gradient(180deg, #dfc173, #c9a84c)' }}
+              style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
             />
             <h3 className="font-serif text-lg font-bold text-elvitra-white">
               Methodology & Process Flow
             </h3>
           </div>
 
-          <div className="relative pl-6 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-elvitra-gold/15">
+          <div className="relative pl-6 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-elvitra-pink-dark/15">
             {service.process.map((proc, index) => (
               <motion.div
                 key={proc.step}
@@ -231,9 +231,9 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
                   className="absolute -left-[20px] top-1.5 flex h-6 w-6 items-center justify-center rounded-full border text-[10px] font-bold"
                   style={{
                     backgroundColor: '#1a1a2e',
-                    borderColor: '#c9a84c',
-                    color: '#c9a84c',
-                    boxShadow: '0 0 6px rgba(201,168,76,0.3)',
+                    borderColor: '#d67a92',
+                    color: '#d67a92',
+                    boxShadow: '0 0 6px rgba(214,122,146,0.3)',
                   }}
                 >
                   {index + 1}
@@ -243,7 +243,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
                   className="rounded-xl p-4"
                   style={{
                     background: 'linear-gradient(135deg, rgba(26,26,46,0.5), rgba(15,15,26,0.7))',
-                    border: '1px solid rgba(201,168,76,0.06)',
+                    border: '1px solid rgba(214,122,146,0.06)',
                   }}
                 >
                   <h4 className="text-sm font-semibold text-elvitra-white">
@@ -263,7 +263,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
           <div className="flex items-center gap-2">
             <div
               className="h-5 w-1 rounded-full"
-              style={{ background: 'linear-gradient(180deg, #dfc173, #c9a84c)' }}
+              style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
             />
             <h3 className="font-serif text-lg font-bold text-elvitra-white">
               Service FAQs
@@ -277,7 +277,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
                 className="rounded-xl p-5"
                 style={{
                   background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-                  border: '1px solid rgba(201,168,76,0.08)',
+                  border: '1px solid rgba(214,122,146,0.08)',
                 }}
               >
                 <h4 className="text-sm font-semibold text-elvitra-white/90">
@@ -315,9 +315,9 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
           <button
             className="flex items-center justify-center gap-2 rounded-lg border px-6 py-3 font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:scale-[1.02]"
             style={{
-              borderColor: 'rgba(201,168,76,0.3)',
-              color: '#c9a84c',
-              background: 'rgba(201,168,76,0.05)',
+              borderColor: 'rgba(214,122,146,0.3)',
+              color: '#d67a92',
+              background: 'rgba(214,122,146,0.05)',
             }}
           >
             <PhoneCall className="h-4 w-4" />

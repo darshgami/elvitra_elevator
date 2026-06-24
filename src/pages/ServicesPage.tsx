@@ -38,8 +38,8 @@ export default function ServicesPage() {
           className="pointer-events-none absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage: `
-              repeating-linear-gradient(90deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px),
-              repeating-linear-gradient(0deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px)
+              repeating-linear-gradient(90deg, transparent, transparent 60px, #d67a92 60px, #d67a92 61px),
+              repeating-linear-gradient(0deg, transparent, transparent 60px, #d67a92 60px, #d67a92 61px)
             `,
           }}
         />
@@ -51,11 +51,11 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="mb-3 font-sans text-xs font-semibold tracking-[0.25em] text-elvitra-gold uppercase">
+            <p className="mb-3 font-sans text-xs font-semibold tracking-[0.25em] text-elvitra-pink-dark uppercase">
               Full Lifecycle Engineering
             </p>
             <h1 className="font-serif text-3xl font-bold leading-tight text-elvitra-white md:text-5xl">
-              Our <span className="text-elvitra-gold">Services</span>
+              Our <span className="text-elvitra-pink-dark">Services</span>
             </h1>
           </motion.div>
         </div>
@@ -79,7 +79,7 @@ export default function ServicesPage() {
               animate={{
                 background: `radial-gradient(circle, ${
                   activeService.id === 'installation'
-                    ? '#c9a84c'
+                    ? '#d67a92'
                     : activeService.id === 'maintenance'
                     ? '#10b981'
                     : activeService.id === 'amc'

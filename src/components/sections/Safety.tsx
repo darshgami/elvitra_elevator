@@ -25,9 +25,9 @@ export default function Safety() {
     <SectionWrapper id="safety" bgColor="bg-elvitra-pearl">
       <div className="relative">
         <div className="absolute -top-8 left-1/2 -translate-x-1/2">
-          <div className="inline-flex items-center gap-2 rounded-full border border-elvitra-gold/30 bg-elvitra-gold-pale/80 px-5 py-1.5">
-            <Shield className="h-4 w-4 text-elvitra-gold-dark" />
-            <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-elvitra-gold-dark">
+          <div className="inline-flex items-center gap-2 rounded-full border border-elvitra-pink-dark/30 bg-elvitra-pink-pale/80 px-5 py-1.5">
+            <Shield className="h-4 w-4 text-elvitra-pink-dark" />
+            <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-elvitra-pink-dark">
               Your Safety Is Our Priority
             </span>
           </div>
@@ -38,9 +38,9 @@ export default function Safety() {
         <div className="mb-14 mt-4 text-center">
           <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
             Safety{' '}
-            <span className="text-elvitra-gold">First, Always</span>
+            <span className="text-elvitra-pink-dark">First, Always</span>
           </h2>
-          <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-elvitra-gold" />
+          <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-elvitra-pink-dark" />
         </div>
       </ScrollReveal>
 
@@ -49,8 +49,8 @@ export default function Safety() {
           const Icon = iconMap[index] || Shield
           return (
             <ScrollReveal key={feature.title} delay={index * 0.08}>
-              <div className="group flex h-full flex-col rounded-lg border border-elvitra-silver/50 border-t-4 border-t-elvitra-gold bg-elvitra-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-elvitra-gold/10 text-elvitra-gold-dark transition-colors duration-300 group-hover:bg-elvitra-gold group-hover:text-elvitra-white">
+              <div className="group flex h-full flex-col rounded-lg border border-elvitra-silver/50 border-t-4 border-t-elvitra-pink-dark bg-elvitra-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-elvitra-pink-dark/10 text-elvitra-pink-dark transition-colors duration-300 group-hover:bg-elvitra-pink-dark group-hover:text-elvitra-white">
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="mb-2 font-sans text-base font-bold text-elvitra-dark">

@@ -11,7 +11,7 @@ interface ElevatorGalleryProps {
 const elevatorImageStyles: Record<string, { gradient: string; accent: string; pattern: string }> = {
   passenger: {
     gradient: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f1a 100%)',
-    accent: '#c9a84c',
+    accent: '#d67a92',
     pattern: 'Modern stainless steel cabin interior',
   },
   hospital: {
@@ -69,7 +69,7 @@ export default function ElevatorGallery({
         style={{
           aspectRatio: '16/10',
           background: style.gradient,
-          border: '1px solid rgba(201,168,76,0.12)',
+          border: '1px solid rgba(214,122,146,0.12)',
           boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
         }}
       >
@@ -180,7 +180,7 @@ export default function ElevatorGallery({
               className="absolute left-3 top-1/2 z-20 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full transition-all duration-300 hover:scale-110"
               style={{
                 background: 'rgba(0,0,0,0.5)',
-                border: '1px solid rgba(201,168,76,0.2)',
+                border: '1px solid rgba(214,122,146,0.2)',
                 backdropFilter: 'blur(8px)',
               }}
             >
@@ -191,7 +191,7 @@ export default function ElevatorGallery({
               className="absolute right-3 top-1/2 z-20 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full transition-all duration-300 hover:scale-110"
               style={{
                 background: 'rgba(0,0,0,0.5)',
-                border: '1px solid rgba(201,168,76,0.2)',
+                border: '1px solid rgba(214,122,146,0.2)',
                 backdropFilter: 'blur(8px)',
               }}
             >
@@ -205,11 +205,11 @@ export default function ElevatorGallery({
           className="absolute right-4 top-4 rounded-full px-3 py-1"
           style={{
             background: 'rgba(0,0,0,0.5)',
-            border: '1px solid rgba(201,168,76,0.2)',
+            border: '1px solid rgba(214,122,146,0.2)',
             backdropFilter: 'blur(8px)',
           }}
         >
-          <span className="text-[10px] font-semibold text-elvitra-gold">
+          <span className="text-[10px] font-semibold text-elvitra-pink-dark">
             {activeIndex + 1} / {images.length}
           </span>
         </div>
@@ -227,11 +227,11 @@ export default function ElevatorGallery({
                 width: index === activeIndex ? 24 : 8,
                 background:
                   index === activeIndex
-                    ? 'linear-gradient(90deg, #dfc173, #c9a84c)'
+                    ? 'linear-gradient(90deg, #f4d0d9, #d67a92)'
                     : 'rgba(138,138,154,0.3)',
                 boxShadow:
                   index === activeIndex
-                    ? '0 0 6px rgba(201,168,76,0.4)'
+                    ? '0 0 6px rgba(214,122,146,0.4)'
                     : 'none',
               }}
             />

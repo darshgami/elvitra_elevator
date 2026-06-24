@@ -58,8 +58,8 @@ export default function ComparePage() {
           className="pointer-events-none absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage: `
-              repeating-linear-gradient(90deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px),
-              repeating-linear-gradient(0deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px)
+              repeating-linear-gradient(90deg, transparent, transparent 60px, #d67a92 60px, #d67a92 61px),
+              repeating-linear-gradient(0deg, transparent, transparent 60px, #d67a92 60px, #d67a92 61px)
             `,
           }}
         />
@@ -73,14 +73,14 @@ export default function ComparePage() {
           >
             <Link
               to="/elevators"
-              className="mb-6 inline-flex items-center gap-2 text-sm font-medium tracking-wider text-elvitra-gold/70 uppercase transition-colors hover:text-elvitra-gold"
+              className="mb-6 inline-flex items-center gap-2 text-sm font-medium tracking-wider text-elvitra-pink-dark/70 uppercase transition-colors hover:text-elvitra-pink-dark"
             >
               <ArrowLeft className="h-3.5 w-3.5" />
               Back to Elevators
             </Link>
             <h1 className="font-serif text-4xl font-bold text-elvitra-white md:text-5xl lg:text-6xl">
               Compare{' '}
-              <span className="text-elvitra-gold">Elevators</span>
+              <span className="text-elvitra-pink-dark">Elevators</span>
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-elvitra-text-light">
               Select up to 3 elevator models to compare their specifications, features, and safety aspects side by side.
@@ -108,10 +108,10 @@ export default function ComparePage() {
                     whileTap={!isDisabled ? { scale: 0.96 } : {}}
                     className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors ${
                       isSelected
-                        ? 'border-elvitra-gold bg-elvitra-gold text-elvitra-dark'
+                        ? 'border-elvitra-pink-dark bg-elvitra-pink-dark text-elvitra-dark'
                         : isDisabled
                           ? 'cursor-not-allowed border-elvitra-silver/40 text-elvitra-text-light/40'
-                          : 'border-elvitra-silver bg-elvitra-white text-elvitra-text hover:border-elvitra-gold/50 hover:text-elvitra-gold'
+                          : 'border-elvitra-silver bg-elvitra-white text-elvitra-text hover:border-elvitra-pink-dark/50 hover:text-elvitra-pink-dark'
                     }`}
                   >
                     {elevator.title}
@@ -140,7 +140,7 @@ export default function ComparePage() {
                       <h3 className="font-serif text-xl font-bold text-elvitra-dark">
                         {elevator.title}
                       </h3>
-                      <p className="mt-0.5 text-sm font-medium italic text-elvitra-gold">
+                      <p className="mt-0.5 text-sm font-medium italic text-elvitra-pink-dark">
                         {elevator.subtitle}
                       </p>
                       <div className="mt-4 grid grid-cols-2 gap-3 rounded-md bg-elvitra-pearl p-4">
@@ -188,7 +188,7 @@ export default function ComparePage() {
             <div className="mx-auto max-w-7xl">
               <ScrollReveal delay={0.2}>
                 <div className="mb-6 hidden items-center gap-2 border-b border-elvitra-silver pb-4 md:flex">
-                  <BarChart3 className="h-5 w-5 text-elvitra-gold" />
+                  <BarChart3 className="h-5 w-5 text-elvitra-pink-dark" />
                   <span className="font-sans text-sm font-semibold uppercase tracking-widest text-elvitra-text-light">
                     Category:
                   </span>
@@ -198,7 +198,7 @@ export default function ComparePage() {
                       onClick={() => setActiveCategory(cat.key)}
                       className={`rounded-full px-4 py-1 text-sm font-medium transition-colors ${
                         activeCategory === cat.key
-                          ? 'bg-elvitra-gold text-elvitra-dark'
+                          ? 'bg-elvitra-pink-dark text-elvitra-dark'
                           : 'bg-elvitra-pearl text-elvitra-text hover:bg-elvitra-silver'
                       }`}
                     >
@@ -220,9 +220,9 @@ export default function ComparePage() {
                         >
                           {cat.label}
                           {isOpen ? (
-                            <ChevronUp className="h-4 w-4 text-elvitra-gold" />
+                            <ChevronUp className="h-4 w-4 text-elvitra-pink-dark" />
                           ) : (
-                            <ChevronDown className="h-4 w-4 text-elvitra-gold" />
+                            <ChevronDown className="h-4 w-4 text-elvitra-pink-dark" />
                           )}
                         </button>
                         {isOpen && (
@@ -256,7 +256,7 @@ export default function ComparePage() {
               animate={{ opacity: 1 }}
               className="flex flex-col items-center justify-center rounded-lg border border-dashed border-elvitra-silver bg-elvitra-pearl/50 px-6 py-20"
             >
-              <BarChart3 className="mb-4 h-12 w-12 text-elvitra-gold/50" />
+              <BarChart3 className="mb-4 h-12 w-12 text-elvitra-pink-dark/50" />
               <p className="text-center font-serif text-2xl font-medium text-elvitra-text-light">
                 Select elevators above to compare
               </p>
@@ -284,7 +284,7 @@ export default function ComparePage() {
               <Button
                 variant="ghost"
                 size="lg"
-                className="border border-elvitra-white/20 text-elvitra-white hover:border-elvitra-gold/50 hover:text-elvitra-gold"
+                className="border border-elvitra-white/20 text-elvitra-white hover:border-elvitra-pink-dark/50 hover:text-elvitra-pink-dark"
                 href="/elevators"
               >
                 View All Elevators
@@ -339,7 +339,7 @@ function RenderCategory({
         {category === 'overview' && (
           <>
             <tr className="border-t border-elvitra-silver">
-              <td className="bg-elvitra-pearl/50 px-4 py-3 text-sm font-semibold text-elvitra-gold">
+              <td className="bg-elvitra-pearl/50 px-4 py-3 text-sm font-semibold text-elvitra-pink-dark">
                 Description
               </td>
               {selected.map((elevator) => (
@@ -349,7 +349,7 @@ function RenderCategory({
               ))}
             </tr>
             <tr className="border-t border-elvitra-silver">
-              <td className="bg-elvitra-pearl/50 px-4 py-3 text-sm font-semibold text-elvitra-gold">
+              <td className="bg-elvitra-pearl/50 px-4 py-3 text-sm font-semibold text-elvitra-pink-dark">
                 Category
               </td>
               {selected.map((elevator) => (
@@ -359,7 +359,7 @@ function RenderCategory({
               ))}
             </tr>
             <tr className="border-t border-elvitra-silver">
-              <td className="bg-elvitra-pearl/50 px-4 py-3 text-sm font-semibold text-elvitra-gold">
+              <td className="bg-elvitra-pearl/50 px-4 py-3 text-sm font-semibold text-elvitra-pink-dark">
                 Applications
               </td>
               {selected.map((elevator) => (
@@ -379,7 +379,7 @@ function RenderCategory({
           <>
             {Object.keys(specLabels).map((key) => (
               <tr key={key} className="border-t border-elvitra-silver">
-                <td className="bg-elvitra-pearl/50 px-4 py-3 text-sm font-semibold text-elvitra-gold">
+                <td className="bg-elvitra-pearl/50 px-4 py-3 text-sm font-semibold text-elvitra-pink-dark">
                   {specLabels[key]}
                 </td>
                 {selected.map((elevator) => (
@@ -403,7 +403,7 @@ function RenderCategory({
               )
               return (
                 <tr key={featIndex} className="border-t border-elvitra-silver">
-                  <td className="bg-elvitra-pearl/50 px-4 py-2.5 text-sm font-semibold text-elvitra-gold">
+                  <td className="bg-elvitra-pearl/50 px-4 py-2.5 text-sm font-semibold text-elvitra-pink-dark">
                     {allPresent ? feat.title : `Feature ${featIndex + 1}`}
                   </td>
                   {selected.map((elevator) => (

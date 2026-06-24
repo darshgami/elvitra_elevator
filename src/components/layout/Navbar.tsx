@@ -70,11 +70,17 @@ export default function Navbar() {
       >
         <div className="mx-auto flex h-full max-w-7xl items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="group flex items-center gap-2">
-            <ArrowUpFromLine className="h-6 w-6 text-elvitra-gold transition-transform duration-300 group-hover:-translate-y-0.5" />
-            <span className="font-serif text-2xl font-bold tracking-[0.15em] text-elvitra-gold">
-              ELVITRA
-            </span>
+          <Link to="/" className="group flex items-center">
+            <img 
+              src="/logo.png" 
+              alt="Elvitra Logo Mark" 
+              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+            />
+            <img 
+              src="/elvitraname.png" 
+              alt="Elvitra Elevator" 
+              className="-ml-9 h-10 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80 md:-ml-[22]" 
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -83,8 +89,8 @@ export default function Navbar() {
               onClick={() => handleNav('/')}
               className={`px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
                 isHome
-                  ? 'text-elvitra-gold'
-                  : 'text-elvitra-white/80 hover:text-elvitra-gold'
+                  ? 'text-elvitra-pink-dark'
+                  : 'text-elvitra-white/80 hover:text-elvitra-pink-dark'
               }`}
             >
               Home
@@ -94,8 +100,8 @@ export default function Navbar() {
               onClick={() => handleNav('/elevators')}
               className={`px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
                 location.pathname.startsWith('/elevators')
-                  ? 'text-elvitra-gold'
-                  : 'text-elvitra-white/80 hover:text-elvitra-gold'
+                  ? 'text-elvitra-pink-dark'
+                  : 'text-elvitra-white/80 hover:text-elvitra-pink-dark'
               }`}
             >
               Elevators
@@ -105,8 +111,8 @@ export default function Navbar() {
               onClick={() => handleNav('/services')}
               className={`px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
                 location.pathname.startsWith('/services')
-                  ? 'text-elvitra-gold'
-                  : 'text-elvitra-white/80 hover:text-elvitra-gold'
+                  ? 'text-elvitra-pink-dark'
+                  : 'text-elvitra-white/80 hover:text-elvitra-pink-dark'
               }`}
             >
               Services
@@ -114,21 +120,21 @@ export default function Navbar() {
 
             <button
               onClick={() => handleNav('/#features')}
-              className="px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-gold"
+              className="px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-pink-dark"
             >
               Features
             </button>
 
             <button
               onClick={() => handleNav('/#safety')}
-              className="px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-gold"
+              className="px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-pink-dark"
             >
               Safety
             </button>
 
             <button
               onClick={() => handleNav('/#contact')}
-              className="px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-gold"
+              className="px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-pink-dark"
             >
               Contact
             </button>
@@ -191,8 +197,8 @@ export default function Navbar() {
               className="pointer-events-none absolute inset-0 opacity-[0.03]"
               style={{
                 backgroundImage: `
-                  repeating-linear-gradient(90deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px),
-                  repeating-linear-gradient(0deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px)
+                  repeating-linear-gradient(90deg, transparent, transparent 60px, #d67a92 60px, #d67a92 61px),
+                  repeating-linear-gradient(0deg, transparent, transparent 60px, #d67a92 60px, #d67a92 61px)
                 `,
               }}
             />
@@ -206,7 +212,7 @@ export default function Navbar() {
                 exit="hidden"
                 onClick={() => handleNav('/')}
                 className={`font-serif text-3xl font-medium tracking-wider transition-colors duration-300 ${
-                  isHome ? 'text-elvitra-gold' : 'text-elvitra-white/90 hover:text-elvitra-gold'
+                  isHome ? 'text-elvitra-pink-dark' : 'text-elvitra-white/90 hover:text-elvitra-pink-dark'
                 }`}
               >
                 Home
@@ -221,8 +227,8 @@ export default function Navbar() {
                 onClick={() => handleNav('/elevators')}
                 className={`font-serif text-3xl font-medium tracking-wider transition-colors duration-300 ${
                   location.pathname.startsWith('/elevators')
-                    ? 'text-elvitra-gold'
-                    : 'text-elvitra-white/90 hover:text-elvitra-gold'
+                    ? 'text-elvitra-pink-dark'
+                    : 'text-elvitra-white/90 hover:text-elvitra-pink-dark'
                 }`}
               >
                 Elevators
@@ -237,8 +243,8 @@ export default function Navbar() {
                 onClick={() => handleNav('/services')}
                 className={`font-serif text-3xl font-medium tracking-wider transition-colors duration-300 ${
                   location.pathname.startsWith('/services')
-                    ? 'text-elvitra-gold'
-                    : 'text-elvitra-white/90 hover:text-elvitra-gold'
+                    ? 'text-elvitra-pink-dark'
+                    : 'text-elvitra-white/90 hover:text-elvitra-pink-dark'
                 }`}
               >
                 Services
@@ -251,7 +257,7 @@ export default function Navbar() {
                 animate="visible"
                 exit="hidden"
                 onClick={() => handleNav('/#features')}
-                className="font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-gold"
+                className="font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-pink-dark"
               >
                 Features
               </motion.button>
@@ -263,7 +269,7 @@ export default function Navbar() {
                 animate="visible"
                 exit="hidden"
                 onClick={() => handleNav('/#safety')}
-                className="font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-gold"
+                className="font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-pink-dark"
               >
                 Safety
               </motion.button>
@@ -275,7 +281,7 @@ export default function Navbar() {
                 animate="visible"
                 exit="hidden"
                 onClick={() => handleNav('/#contact')}
-                className="font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-gold"
+                className="font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-pink-dark"
               >
                 Contact
               </motion.button>

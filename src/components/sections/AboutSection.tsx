@@ -10,15 +10,15 @@ function ElevatorShaftGraphic() {
           {[...Array(6)].map((_, i) => (
             <div
               key={i}
-              className="h-0.5 w-full bg-elvitra-gold/30"
+              className="h-0.5 w-full bg-elvitra-pink-dark/30"
             />
           ))}
         </div>
-        <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-elvitra-gold/40" />
-        <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-elvitra-gold/40" style={{ left: 'calc(50% - 16px)' }} />
-        <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-elvitra-gold/40" style={{ left: 'calc(50% + 16px)' }} />
+        <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-elvitra-pink-dark/40" />
+        <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-elvitra-pink-dark/40" style={{ left: 'calc(50% - 16px)' }} />
+        <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-elvitra-pink-dark/40" style={{ left: 'calc(50% + 16px)' }} />
         <motion.div
-          className="absolute left-1/2 h-12 w-12 -translate-x-1/2 rounded border border-elvitra-gold/60 bg-elvitra-gold/10"
+          className="absolute left-1/2 h-12 w-12 -translate-x-1/2 rounded border border-elvitra-pink-dark/60 bg-elvitra-pink-dark/10"
           animate={{ y: ['0%', '500%', '0%'] }}
           transition={{
             duration: 6,
@@ -28,12 +28,12 @@ function ElevatorShaftGraphic() {
           style={{ top: '10%' }}
         >
           <div className="flex h-full items-center justify-center">
-            <div className="h-3 w-3 rotate-45 border border-elvitra-gold/40" />
+            <div className="h-3 w-3 rotate-45 border border-elvitra-pink-dark/40" />
           </div>
         </motion.div>
       </div>
-      <div className="absolute -bottom-4 left-1/2 h-3 w-20 -translate-x-1/2 rounded bg-elvitra-gold/20" />
-      <div className="absolute -top-4 left-1/2 h-3 w-20 -translate-x-1/2 rounded bg-elvitra-gold/20" />
+      <div className="absolute -bottom-4 left-1/2 h-3 w-20 -translate-x-1/2 rounded bg-elvitra-pink-dark/20" />
+      <div className="absolute -top-4 left-1/2 h-3 w-20 -translate-x-1/2 rounded bg-elvitra-pink-dark/20" />
     </div>
   )
 }
@@ -47,7 +47,7 @@ export default function AboutSection() {
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
               Who We Are
             </h2>
-            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
           </div>
         </ScrollReveal>
 
@@ -88,8 +88,8 @@ export default function AboutSection() {
         <div className="mt-20 grid grid-cols-2 gap-6 md:grid-cols-4">
           {stats.map((stat, index) => (
             <ScrollReveal key={stat.label} delay={index * 0.1}>
-              <div className="rounded-lg border border-elvitra-gold/20 bg-elvitra-pearl p-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
-                <div className="font-serif text-3xl font-bold text-elvitra-gold md:text-4xl">
+              <div className="rounded-lg border border-elvitra-pink-dark/20 bg-elvitra-pearl p-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+                <div className="font-serif text-3xl font-bold text-elvitra-pink-dark md:text-4xl">
                   {stat.value}
                 </div>
                 <div className="mt-2 text-sm font-medium uppercase tracking-wider text-elvitra-text-light">

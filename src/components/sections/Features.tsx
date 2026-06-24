@@ -18,7 +18,7 @@ export default function Features() {
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
               Why Choose Elvitra
             </h2>
-            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-elvitra-text">
             We combine cutting-edge technology, superior craftsmanship, and unwavering
@@ -33,8 +33,8 @@ export default function Features() {
             return (
               <ScrollReveal key={feature.title} delay={index * 0.1}>
                 <div className="group rounded-lg bg-elvitra-white p-8 text-center shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-                  <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-elvitra-gold/10 transition-colors duration-300 group-hover:bg-elvitra-gold">
-                    <IconComponent className="h-8 w-8 text-elvitra-gold transition-colors duration-300 group-hover:text-elvitra-dark" />
+                  <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-elvitra-pink-dark/10 transition-colors duration-300 group-hover:bg-elvitra-pink-dark">
+                    <IconComponent className="h-8 w-8 text-elvitra-pink-dark transition-colors duration-300 group-hover:text-elvitra-dark" />
                   </div>
 
                   <h3 className="font-serif text-xl font-bold text-elvitra-dark">

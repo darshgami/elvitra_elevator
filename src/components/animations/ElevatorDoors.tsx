@@ -23,8 +23,8 @@ export default function ElevatorDoors({
       <div
         className="absolute inset-0 rounded-lg"
         style={{
-          background: 'linear-gradient(135deg, #dfc173 0%, #c9a84c 30%, #b8953a 60%, #8a7530 100%)',
-          boxShadow: '0 0 30px rgba(201,168,76,0.2), 0 8px 32px rgba(0,0,0,0.4)',
+          background: 'linear-gradient(135deg, #f4d0d9 0%, #d67a92 30%, #d67a92 60%, #8a7530 100%)',
+          boxShadow: '0 0 30px rgba(214,122,146,0.2), 0 8px 32px rgba(0,0,0,0.4)',
         }}
       />
 
@@ -67,9 +67,9 @@ export default function ElevatorDoors({
             left: '15%',
             right: '15%',
             bottom: '30%',
-            background: 'linear-gradient(180deg, rgba(201,168,76,0.08) 0%, rgba(201,168,76,0.03) 100%)',
+            background: 'linear-gradient(180deg, rgba(214,122,146,0.08) 0%, rgba(214,122,146,0.03) 100%)',
             borderRadius: 3,
-            border: '1px solid rgba(201,168,76,0.1)',
+            border: '1px solid rgba(214,122,146,0.1)',
           }}
         />
 
@@ -81,9 +81,9 @@ export default function ElevatorDoors({
             left: '10%',
             right: '10%',
             height: 3,
-            background: 'linear-gradient(90deg, rgba(201,168,76,0.2), rgba(201,168,76,0.5), rgba(201,168,76,0.2))',
+            background: 'linear-gradient(90deg, rgba(214,122,146,0.2), rgba(214,122,146,0.5), rgba(214,122,146,0.2))',
             borderRadius: 2,
-            boxShadow: '0 1px 4px rgba(201,168,76,0.15)',
+            boxShadow: '0 1px 4px rgba(214,122,146,0.15)',
           }}
         />
 
@@ -95,7 +95,7 @@ export default function ElevatorDoors({
             left: 0,
             right: 0,
             height: '25%',
-            background: 'linear-gradient(180deg, transparent, rgba(201,168,76,0.04))',
+            background: 'linear-gradient(180deg, transparent, rgba(214,122,146,0.04))',
           }}
         />
 
@@ -173,7 +173,7 @@ export default function ElevatorDoors({
               bottom: 0,
               right: 0,
               width: 2,
-              background: 'linear-gradient(180deg, rgba(201,168,76,0.15), rgba(201,168,76,0.3), rgba(201,168,76,0.15))',
+              background: 'linear-gradient(180deg, rgba(214,122,146,0.15), rgba(214,122,146,0.3), rgba(214,122,146,0.15))',
             }}
           />
           {/* Door reflection */}
@@ -221,7 +221,7 @@ export default function ElevatorDoors({
               bottom: 0,
               left: 0,
               width: 2,
-              background: 'linear-gradient(180deg, rgba(201,168,76,0.15), rgba(201,168,76,0.3), rgba(201,168,76,0.15))',
+              background: 'linear-gradient(180deg, rgba(214,122,146,0.15), rgba(214,122,146,0.3), rgba(214,122,146,0.15))',
             }}
           />
           {/* Door reflection */}
@@ -246,7 +246,7 @@ export default function ElevatorDoors({
           left: 20,
           right: 20,
           height: 3,
-          background: 'linear-gradient(90deg, transparent, rgba(223,193,115,0.6), transparent)',
+          background: 'linear-gradient(90deg, transparent, rgba(244,208,217,0.6), transparent)',
           borderRadius: '0 0 50% 50%',
         }}
       />
@@ -261,9 +261,9 @@ export default function ElevatorDoors({
           width: 56,
           height: 28,
           background: 'linear-gradient(180deg, #1a1a2e, #0f0f1a)',
-          border: '1.5px solid rgba(201,168,76,0.5)',
+          border: '1.5px solid rgba(214,122,146,0.5)',
           borderRadius: 6,
-          boxShadow: '0 0 12px rgba(201,168,76,0.15), inset 0 0 8px rgba(0,0,0,0.5)',
+          boxShadow: '0 0 12px rgba(214,122,146,0.15), inset 0 0 8px rgba(0,0,0,0.5)',
         }}
       >
         <motion.span
@@ -271,8 +271,8 @@ export default function ElevatorDoors({
           className="font-sans font-bold"
           style={{
             fontSize: 16,
-            color: '#c9a84c',
-            textShadow: '0 0 6px rgba(201,168,76,0.6)',
+            color: '#d67a92',
+            textShadow: '0 0 6px rgba(214,122,146,0.6)',
             letterSpacing: '0.1em',
           }}
           initial={{ opacity: 0, y: -4 }}
@@ -295,7 +295,7 @@ export default function ElevatorDoors({
         transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
       >
         <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
-          <path d="M6 0L12 8H0L6 0Z" fill="#c9a84c" opacity="0.7" />
+          <path d="M6 0L12 8H0L6 0Z" fill="#d67a92" opacity="0.7" />
         </svg>
       </motion.div>
 
@@ -307,7 +307,7 @@ export default function ElevatorDoors({
           left: 2,
           width: 2,
           height: 40,
-          background: 'linear-gradient(180deg, rgba(223,193,115,0.4), rgba(201,168,76,0.6), rgba(223,193,115,0.4))',
+          background: 'linear-gradient(180deg, rgba(244,208,217,0.4), rgba(214,122,146,0.6), rgba(244,208,217,0.4))',
           borderRadius: 1,
         }}
       />
@@ -320,7 +320,7 @@ export default function ElevatorDoors({
           right: 2,
           width: 2,
           height: 40,
-          background: 'linear-gradient(180deg, rgba(223,193,115,0.4), rgba(201,168,76,0.6), rgba(223,193,115,0.4))',
+          background: 'linear-gradient(180deg, rgba(244,208,217,0.4), rgba(214,122,146,0.6), rgba(244,208,217,0.4))',
           borderRadius: 1,
         }}
       />
@@ -333,9 +333,9 @@ export default function ElevatorDoors({
           left: 10,
           right: 10,
           height: 4,
-          background: 'linear-gradient(90deg, #8a7530, #c9a84c, #dfc173, #c9a84c, #8a7530)',
+          background: 'linear-gradient(90deg, #8a7530, #d67a92, #f4d0d9, #d67a92, #8a7530)',
           borderRadius: '0 0 2px 2px',
-          boxShadow: '0 2px 8px rgba(201,168,76,0.2)',
+          boxShadow: '0 2px 8px rgba(214,122,146,0.2)',
         }}
       />
     </div>

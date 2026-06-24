@@ -60,7 +60,7 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.15, duration: 0.4 }}
           >
-            <p className="mb-2 font-sans text-xs font-semibold tracking-[0.2em] text-elvitra-gold/70 uppercase">
+            <p className="mb-2 font-sans text-xs font-semibold tracking-[0.2em] text-elvitra-pink-dark/70 uppercase">
               {elevator.subtitle}
             </p>
             <h2 className="font-serif text-3xl font-bold text-elvitra-white md:text-4xl">
@@ -94,11 +94,11 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
                 key={stat.label}
                 className="rounded-xl px-4 py-3"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.02))',
-                  border: '1px solid rgba(201,168,76,0.1)',
+                  background: 'linear-gradient(135deg, rgba(214,122,146,0.08), rgba(214,122,146,0.02))',
+                  border: '1px solid rgba(214,122,146,0.1)',
                 }}
               >
-                <p className="text-[10px] font-semibold tracking-wider text-elvitra-gold/50 uppercase">
+                <p className="text-[10px] font-semibold tracking-wider text-elvitra-pink-dark/50 uppercase">
                   {stat.label}
                 </p>
                 <p className="mt-1 text-sm font-bold text-elvitra-white/90">
@@ -119,7 +119,7 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
           <div className="mb-4 flex items-center gap-2">
             <div
               className="h-5 w-1 rounded-full"
-              style={{ background: 'linear-gradient(180deg, #dfc173, #c9a84c)' }}
+              style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
             />
             <h3 className="font-serif text-lg font-bold text-elvitra-white">
               Use Cases
@@ -131,13 +131,13 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
                 key={index}
                 className="flex items-start gap-3 rounded-lg px-4 py-2.5"
                 style={{
-                  background: 'rgba(201,168,76,0.03)',
+                  background: 'rgba(214,122,146,0.03)',
                 }}
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 + index * 0.05, duration: 0.3 }}
               >
-                <ArrowRight className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-elvitra-gold/60" />
+                <ArrowRight className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-elvitra-pink-dark/60" />
                 <span className="text-sm text-elvitra-white/70">{useCase}</span>
               </motion.div>
             ))}
@@ -148,7 +148,7 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
         <div
           className="my-8 h-px"
           style={{
-            background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent)',
+            background: 'linear-gradient(90deg, transparent, rgba(214,122,146,0.2), transparent)',
           }}
         />
 
@@ -159,7 +159,7 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
         <div
           className="my-8 h-px"
           style={{
-            background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent)',
+            background: 'linear-gradient(90deg, transparent, rgba(214,122,146,0.2), transparent)',
           }}
         />
 
@@ -189,9 +189,9 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
           <button
             className="flex items-center justify-center gap-2 rounded-lg border px-6 py-3 font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:scale-[1.02]"
             style={{
-              borderColor: 'rgba(201,168,76,0.3)',
-              color: '#c9a84c',
-              background: 'rgba(201,168,76,0.05)',
+              borderColor: 'rgba(214,122,146,0.3)',
+              color: '#d67a92',
+              background: 'rgba(214,122,146,0.05)',
             }}
           >
             <Download className="h-4 w-4" />
@@ -210,7 +210,7 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
             <div className="mb-4 flex items-center gap-2">
               <div
                 className="h-5 w-1 rounded-full"
-                style={{ background: 'linear-gradient(180deg, #dfc173, #c9a84c)' }}
+                style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
               />
               <h3 className="font-serif text-lg font-bold text-elvitra-white">
                 Frequently Asked Questions
@@ -224,7 +224,7 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
                   className="rounded-xl p-5"
                   style={{
                     background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-                    border: '1px solid rgba(201,168,76,0.08)',
+                    border: '1px solid rgba(214,122,146,0.08)',
                   }}
                 >
                   <h4 className="text-sm font-semibold text-elvitra-white/90">

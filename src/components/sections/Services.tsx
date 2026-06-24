@@ -18,7 +18,7 @@ export default function Services() {
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
               Our Services
             </h2>
-            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-elvitra-text">
             End-to-end elevator solutions from expert installation to lifetime maintenance and
@@ -32,9 +32,9 @@ export default function Services() {
 
             return (
               <ScrollReveal key={service.title} delay={index * 0.1}>
-                <div className="group rounded-lg border-l-4 border-transparent bg-elvitra-pearl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-l-elvitra-gold hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]">
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-elvitra-gold/10">
-                    <IconComponent className="h-7 w-7 text-elvitra-gold" />
+                <div className="group rounded-lg border-l-4 border-transparent bg-elvitra-pearl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 hover:border-l-elvitra-pink-dark hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]">
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-elvitra-pink-dark/10">
+                    <IconComponent className="h-7 w-7 text-elvitra-pink-dark" />
                   </div>
 
                   <h3 className="font-serif text-2xl font-bold text-elvitra-dark">
@@ -47,7 +47,7 @@ export default function Services() {
                   <ul className="mt-5 space-y-2.5">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-elvitra-gold" />
+                        <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-elvitra-pink-dark" />
                         <span className="text-sm text-elvitra-text-light">{feature}</span>
                       </li>
                     ))}

@@ -94,7 +94,7 @@ export default function ElevatorPage() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-serif text-8xl font-bold text-elvitra-gold"
+            className="font-serif text-8xl font-bold text-elvitra-pink-dark"
           >
             404
           </motion.h1>
@@ -160,11 +160,11 @@ function HeroSection({ elevator, Icon }: { elevator: typeof elevators[0]; Icon: 
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div
           className="absolute -left-32 -top-32 h-[500px] w-[500px] rounded-full opacity-[0.03]"
-          style={{ background: 'radial-gradient(circle, #c9a84c 0%, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #d67a92 0%, transparent 70%)' }}
         />
         <div
           className="absolute -bottom-32 -right-32 h-[600px] w-[600px] rounded-full opacity-[0.03]"
-          style={{ background: 'radial-gradient(circle, #c9a84c 0%, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #d67a92 0%, transparent 70%)' }}
         />
         {[1, 2, 3].map((i) => (
           <div
@@ -172,7 +172,7 @@ function HeroSection({ elevator, Icon }: { elevator: typeof elevators[0]; Icon: 
             className="absolute h-full w-px opacity-[0.04]"
             style={{
               left: `${20 + i * 25}%`,
-              background: 'linear-gradient(to bottom, transparent, #c9a84c, transparent)',
+              background: 'linear-gradient(to bottom, transparent, #d67a92, transparent)',
             }}
           />
         ))}
@@ -183,7 +183,7 @@ function HeroSection({ elevator, Icon }: { elevator: typeof elevators[0]; Icon: 
             style={{
               top: `${15 + i * 20}%`,
               height: 1,
-              background: 'linear-gradient(to right, transparent, #c9a84c, transparent)',
+              background: 'linear-gradient(to right, transparent, #d67a92, transparent)',
             }}
           />
         ))}
@@ -193,7 +193,7 @@ function HeroSection({ elevator, Icon }: { elevator: typeof elevators[0]; Icon: 
             opacity: [0.04, 0.06, 0.04],
           }}
           transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute left-[15%] top-[20%] h-32 w-32 rounded-full border border-elvitra-gold/10"
+          className="absolute left-[15%] top-[20%] h-32 w-32 rounded-full border border-elvitra-pink-dark/10"
         />
         <motion.div
           animate={{
@@ -201,7 +201,7 @@ function HeroSection({ elevator, Icon }: { elevator: typeof elevators[0]; Icon: 
             opacity: [0.03, 0.05, 0.03],
           }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-          className="absolute right-[20%] top-[60%] h-48 w-48 rounded-full border border-elvitra-gold/10"
+          className="absolute right-[20%] top-[60%] h-48 w-48 rounded-full border border-elvitra-pink-dark/10"
         />
         <motion.div
           animate={{
@@ -210,7 +210,7 @@ function HeroSection({ elevator, Icon }: { elevator: typeof elevators[0]; Icon: 
             opacity: [0.02, 0.04, 0.02],
           }}
           transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-          className="absolute left-[40%] top-[70%] h-24 w-24 rounded-full border border-elvitra-gold/10"
+          className="absolute left-[40%] top-[70%] h-24 w-24 rounded-full border border-elvitra-pink-dark/10"
         />
       </div>
 
@@ -219,17 +219,17 @@ function HeroSection({ elevator, Icon }: { elevator: typeof elevators[0]; Icon: 
           <div>
             <ScrollReveal direction="left">
               <div className="mb-6 flex items-center gap-3">
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-elvitra-gold/10">
-                  <Icon className="h-7 w-7 text-elvitra-gold" />
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-elvitra-pink-dark/10">
+                  <Icon className="h-7 w-7 text-elvitra-pink-dark" />
                 </div>
-                <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-elvitra-gold">
+                <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-elvitra-pink-dark">
                   {elevator.id} Elevator
                 </span>
               </div>
               <h1 className="font-serif text-5xl font-bold leading-tight text-elvitra-white md:text-7xl">
                 {elevator.title}
               </h1>
-              <p className="mt-3 font-serif text-xl italic text-elvitra-gold md:text-2xl">
+              <p className="mt-3 font-serif text-xl italic text-elvitra-pink-dark md:text-2xl">
                 {elevator.subtitle}
               </p>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-elvitra-text-light md:text-lg">
@@ -256,20 +256,20 @@ function HeroSection({ elevator, Icon }: { elevator: typeof elevators[0]; Icon: 
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
                 className="relative mx-auto h-[500px] w-[350px]"
               >
-                <div className="absolute inset-0 rounded-2xl border border-elvitra-gold/20 bg-gradient-to-b from-elvitra-gold/5 to-transparent backdrop-blur-sm">
+                <div className="absolute inset-0 rounded-2xl border border-elvitra-pink-dark/20 bg-gradient-to-b from-elvitra-pink-dark/5 to-transparent backdrop-blur-sm">
                   <div className="flex h-full flex-col items-center justify-center p-8 text-center">
-                    <Icon className="mb-6 h-24 w-24 text-elvitra-gold/30" />
+                    <Icon className="mb-6 h-24 w-24 text-elvitra-pink-dark/30" />
                     <span className="font-serif text-3xl font-bold text-elvitra-white/80">
                       {elevator.title}
                     </span>
-                    <div className="mt-4 h-px w-16 bg-elvitra-gold/40" />
-                    <span className="mt-4 font-serif text-sm italic text-elvitra-gold/60">
+                    <div className="mt-4 h-px w-16 bg-elvitra-pink-dark/40" />
+                    <span className="mt-4 font-serif text-sm italic text-elvitra-pink-dark/60">
                       {elevator.subtitle}
                     </span>
                     <div className="mt-8 grid w-full grid-cols-2 gap-4">
                       {Object.entries(elevator.specifications).map(([key, value]) => (
                         <div key={key}>
-                          <span className="text-[10px] font-bold uppercase tracking-widest text-elvitra-gold/50">
+                          <span className="text-[10px] font-bold uppercase tracking-widest text-elvitra-pink-dark/50">
                             {key}
                           </span>
                           <p className="mt-1 text-xs text-elvitra-text-light">{value}</p>
@@ -278,7 +278,7 @@ function HeroSection({ elevator, Icon }: { elevator: typeof elevators[0]; Icon: 
                     </div>
                   </div>
                 </div>
-                <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-b from-elvitra-gold/5 to-transparent opacity-50 blur-2xl" />
+                <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-b from-elvitra-pink-dark/5 to-transparent opacity-50 blur-2xl" />
               </motion.div>
             </ScrollReveal>
           </div>
@@ -299,7 +299,7 @@ function HeroSection({ elevator, Icon }: { elevator: typeof elevators[0]; Icon: 
           <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-elvitra-text-light">
             Scroll
           </span>
-          <ChevronDown className="h-4 w-4 text-elvitra-gold" />
+          <ChevronDown className="h-4 w-4 text-elvitra-pink-dark" />
         </motion.div>
       </motion.div>
     </section>
@@ -316,7 +316,7 @@ function OverviewSection({ elevator }: { elevator: typeof elevators[0] }) {
               <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
                 Overview
               </h2>
-              <div className="mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+              <div className="mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
               <p className="mt-6 text-base leading-relaxed text-elvitra-text lg:text-lg">
                 {elevator.description}
               </p>
@@ -334,7 +334,7 @@ function OverviewSection({ elevator }: { elevator: typeof elevators[0] }) {
                       key={useCase}
                       className="flex items-center gap-3 rounded-lg border border-elvitra-silver/50 bg-elvitra-pearl px-5 py-3"
                     >
-                      <UcIcon className="h-5 w-5 text-elvitra-gold" />
+                      <UcIcon className="h-5 w-5 text-elvitra-pink-dark" />
                       <span className="text-sm font-medium text-elvitra-dark">{useCase}</span>
                     </div>
                   )
@@ -356,10 +356,10 @@ function OverviewSection({ elevator }: { elevator: typeof elevators[0] }) {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.08 }}
-                    className="flex items-start gap-4 rounded-lg border border-elvitra-silver/40 bg-elvitra-pearl/50 p-5 transition-colors duration-300 hover:border-elvitra-gold/30"
+                    className="flex items-start gap-4 rounded-lg border border-elvitra-silver/40 bg-elvitra-pearl/50 p-5 transition-colors duration-300 hover:border-elvitra-pink-dark/30"
                   >
-                    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-elvitra-gold/10">
-                      <CheckCircle className="h-4 w-4 text-elvitra-gold" />
+                    <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-elvitra-pink-dark/10">
+                      <CheckCircle className="h-4 w-4 text-elvitra-pink-dark" />
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-elvitra-dark">{app.title}</p>
@@ -390,9 +390,9 @@ function FeatureSection({ features }: { features: string[] }) {
         <ScrollReveal>
           <div className="text-center">
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
-              Key <span className="text-elvitra-gold">Features</span>
+              Key <span className="text-elvitra-pink-dark">Features</span>
             </h2>
-            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
           </div>
         </ScrollReveal>
 
@@ -402,8 +402,8 @@ function FeatureSection({ features }: { features: string[] }) {
             return (
               <ScrollReveal key={feature} delay={index * 0.08}>
                 <div className="group rounded-lg bg-elvitra-white p-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-                  <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-elvitra-gold/10 transition-colors duration-300 group-hover:bg-elvitra-gold">
-                    <Icon className="h-7 w-7 text-elvitra-gold transition-colors duration-300 group-hover:text-elvitra-dark" />
+                  <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-elvitra-pink-dark/10 transition-colors duration-300 group-hover:bg-elvitra-pink-dark">
+                    <Icon className="h-7 w-7 text-elvitra-pink-dark transition-colors duration-300 group-hover:text-elvitra-dark" />
                   </div>
                   <h3 className="font-serif text-base font-bold text-elvitra-dark">
                     {feature}
@@ -433,15 +433,15 @@ function SpecSection({
         <ScrollReveal>
           <div className="text-center">
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
-              Technical <span className="text-elvitra-gold">Specifications</span>
+              Technical <span className="text-elvitra-pink-dark">Specifications</span>
             </h2>
-            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
           <div className="mx-auto mt-16 max-w-3xl overflow-hidden rounded-xl border border-elvitra-silver/50 shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
-            <div className="bg-gradient-to-r from-elvitra-gold/10 to-elvitra-gold/5 px-8 py-5">
+            <div className="bg-gradient-to-r from-elvitra-pink-dark/10 to-elvitra-pink-dark/5 px-8 py-5">
               <h3 className="font-serif text-xl font-bold text-elvitra-dark">{title}</h3>
             </div>
             <div className="divide-y divide-elvitra-silver/40">
@@ -450,7 +450,7 @@ function SpecSection({
                   key={key}
                   className="flex items-center justify-between px-8 py-4 transition-colors duration-200 hover:bg-elvitra-pearl/50"
                 >
-                  <span className="font-sans text-sm font-bold uppercase tracking-widest text-elvitra-gold">
+                  <span className="font-sans text-sm font-bold uppercase tracking-widest text-elvitra-pink-dark">
                     {key}
                   </span>
                   <span className="font-sans text-right text-sm font-medium text-elvitra-text">
@@ -472,16 +472,16 @@ function SafetySection() {
       <div className="mx-auto max-w-7xl">
         <ScrollReveal>
           <div className="relative mb-14 text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-elvitra-gold/30 bg-elvitra-gold/5 px-5 py-1.5">
-              <Shield className="h-4 w-4 text-elvitra-gold" />
-              <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-elvitra-gold">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-elvitra-pink-dark/30 bg-elvitra-pink-dark/5 px-5 py-1.5">
+              <Shield className="h-4 w-4 text-elvitra-pink-dark" />
+              <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-elvitra-pink-dark">
                 Your Safety Is Our Priority
               </span>
             </div>
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
-              Safety <span className="text-elvitra-gold">Features</span>
+              Safety <span className="text-elvitra-pink-dark">Features</span>
             </h2>
-            <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-elvitra-gold" />
+            <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-elvitra-pink-dark" />
           </div>
         </ScrollReveal>
 
@@ -490,8 +490,8 @@ function SafetySection() {
             const Icon = safetyIconMap[feature.title] || Shield
             return (
               <ScrollReveal key={feature.title} delay={index * 0.08}>
-                <div className="group flex h-full flex-col rounded-lg border border-elvitra-silver/50 border-t-4 border-t-elvitra-gold bg-elvitra-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-elvitra-gold/10 text-elvitra-gold transition-colors duration-300 group-hover:bg-elvitra-gold group-hover:text-elvitra-white">
+                <div className="group flex h-full flex-col rounded-lg border border-elvitra-silver/50 border-t-4 border-t-elvitra-pink-dark bg-elvitra-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-shadow duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-elvitra-pink-dark/10 text-elvitra-pink-dark transition-colors duration-300 group-hover:bg-elvitra-pink-dark group-hover:text-elvitra-white">
                     <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="mb-2 font-sans text-base font-bold text-elvitra-dark">
@@ -518,9 +518,9 @@ function GallerySection() {
         <ScrollReveal>
           <div className="text-center">
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
-              <span className="text-elvitra-gold">Gallery</span>
+              <span className="text-elvitra-pink-dark">Gallery</span>
             </h2>
-            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
             <p className="mx-auto mt-4 max-w-2xl text-elvitra-text">
               Visual highlights of our elevator designs and installations
             </p>
@@ -531,9 +531,9 @@ function GallerySection() {
           {galleryPlaceholders.map((item, index) => (
             <ScrollReveal key={item.title} delay={index * 0.1}>
               <div className="group relative overflow-hidden rounded-xl border border-elvitra-silver/40 bg-elvitra-pearl shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-500 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-                <div className="flex h-64 items-center justify-center bg-gradient-to-br from-elvitra-gold/5 to-elvitra-dark/5">
+                <div className="flex h-64 items-center justify-center bg-gradient-to-br from-elvitra-pink-dark/5 to-elvitra-dark/5">
                   <div className="flex flex-col items-center gap-3">
-                    <ImageIcon className="h-16 w-16 text-elvitra-gold/30 transition-all duration-500 group-hover:scale-110 group-hover:text-elvitra-gold/50" />
+                    <ImageIcon className="h-16 w-16 text-elvitra-pink-dark/30 transition-all duration-500 group-hover:scale-110 group-hover:text-elvitra-pink-dark/50" />
                     <span className="font-sans text-xs font-medium uppercase tracking-widest text-elvitra-text-light">
                       Image Placeholder
                     </span>
@@ -568,9 +568,9 @@ function FaqSection({ faq }: { faq: { question: string; answer: string }[] }) {
         <ScrollReveal>
           <div className="text-center">
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
-              Frequently Asked <span className="text-elvitra-gold">Questions</span>
+              Frequently Asked <span className="text-elvitra-pink-dark">Questions</span>
             </h2>
-            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
           </div>
         </ScrollReveal>
 
@@ -600,23 +600,23 @@ function FaqItem({
       <motion.div
         className={`overflow-hidden rounded-xl border transition-all duration-300 ${
           isOpen
-            ? 'border-elvitra-gold/40 bg-elvitra-white shadow-[0_8px_30px_rgba(0,0,0,0.08)]'
-            : 'border-elvitra-silver/50 bg-elvitra-white/70 hover:border-elvitra-gold/20'
+            ? 'border-elvitra-pink-dark/40 bg-elvitra-white shadow-[0_8px_30px_rgba(0,0,0,0.08)]'
+            : 'border-elvitra-silver/50 bg-elvitra-white/70 hover:border-elvitra-pink-dark/20'
         }`}
       >
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="flex w-full items-center justify-between px-6 py-5 text-left"
         >
-          <span className="pr-4 font-serif text-base font-bold text-elvitra-gold md:text-lg">
+          <span className="pr-4 font-serif text-base font-bold text-elvitra-pink-dark md:text-lg">
             {question}
           </span>
           <motion.div
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
-            className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-elvitra-gold/10"
+            className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-elvitra-pink-dark/10"
           >
-            <ChevronDown className="h-4 w-4 text-elvitra-gold" />
+            <ChevronDown className="h-4 w-4 text-elvitra-pink-dark" />
           </motion.div>
         </button>
         <motion.div
@@ -628,7 +628,7 @@ function FaqItem({
           transition={{ duration: 0.3, ease: 'easeInOut' }}
           className="overflow-hidden"
         >
-          <div className="border-t border-elvitra-gold/10 px-6 pb-5 pt-4">
+          <div className="border-t border-elvitra-pink-dark/10 px-6 pb-5 pt-4">
             <p className="text-sm leading-relaxed text-elvitra-text">{answer}</p>
           </div>
         </motion.div>
@@ -644,15 +644,15 @@ function CTASection() {
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `
-            linear-gradient(45deg, #c9a84c 1px, transparent 1px),
-            linear-gradient(-45deg, #c9a84c 1px, transparent 1px)
+            linear-gradient(45deg, #d67a92 1px, transparent 1px),
+            linear-gradient(-45deg, #d67a92 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
         }}
       />
       <div
         className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.04]"
-        style={{ background: 'radial-gradient(circle, #c9a84c 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, #d67a92 0%, transparent 70%)' }}
       />
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
@@ -679,7 +679,7 @@ function CTASection() {
               Contact Us
             </Button>
           </div>
-          <p className="mt-8 font-serif text-xl text-elvitra-gold md:text-2xl">
+          <p className="mt-8 font-serif text-xl text-elvitra-pink-dark md:text-2xl">
             {contact.phone[2].number}
           </p>
           <p className="mt-2 text-sm text-elvitra-text-light">{contact.hours}</p>
@@ -700,9 +700,9 @@ function RelatedSection({
         <ScrollReveal>
           <div className="text-center">
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
-              Explore Other <span className="text-elvitra-gold">Elevators</span>
+              Explore Other <span className="text-elvitra-pink-dark">Elevators</span>
             </h2>
-            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
           </div>
         </ScrollReveal>
 
@@ -713,19 +713,19 @@ function RelatedSection({
               <ScrollReveal key={item.id} delay={index * 0.08}>
                 <Link to={`/elevators/${item.id}`} className="group block h-full">
                   <div className="flex h-full flex-col rounded-lg border border-elvitra-silver/40 bg-elvitra-pearl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-                    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-elvitra-gold/10">
-                      <Icon className="h-7 w-7 text-elvitra-gold transition-colors duration-300 group-hover:text-elvitra-gold" />
+                    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-elvitra-pink-dark/10">
+                      <Icon className="h-7 w-7 text-elvitra-pink-dark transition-colors duration-300 group-hover:text-elvitra-pink-dark" />
                     </div>
                     <h3 className="font-serif text-lg font-bold text-elvitra-dark">
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-xs font-medium italic text-elvitra-gold">
+                    <p className="mt-1 text-xs font-medium italic text-elvitra-pink-dark">
                       {item.subtitle}
                     </p>
                     <p className="mt-3 flex-1 text-xs leading-relaxed text-elvitra-text">
                       {item.description}
                     </p>
-                    <div className="mt-4 flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-elvitra-gold transition-all duration-300 group-hover:gap-2">
+                    <div className="mt-4 flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-elvitra-pink-dark transition-all duration-300 group-hover:gap-2">
                       <span>View Details</span>
                       <ArrowRight className="h-3 w-3" />
                     </div>

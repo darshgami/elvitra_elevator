@@ -37,7 +37,7 @@ function AnimatedStat({ value, label, index }: { value: string; label: string; i
   return (
     <ScrollReveal direction="up" delay={index * 0.15}>
       <div ref={ref} className="flex flex-col items-center text-center">
-        <span className="font-serif text-5xl font-bold text-elvitra-gold md:text-6xl">
+        <span className="font-serif text-5xl font-bold text-elvitra-pink-dark md:text-6xl">
           {prefix}
           {Math.round(displayNum)}
           {suffix}
@@ -59,7 +59,7 @@ export default function Stats() {
             <div key={stat.label} className="relative flex items-center justify-center">
               <AnimatedStat value={stat.value} label={stat.label} index={i} />
               {i < stats.length - 1 && (
-                <div className="hidden h-16 w-px bg-gradient-to-b from-transparent via-elvitra-gold/30 to-transparent lg:absolute lg:right-0 lg:block" />
+                <div className="hidden h-16 w-px bg-gradient-to-b from-transparent via-elvitra-pink-dark/30 to-transparent lg:absolute lg:right-0 lg:block" />
               )}
             </div>
           ))}

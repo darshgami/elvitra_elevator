@@ -30,8 +30,8 @@ export default function FloorIndicator({
         style={{
           padding: '8px 6px',
           background: 'linear-gradient(180deg, #161626 0%, #0d0d18 100%)',
-          border: '1px solid rgba(201,168,76,0.25)',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(201,168,76,0.1)',
+          border: '1px solid rgba(214,122,146,0.25)',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(214,122,146,0.1)',
         }}
       >
         {/* Top arrow indicator */}
@@ -42,7 +42,7 @@ export default function FloorIndicator({
             transition={{ duration: 1.5, repeat: Infinity }}
           >
             <svg width="8" height="5" viewBox="0 0 8 5" fill="none">
-              <path d="M4 0L8 5H0L4 0Z" fill="rgba(201,168,76,0.4)" />
+              <path d="M4 0L8 5H0L4 0Z" fill="rgba(214,122,146,0.4)" />
             </svg>
           </motion.div>
         )}
@@ -67,9 +67,9 @@ export default function FloorIndicator({
                   style={{
                     width: 5,
                     height: 5,
-                    backgroundColor: isActive ? '#c9a84c' : 'rgba(138,138,154,0.25)',
+                    backgroundColor: isActive ? '#d67a92' : 'rgba(138,138,154,0.25)',
                     boxShadow: isActive
-                      ? '0 0 6px rgba(201,168,76,0.6), 0 0 12px rgba(201,168,76,0.3)'
+                      ? '0 0 6px rgba(214,122,146,0.6), 0 0 12px rgba(214,122,146,0.3)'
                       : 'none',
                   }}
                   animate={isActive ? { scale: [1, 1.4, 1] } : { scale: 1 }}
@@ -85,8 +85,8 @@ export default function FloorIndicator({
                   style={{
                     fontSize: 9,
                     fontWeight: isActive ? 700 : 400,
-                    color: isActive ? '#c9a84c' : 'rgba(138,138,154,0.4)',
-                    textShadow: isActive ? '0 0 4px rgba(201,168,76,0.4)' : 'none',
+                    color: isActive ? '#d67a92' : 'rgba(138,138,154,0.4)',
+                    textShadow: isActive ? '0 0 4px rgba(214,122,146,0.4)' : 'none',
                     transition: 'all 0.3s ease',
                     fontFamily: 'Inter, sans-serif',
                     minWidth: 12,
@@ -108,7 +108,7 @@ export default function FloorIndicator({
             transition={{ duration: 1.5, repeat: Infinity }}
           >
             <svg width="8" height="5" viewBox="0 0 8 5" fill="none">
-              <path d="M0 0H8L4 5L0 0Z" fill="rgba(201,168,76,0.4)" />
+              <path d="M0 0H8L4 5L0 0Z" fill="rgba(214,122,146,0.4)" />
             </svg>
           </motion.div>
         )}
@@ -121,7 +121,7 @@ export default function FloorIndicator({
             left: -1,
             bottom: '20%',
             width: 1,
-            background: 'linear-gradient(180deg, transparent, rgba(201,168,76,0.3), transparent)',
+            background: 'linear-gradient(180deg, transparent, rgba(214,122,146,0.3), transparent)',
           }}
         />
         <div
@@ -131,7 +131,7 @@ export default function FloorIndicator({
             right: -1,
             bottom: '20%',
             width: 1,
-            background: 'linear-gradient(180deg, transparent, rgba(201,168,76,0.3), transparent)',
+            background: 'linear-gradient(180deg, transparent, rgba(214,122,146,0.3), transparent)',
           }}
         />
       </div>

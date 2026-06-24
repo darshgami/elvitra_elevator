@@ -1,6 +1,6 @@
 export const company = {
   name: 'Elvitra Elevators',
-  tagline: 'Elevating Excellence',
+  tagline: 'A NEW WAY TO ',
   taglineFull: 'Engineering Elevation, Redefining Excellence',
   description:
     'Elvitra Elevators is a premier elevator manufacturing and service company dedicated to providing world-class vertical mobility solutions. With a commitment to engineering excellence, safety, and innovation, we design, manufacture, install, and maintain elevators that set the benchmark for quality and reliability.',

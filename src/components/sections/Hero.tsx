@@ -54,8 +54,8 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage: `
-            repeating-linear-gradient(90deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px),
-            repeating-linear-gradient(0deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px)
+            repeating-linear-gradient(90deg, transparent, transparent 60px, #d67a92 60px, #d67a92 61px),
+            repeating-linear-gradient(0deg, transparent, transparent 60px, #d67a92 60px, #d67a92 61px)
           `,
         }}
       />
@@ -63,19 +63,19 @@ export default function Hero() {
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: 'radial-gradient(circle, #c9a84c 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #d67a92 1px, transparent 1px)',
           backgroundSize: '50px 50px',
         }}
       />
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-elvitra-dark/0 via-elvitra-dark/50 to-elvitra-dark" />
 
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-1/2 bg-gradient-to-r from-elvitra-gold/[0.02] to-transparent" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-1/2 bg-gradient-to-r from-elvitra-pink-dark/[0.02] to-transparent" />
 
       {cableLines.map((line, i) => (
         <motion.div
           key={i}
-          className="pointer-events-none absolute w-px bg-gradient-to-b from-transparent via-elvitra-gold/10 to-transparent"
+          className="pointer-events-none absolute w-px bg-gradient-to-b from-transparent via-elvitra-pink-dark/10 to-transparent"
           style={{ left: line.left, top: line.top, height: line.height }}
           animate={{ opacity: [0.3, 0.6, 0.3], scaleY: [1, 1.02, 1] }}
           transition={{
@@ -91,7 +91,7 @@ export default function Hero() {
         <div className="flex-1 text-center lg:text-left">
           <ScrollReveal direction="up" delay={0.2}>
             <motion.p
-              className="mb-4 font-sans text-sm font-semibold tracking-[0.25em] text-elvitra-gold uppercase"
+              className="mb-4 font-sans text-sm font-semibold tracking-[0.25em] text-elvitra-pink-dark uppercase"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -103,7 +103,7 @@ export default function Hero() {
           <ScrollReveal direction="up" delay={0.4}>
             <h1 className="font-serif text-5xl font-bold leading-tight tracking-tight text-elvitra-white md:text-6xl lg:text-7xl">
               {company.tagline}{' '}
-              <span className="text-elvitra-gold">Excellence</span>
+              <br /><span className="text-elvitra-pink-dark tracking-wider">RISE HIGH</span>
             </h1>
           </ScrollReveal>
 
@@ -128,7 +128,7 @@ export default function Hero() {
               <Button
                 variant="ghost"
                 size="lg"
-                className="border border-elvitra-white/20 text-elvitra-white hover:border-elvitra-gold/50 hover:text-elvitra-gold"
+                className="border border-elvitra-white/20 text-elvitra-white hover:border-elvitra-pink-dark/50 hover:text-elvitra-pink-dark"
                 onClick={() => scrollToSection('contact')}
               >
                 Get in Touch
@@ -161,7 +161,7 @@ export default function Hero() {
                       top: 0,
                       bottom: 0,
                       width: 1,
-                      background: 'linear-gradient(180deg, rgba(201,168,76,0.1), rgba(201,168,76,0.3))',
+                      background: 'linear-gradient(180deg, rgba(214,122,146,0.1), rgba(214,122,146,0.3))',
                     }}
                     animate={{ opacity: [0.5, 1, 0.5] }}
                     transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
@@ -174,7 +174,7 @@ export default function Hero() {
                       top: 0,
                       bottom: 0,
                       width: 1,
-                      background: 'linear-gradient(180deg, rgba(201,168,76,0.1), rgba(201,168,76,0.3))',
+                      background: 'linear-gradient(180deg, rgba(214,122,146,0.1), rgba(214,122,146,0.3))',
                     }}
                     animate={{ opacity: [0.5, 1, 0.5] }}
                     transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
@@ -193,7 +193,7 @@ export default function Hero() {
                   style={{
                     width: 220,
                     height: 3,
-                    background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.3), rgba(201,168,76,0.5), rgba(201,168,76,0.3), transparent)',
+                    background: 'linear-gradient(90deg, transparent, rgba(214,122,146,0.3), rgba(214,122,146,0.5), rgba(214,122,146,0.3), transparent)',
                     borderRadius: 2,
                   }}
                 />
@@ -203,7 +203,7 @@ export default function Hero() {
                   style={{
                     width: 180,
                     height: 20,
-                    background: 'radial-gradient(ellipse at top, rgba(201,168,76,0.08), transparent)',
+                    background: 'radial-gradient(ellipse at top, rgba(214,122,146,0.08), transparent)',
                     marginTop: -2,
                   }}
                 />
@@ -215,7 +215,7 @@ export default function Hero() {
 
       <motion.button
         onClick={() => scrollToSection('elevators')}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-elvitra-gold/60"
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 text-elvitra-pink-dark/60"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         aria-label="Scroll down"

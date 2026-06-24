@@ -34,8 +34,8 @@ export default function ElevatorsPage() {
           className="pointer-events-none absolute inset-0 opacity-[0.04]"
           style={{
             backgroundImage: `
-              repeating-linear-gradient(90deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px),
-              repeating-linear-gradient(0deg, transparent, transparent 60px, #c9a84c 60px, #c9a84c 61px)
+              repeating-linear-gradient(90deg, transparent, transparent 60px, #d67a92 60px, #d67a92 61px),
+              repeating-linear-gradient(0deg, transparent, transparent 60px, #d67a92 60px, #d67a92 61px)
             `,
           }}
         />
@@ -47,11 +47,11 @@ export default function ElevatorsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="mb-3 font-sans text-xs font-semibold tracking-[0.25em] text-elvitra-gold uppercase">
+            <p className="mb-3 font-sans text-xs font-semibold tracking-[0.25em] text-elvitra-pink-dark uppercase">
               Premium Vertical Mobility
             </p>
             <h1 className="font-serif text-3xl font-bold leading-tight text-elvitra-white md:text-5xl">
-              Elevator <span className="text-elvitra-gold">Types</span>
+              Elevator <span className="text-elvitra-pink-dark">Types</span>
             </h1>
           </motion.div>
         </div>

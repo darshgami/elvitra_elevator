@@ -88,7 +88,7 @@ export const elevators: Elevator[] = [
       'High-rise passenger elevator machine room with gearless motor',
     ],
     icon: 'ArrowUpDown',
-    color: '#c9a84c',
+    color: '#d67a92',
     category: 'passenger',
   },
   {

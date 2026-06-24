@@ -38,7 +38,7 @@ export default function ServicePage() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-serif text-8xl font-bold text-elvitra-gold"
+            className="font-serif text-8xl font-bold text-elvitra-pink-dark"
           >
             404
           </motion.h1>
@@ -97,11 +97,11 @@ function HeroSection({ service, Icon }: { service: typeof servicesData[0]; Icon:
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div
           className="absolute -left-32 -top-32 h-[500px] w-[500px] rounded-full opacity-[0.03]"
-          style={{ background: 'radial-gradient(circle, #c9a84c 0%, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #d67a92 0%, transparent 70%)' }}
         />
         <div
           className="absolute -bottom-32 -right-32 h-[500px] w-[500px] rounded-full opacity-[0.03]"
-          style={{ background: 'radial-gradient(circle, #c9a84c 0%, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #d67a92 0%, transparent 70%)' }}
         />
         {[1, 2, 3].map((i) => (
           <div
@@ -109,19 +109,19 @@ function HeroSection({ service, Icon }: { service: typeof servicesData[0]; Icon:
             className="absolute h-full w-px opacity-[0.04]"
             style={{
               left: `${15 + i * 30}%`,
-              background: 'linear-gradient(to bottom, transparent, #c9a84c, transparent)',
+              background: 'linear-gradient(to bottom, transparent, #d67a92, transparent)',
             }}
           />
         ))}
         <motion.div
           animate={{ y: [0, -20, 0], opacity: [0.03, 0.06, 0.03] }}
           transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute left-[20%] top-[25%] h-40 w-40 rounded-full border border-elvitra-gold/10"
+          className="absolute left-[20%] top-[25%] h-40 w-40 rounded-full border border-elvitra-pink-dark/10"
         />
         <motion.div
           animate={{ y: [0, 25, 0], opacity: [0.02, 0.05, 0.02] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
-          className="absolute right-[15%] top-[55%] h-56 w-56 rounded-full border border-elvitra-gold/10"
+          className="absolute right-[15%] top-[55%] h-56 w-56 rounded-full border border-elvitra-pink-dark/10"
         />
       </div>
 
@@ -130,17 +130,17 @@ function HeroSection({ service, Icon }: { service: typeof servicesData[0]; Icon:
           <div>
             <ScrollReveal direction="left">
               <div className="mb-6 flex items-center gap-3">
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-elvitra-gold/10">
-                  <Icon className="h-7 w-7 text-elvitra-gold" />
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-elvitra-pink-dark/10">
+                  <Icon className="h-7 w-7 text-elvitra-pink-dark" />
                 </div>
-                <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-elvitra-gold">
+                <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-elvitra-pink-dark">
                   Our Services
                 </span>
               </div>
               <h1 className="font-serif text-5xl font-bold leading-tight text-elvitra-white md:text-7xl">
                 {service.title}
               </h1>
-              <div className="mt-4 h-1 w-24 rounded bg-elvitra-gold" />
+              <div className="mt-4 h-1 w-24 rounded bg-elvitra-pink-dark" />
               <p className="mt-6 max-w-xl text-base leading-relaxed text-elvitra-text-light md:text-lg">
                 {service.description}
               </p>
@@ -163,22 +163,22 @@ function HeroSection({ service, Icon }: { service: typeof servicesData[0]; Icon:
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
                 className="relative mx-auto h-[400px] w-[350px]"
               >
-                <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-elvitra-gold/20 bg-gradient-to-b from-elvitra-gold/5 to-transparent p-8 backdrop-blur-sm">
-                  <Icon className="mb-6 h-24 w-24 text-elvitra-gold/30" />
+                <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-elvitra-pink-dark/20 bg-gradient-to-b from-elvitra-pink-dark/5 to-transparent p-8 backdrop-blur-sm">
+                  <Icon className="mb-6 h-24 w-24 text-elvitra-pink-dark/30" />
                   <span className="font-serif text-3xl font-bold text-elvitra-white/80">
                     {service.title}
                   </span>
-                  <div className="mt-4 h-px w-16 bg-elvitra-gold/40" />
+                  <div className="mt-4 h-px w-16 bg-elvitra-pink-dark/40" />
                   <div className="mt-6 space-y-3">
                     {service.benefits.slice(0, 4).map((b) => (
                       <div key={b} className="flex items-center gap-3">
-                        <CheckCircle className="h-4 w-4 text-elvitra-gold/60" />
+                        <CheckCircle className="h-4 w-4 text-elvitra-pink-dark/60" />
                         <span className="text-xs text-elvitra-text-light">{b}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-                <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-b from-elvitra-gold/5 to-transparent opacity-50 blur-2xl" />
+                <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-b from-elvitra-pink-dark/5 to-transparent opacity-50 blur-2xl" />
               </motion.div>
             </ScrollReveal>
           </div>
@@ -199,7 +199,7 @@ function HeroSection({ service, Icon }: { service: typeof servicesData[0]; Icon:
           <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-elvitra-text-light">
             Scroll
           </span>
-          <ChevronDown className="h-4 w-4 text-elvitra-gold" />
+          <ChevronDown className="h-4 w-4 text-elvitra-pink-dark" />
         </motion.div>
       </motion.div>
     </section>
@@ -216,7 +216,7 @@ function OverviewSection({ service }: { service: typeof servicesData[0] }) {
               <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
                 Overview
               </h2>
-              <div className="mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+              <div className="mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
               <p className="mt-6 text-base leading-relaxed text-elvitra-text lg:text-lg">
                 {service.description}
               </p>
@@ -236,8 +236,8 @@ function OverviewSection({ service }: { service: typeof servicesData[0] }) {
                     transition={{ delay: i * 0.06 }}
                     className="flex items-start gap-3 rounded-lg border border-elvitra-silver/40 bg-elvitra-pearl/50 p-4"
                   >
-                    <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-elvitra-gold/10">
-                      <CheckCircle className="h-3.5 w-3.5 text-elvitra-gold" />
+                    <div className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-elvitra-pink-dark/10">
+                      <CheckCircle className="h-3.5 w-3.5 text-elvitra-pink-dark" />
                     </div>
                     <span className="text-sm text-elvitra-text">{benefit}</span>
                   </motion.div>
@@ -261,7 +261,7 @@ function OverviewSection({ service }: { service: typeof servicesData[0] }) {
                     transition={{ delay: i * 0.06 }}
                     className="flex items-center gap-3 rounded-lg border border-elvitra-silver/30 bg-elvitra-white p-4 shadow-[0_2px_10px_rgba(0,0,0,0.04)]"
                   >
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-elvitra-gold/10 text-xs font-bold text-elvitra-gold">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-elvitra-pink-dark/10 text-xs font-bold text-elvitra-pink-dark">
                       {i + 1}
                     </span>
                     <span className="text-sm font-medium text-elvitra-dark">{benefit}</span>
@@ -283,9 +283,9 @@ function ProcessSection({ process }: { process: { step: string; description: str
         <ScrollReveal>
           <div className="text-center">
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
-              Our <span className="text-elvitra-gold">Process</span>
+              Our <span className="text-elvitra-pink-dark">Process</span>
             </h2>
-            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
             <p className="mx-auto mt-4 max-w-2xl text-elvitra-text">
               Our proven methodology ensures consistent quality and timely delivery at every stage
             </p>
@@ -293,7 +293,7 @@ function ProcessSection({ process }: { process: { step: string; description: str
         </ScrollReveal>
 
         <div className="relative mt-16">
-          <div className="pointer-events-none absolute left-[29px] top-0 hidden h-full w-px bg-gradient-to-b from-elvitra-gold/60 via-elvitra-gold/30 to-transparent md:block lg:left-[39px]" />
+          <div className="pointer-events-none absolute left-[29px] top-0 hidden h-full w-px bg-gradient-to-b from-elvitra-pink-dark/60 via-elvitra-pink-dark/30 to-transparent md:block lg:left-[39px]" />
 
           <div className="space-y-12">
             {process.map((step, index) => (
@@ -305,7 +305,7 @@ function ProcessSection({ process }: { process: { step: string; description: str
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1, type: 'spring', stiffness: 200 }}
-                      className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-elvitra-gold shadow-[0_0_20px_rgba(201,168,76,0.3)] md:h-16 md:w-16 lg:h-20 lg:w-20"
+                      className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-elvitra-pink-dark shadow-[0_0_20px_rgba(214,122,146,0.3)] md:h-16 md:w-16 lg:h-20 lg:w-20"
                     >
                       <span className="font-serif text-xl font-bold text-elvitra-dark md:text-2xl lg:text-3xl">
                         {String(index + 1).padStart(2, '0')}
@@ -346,9 +346,9 @@ function BenefitsSection({ service }: { service: typeof servicesData[0] }) {
           <div className="text-center">
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
               Why Choose Our{' '}
-              <span className="text-elvitra-gold">{service.title.replace(' Services', '')}</span>
+              <span className="text-elvitra-pink-dark">{service.title.replace(' Services', '')}</span>
             </h2>
-            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
           </div>
         </ScrollReveal>
 
@@ -358,8 +358,8 @@ function BenefitsSection({ service }: { service: typeof servicesData[0] }) {
             return (
               <ScrollReveal key={card.title} delay={index * 0.1}>
                 <div className="group rounded-lg bg-elvitra-pearl p-8 text-center shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-                  <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-elvitra-gold/10 transition-colors duration-300 group-hover:bg-elvitra-gold">
-                    <Icon className="h-8 w-8 text-elvitra-gold transition-colors duration-300 group-hover:text-elvitra-dark" />
+                  <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-elvitra-pink-dark/10 transition-colors duration-300 group-hover:bg-elvitra-pink-dark">
+                    <Icon className="h-8 w-8 text-elvitra-pink-dark transition-colors duration-300 group-hover:text-elvitra-dark" />
                   </div>
                   <h3 className="font-serif text-xl font-bold text-elvitra-dark">
                     {card.title}
@@ -382,9 +382,9 @@ function FaqSection({ faq }: { faq: { question: string; answer: string }[] }) {
         <ScrollReveal>
           <div className="text-center">
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
-              Frequently Asked <span className="text-elvitra-gold">Questions</span>
+              Frequently Asked <span className="text-elvitra-pink-dark">Questions</span>
             </h2>
-            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
           </div>
         </ScrollReveal>
 
@@ -414,23 +414,23 @@ function FaqItem({
       <motion.div
         className={`overflow-hidden rounded-xl border transition-all duration-300 ${
           isOpen
-            ? 'border-elvitra-gold/40 bg-elvitra-white shadow-[0_8px_30px_rgba(0,0,0,0.08)]'
-            : 'border-elvitra-silver/50 bg-elvitra-white/70 hover:border-elvitra-gold/20'
+            ? 'border-elvitra-pink-dark/40 bg-elvitra-white shadow-[0_8px_30px_rgba(0,0,0,0.08)]'
+            : 'border-elvitra-silver/50 bg-elvitra-white/70 hover:border-elvitra-pink-dark/20'
         }`}
       >
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="flex w-full items-center justify-between px-6 py-5 text-left"
         >
-          <span className="pr-4 font-serif text-base font-bold text-elvitra-gold md:text-lg">
+          <span className="pr-4 font-serif text-base font-bold text-elvitra-pink-dark md:text-lg">
             {question}
           </span>
           <motion.div
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
-            className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-elvitra-gold/10"
+            className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-elvitra-pink-dark/10"
           >
-            <ChevronDown className="h-4 w-4 text-elvitra-gold" />
+            <ChevronDown className="h-4 w-4 text-elvitra-pink-dark" />
           </motion.div>
         </button>
         <motion.div
@@ -442,7 +442,7 @@ function FaqItem({
           transition={{ duration: 0.3, ease: 'easeInOut' }}
           className="overflow-hidden"
         >
-          <div className="border-t border-elvitra-gold/10 px-6 pb-5 pt-4">
+          <div className="border-t border-elvitra-pink-dark/10 px-6 pb-5 pt-4">
             <p className="text-sm leading-relaxed text-elvitra-text">{answer}</p>
           </div>
         </motion.div>
@@ -458,15 +458,15 @@ function CTASection() {
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `
-            linear-gradient(45deg, #c9a84c 1px, transparent 1px),
-            linear-gradient(-45deg, #c9a84c 1px, transparent 1px)
+            linear-gradient(45deg, #d67a92 1px, transparent 1px),
+            linear-gradient(-45deg, #d67a92 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
         }}
       />
       <div
         className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-[0.04]"
-        style={{ background: 'radial-gradient(circle, #c9a84c 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, #d67a92 0%, transparent 70%)' }}
       />
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
@@ -493,7 +493,7 @@ function CTASection() {
               Contact Us
             </Button>
           </div>
-          <p className="mt-8 font-serif text-xl text-elvitra-gold md:text-2xl">
+          <p className="mt-8 font-serif text-xl text-elvitra-pink-dark md:text-2xl">
             {contact.phone[2].number}
           </p>
           <p className="mt-2 text-sm text-elvitra-text-light">{contact.hours}</p>
@@ -521,9 +521,9 @@ function RelatedSection({
         <ScrollReveal>
           <div className="text-center">
             <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
-              Explore Other <span className="text-elvitra-gold">Services</span>
+              Explore Other <span className="text-elvitra-pink-dark">Services</span>
             </h2>
-            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-gold" />
+            <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
           </div>
         </ScrollReveal>
 
@@ -534,8 +534,8 @@ function RelatedSection({
               <ScrollReveal key={item.slug} delay={index * 0.08}>
                 <Link to={`/services/${item.slug}`} className="group block h-full">
                   <div className="flex h-full flex-col rounded-lg border border-elvitra-silver/40 bg-elvitra-pearl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
-                    <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-elvitra-gold/10">
-                      <Icon className="h-7 w-7 text-elvitra-gold" />
+                    <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-elvitra-pink-dark/10">
+                      <Icon className="h-7 w-7 text-elvitra-pink-dark" />
                     </div>
                     <h3 className="font-serif text-2xl font-bold text-elvitra-dark">
                       {item.title}
@@ -543,7 +543,7 @@ function RelatedSection({
                     <p className="mt-3 flex-1 text-sm leading-relaxed text-elvitra-text">
                       {item.description}
                     </p>
-                    <div className="mt-5 flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-elvitra-gold transition-all duration-300 group-hover:gap-2">
+                    <div className="mt-5 flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-elvitra-pink-dark transition-all duration-300 group-hover:gap-2">
                       <span>Learn More</span>
                       <ArrowRight className="h-3 w-3" />
                     </div>

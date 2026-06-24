@@ -8,10 +8,10 @@
   --color-elvitra-dark: #0f0f1a;
   --color-elvitra-dark-2: #1a1a2e;
   --color-elvitra-dark-3: #16213e;
-  --color-elvitra-gold: #c9a84c;
-  --color-elvitra-gold-light: #dfc173;
-  --color-elvitra-gold-dark: #b8953a;
-  --color-elvitra-gold-pale: #f5ecc7;
+  --color-elvitra-pink-dark: #d67a92;
+  --color-elvitra-pink-light: #f4d0d9;
+  
+  --color-elvitra-pink-pale: #fde8ed;
   --color-elvitra-pearl: #f8f6f1;
   --color-elvitra-cream: #f0ece3;
   --color-elvitra-silver: #e2e0db;
@@ -33,6 +33,6 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-elvitra-gold);
+  background-color: var(--color-elvitra-pink-dark);
   color: var(--color-elvitra-dark);
 }

@@ -14,7 +14,7 @@ export default function ElevatorFeatures({ elevator }: ElevatorFeaturesProps) {
         <div className="mb-4 flex items-center gap-2">
           <div
             className="h-5 w-1 rounded-full"
-            style={{ background: 'linear-gradient(180deg, #dfc173, #c9a84c)' }}
+            style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
           />
           <h3 className="font-serif text-lg font-bold text-elvitra-white">
             Key Features
@@ -31,17 +31,17 @@ export default function ElevatorFeatures({ elevator }: ElevatorFeaturesProps) {
               className="group rounded-xl p-4 transition-all duration-300 hover:scale-[1.02]"
               style={{
                 background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-                border: '1px solid rgba(201,168,76,0.08)',
+                border: '1px solid rgba(214,122,146,0.08)',
               }}
             >
               <div className="mb-2 flex items-center gap-2">
                 <div
                   className="flex h-6 w-6 items-center justify-center rounded-md"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05))',
+                    background: 'linear-gradient(135deg, rgba(214,122,146,0.15), rgba(214,122,146,0.05))',
                   }}
                 >
-                  <Check className="h-3.5 w-3.5 text-elvitra-gold" />
+                  <Check className="h-3.5 w-3.5 text-elvitra-pink-dark" />
                 </div>
                 <h4 className="text-sm font-semibold text-elvitra-white/90">
                   {feature.title}
@@ -60,9 +60,9 @@ export default function ElevatorFeatures({ elevator }: ElevatorFeaturesProps) {
         <div className="mb-4 flex items-center gap-2">
           <div
             className="h-5 w-1 rounded-full"
-            style={{ background: 'linear-gradient(180deg, #dfc173, #c9a84c)' }}
+            style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
           />
-          <Shield className="h-4 w-4 text-elvitra-gold" />
+          <Shield className="h-4 w-4 text-elvitra-pink-dark" />
           <h3 className="font-serif text-lg font-bold text-elvitra-white">
             Safety Features
           </h3>
@@ -72,7 +72,7 @@ export default function ElevatorFeatures({ elevator }: ElevatorFeaturesProps) {
           className="rounded-xl p-5"
           style={{
             background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-            border: '1px solid rgba(201,168,76,0.08)',
+            border: '1px solid rgba(214,122,146,0.08)',
           }}
         >
           <div className="grid gap-2.5 sm:grid-cols-2">
@@ -87,8 +87,8 @@ export default function ElevatorFeatures({ elevator }: ElevatorFeaturesProps) {
                 <div
                   className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
                   style={{
-                    backgroundColor: '#c9a84c',
-                    boxShadow: '0 0 4px rgba(201,168,76,0.4)',
+                    backgroundColor: '#d67a92',
+                    boxShadow: '0 0 4px rgba(214,122,146,0.4)',
                   }}
                 />
                 <span className="text-xs text-elvitra-white/70">{feature}</span>
@@ -103,7 +103,7 @@ export default function ElevatorFeatures({ elevator }: ElevatorFeaturesProps) {
         <div className="mb-4 flex items-center gap-2">
           <div
             className="h-5 w-1 rounded-full"
-            style={{ background: 'linear-gradient(180deg, #dfc173, #c9a84c)' }}
+            style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
           />
           <h3 className="font-serif text-lg font-bold text-elvitra-white">
             Applications
@@ -120,10 +120,10 @@ export default function ElevatorFeatures({ elevator }: ElevatorFeaturesProps) {
               className="rounded-xl p-4"
               style={{
                 background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-                border: '1px solid rgba(201,168,76,0.08)',
+                border: '1px solid rgba(214,122,146,0.08)',
               }}
             >
-              <h4 className="text-sm font-semibold text-elvitra-gold">
+              <h4 className="text-sm font-semibold text-elvitra-pink-dark">
                 {app.title}
               </h4>
               <p className="mt-1 text-xs leading-relaxed text-elvitra-text-light/60">
