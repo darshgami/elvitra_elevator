@@ -101,9 +101,9 @@ export default function Hero() {
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.4}>
-            <h1 className="font-serif text-5xl font-bold leading-tight tracking-tight text-elvitra-white md:text-6xl lg:text-7xl">
+            <h1 className="font-sans text-2xl font leading-tight tracking-tight text-elvitra-white md:text-6xl lg:text-7xl">
               {company.tagline}{' '}
-              <br /><span className="text-elvitra-pink-dark tracking-wider">RISE HIGH</span>
+              <br /><span className=" font-sans text-elvitra-pink-dark tracking-wider">RISE HIGH</span>
             </h1>
           </ScrollReveal>
 
