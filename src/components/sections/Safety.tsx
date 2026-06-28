@@ -35,10 +35,10 @@ export default function Safety() {
       </div>
 
       <ScrollReveal>
-        <div className="mb-14 mt-4 text-center">
+        <div className="mb-14 mt-4 text-center pt-3">
           <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
             Safety{' '}
-            <span className="text-elvitra-pink-dark">First, Always</span>
+            <span className="text-black">First, Always</span>
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-elvitra-pink-dark" />
         </div>

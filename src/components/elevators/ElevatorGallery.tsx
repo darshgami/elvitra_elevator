@@ -7,47 +7,47 @@ interface ElevatorGalleryProps {
   elevatorId: string
 }
 
-// Premium elevator images based on type
-const elevatorImageStyles: Record<string, { gradient: string; accent: string; pattern: string }> = {
+// Premium light themes based on type
+const elevatorImageStyles: Record<string, { gradient: string; accent: string; border: string }> = {
   passenger: {
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f1a 100%)',
+    gradient: 'linear-gradient(135deg, #ffffff 0%, #f7f7f9 50%, #eff0f2 100%)',
     accent: '#d67a92',
-    pattern: 'Modern stainless steel cabin interior',
+    border: 'rgba(214,122,146,0.2)',
   },
   hospital: {
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #1a2332 50%, #0f0f1a 100%)',
+    gradient: 'linear-gradient(135deg, #ffffff 0%, #f0f7ff 50%, #e0effe 100%)',
     accent: '#3b82f6',
-    pattern: 'Spacious medical-grade elevator',
+    border: 'rgba(59,130,246,0.2)',
   },
   home: {
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #1a2e1a 50%, #0f0f1a 100%)',
+    gradient: 'linear-gradient(135deg, #ffffff 0%, #f0fdf4 50%, #dcfce7 100%)',
     accent: '#10b981',
-    pattern: 'Elegant home lift with wood finish',
+    border: 'rgba(16,185,129,0.2)',
   },
   freight: {
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #2e2a1a 50%, #0f0f1a 100%)',
+    gradient: 'linear-gradient(135deg, #ffffff 0%, #fffbeb 50%, #fef3c7 100%)',
     accent: '#f59e0b',
-    pattern: 'Heavy-duty industrial elevator',
+    border: 'rgba(245,158,11,0.2)',
   },
   hydraulic: {
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #2e1a1a 50%, #0f0f1a 100%)',
+    gradient: 'linear-gradient(135deg, #ffffff 0%, #fef2f2 50%, #fee2e2 100%)',
     accent: '#ef4444',
-    pattern: 'Hydraulic power system',
+    border: 'rgba(239,68,68,0.2)',
   },
   capsule: {
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #261a2e 50%, #0f0f1a 100%)',
+    gradient: 'linear-gradient(135deg, #ffffff 0%, #faf5ff 50%, #f3e8ff 100%)',
     accent: '#8b5cf6',
-    pattern: 'Panoramic glass elevator',
+    border: 'rgba(139,92,246,0.2)',
   },
   mrl: {
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #1a2a2e 50%, #0f0f1a 100%)',
+    gradient: 'linear-gradient(135deg, #ffffff 0%, #ecfeff 50%, #cffafe 100%)',
     accent: '#06b6d4',
-    pattern: 'Machine-room-less system',
+    border: 'rgba(6,182,212,0.2)',
   },
   goods: {
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #222e1a 50%, #0f0f1a 100%)',
+    gradient: 'linear-gradient(135deg, #ffffff 0%, #f7fee7 50%, #ecfccb 100%)',
     accent: '#84cc16',
-    pattern: 'Goods lift platform',
+    border: 'rgba(132,204,22,0.2)',
   },
 }
 
@@ -62,15 +62,14 @@ export default function ElevatorGallery({
   const prev = () => setActiveIndex((prev) => (prev - 1 + images.length) % images.length)
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       {/* Main image display */}
       <div
-        className="relative overflow-hidden rounded-2xl"
+        className="relative overflow-hidden rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300"
         style={{
           aspectRatio: '16/10',
           background: style.gradient,
-          border: '1px solid rgba(214,122,146,0.12)',
-          boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+          border: `1px solid ${style.border}`,
         }}
       >
         {/* Decorative grid */}
@@ -102,7 +101,7 @@ export default function ElevatorGallery({
                 style={{
                   width: 200,
                   height: 200,
-                  background: `radial-gradient(circle, ${style.accent}15 0%, transparent 70%)`,
+                  background: `radial-gradient(circle, ${style.accent}20 0%, transparent 70%)`,
                 }}
                 animate={{
                   scale: [1, 1.15, 1],
@@ -117,13 +116,11 @@ export default function ElevatorGallery({
 
               {/* Elevator shape */}
               <div
-                className="relative z-10 flex flex-col items-center justify-center rounded-xl"
+                className="relative z-10 flex flex-col items-center justify-center rounded-xl bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
                 style={{
                   width: 120,
                   height: 160,
-                  background: 'linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%)',
                   border: `2px solid ${style.accent}40`,
-                  boxShadow: `0 0 30px ${style.accent}15, inset 0 0 20px rgba(0,0,0,0.3)`,
                 }}
               >
                 {/* Interior lines */}
@@ -148,21 +145,20 @@ export default function ElevatorGallery({
                     bottom: '10%',
                     left: '50%',
                     width: 1,
-                    background: `linear-gradient(180deg, transparent, ${style.accent}40, transparent)`,
+                    background: `linear-gradient(180deg, transparent, ${style.accent}50, transparent)`,
                   }}
                 />
               </div>
 
               {/* Floor label */}
               <div
-                className="mt-4 rounded-md px-4 py-1.5"
+                className="mt-6 rounded-md px-4 py-2 bg-white shadow-sm"
                 style={{
-                  background: 'rgba(0,0,0,0.4)',
                   border: `1px solid ${style.accent}30`,
                 }}
               >
                 <span
-                  className="font-sans text-xs font-medium tracking-wider uppercase"
+                  className="font-sans text-xs font-bold tracking-wider uppercase"
                   style={{ color: style.accent }}
                 >
                   {images[activeIndex]}
@@ -177,39 +173,37 @@ export default function ElevatorGallery({
           <>
             <button
               onClick={prev}
-              className="absolute left-3 top-1/2 z-20 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full transition-all duration-300 hover:scale-110"
+              className="absolute left-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full transition-all duration-300 hover:scale-110 shadow-sm"
               style={{
-                background: 'rgba(0,0,0,0.5)',
-                border: '1px solid rgba(214,122,146,0.2)',
-                backdropFilter: 'blur(8px)',
+                background: 'rgba(255,255,255,0.9)',
+                border: '1px solid rgba(0,0,0,0.05)',
+                backdropFilter: 'blur(4px)',
               }}
             >
-              <ChevronLeft className="h-4 w-4 text-elvitra-white/70" />
+              <ChevronLeft className="h-5 w-5 text-elvitra-dark" />
             </button>
             <button
               onClick={next}
-              className="absolute right-3 top-1/2 z-20 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full transition-all duration-300 hover:scale-110"
+              className="absolute right-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full transition-all duration-300 hover:scale-110 shadow-sm"
               style={{
-                background: 'rgba(0,0,0,0.5)',
-                border: '1px solid rgba(214,122,146,0.2)',
-                backdropFilter: 'blur(8px)',
+                background: 'rgba(255,255,255,0.9)',
+                border: '1px solid rgba(0,0,0,0.05)',
+                backdropFilter: 'blur(4px)',
               }}
             >
-              <ChevronRight className="h-4 w-4 text-elvitra-white/70" />
+              <ChevronRight className="h-5 w-5 text-elvitra-dark" />
             </button>
           </>
         )}
 
         {/* Top-right badge */}
         <div
-          className="absolute right-4 top-4 rounded-full px-3 py-1"
+          className="absolute right-4 top-4 rounded-full px-3 py-1 bg-white shadow-sm"
           style={{
-            background: 'rgba(0,0,0,0.5)',
-            border: '1px solid rgba(214,122,146,0.2)',
-            backdropFilter: 'blur(8px)',
+            border: '1px solid rgba(0,0,0,0.05)',
           }}
         >
-          <span className="text-[10px] font-semibold text-elvitra-pink-dark">
+          <span className="text-[10px] font-bold text-elvitra-dark">
             {activeIndex + 1} / {images.length}
           </span>
         </div>
@@ -217,22 +211,18 @@ export default function ElevatorGallery({
 
       {/* Thumbnail indicators */}
       {images.length > 1 && (
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-2 pt-2">
           {images.map((_, index) => (
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className="relative h-1.5 rounded-full transition-all duration-300"
+              className="relative h-2 rounded-full transition-all duration-300"
               style={{
-                width: index === activeIndex ? 24 : 8,
+                width: index === activeIndex ? 32 : 12,
                 background:
                   index === activeIndex
-                    ? 'linear-gradient(90deg, #f4d0d9, #d67a92)'
-                    : 'rgba(138,138,154,0.3)',
-                boxShadow:
-                  index === activeIndex
-                    ? '0 0 6px rgba(214,122,146,0.4)'
-                    : 'none',
+                    ? style.accent
+                    : 'rgba(0,0,0,0.15)',
               }}
             />
           ))}

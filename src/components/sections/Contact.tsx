@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Send, Link, Camera, Globe } from 'lucide-react'
 import { contact } from '../../data/brochure'
 import SectionWrapper from '../ui/SectionWrapper'
 import ScrollReveal from '../animations/ScrollReveal'
@@ -22,10 +22,9 @@ const subjects = [
 ]
 
 const socialLinks = [
-  { label: 'LinkedIn', href: contact.social.linkedin },
-  { label: 'Facebook', href: contact.social.facebook },
-  { label: 'Instagram', href: contact.social.instagram },
-  { label: 'YouTube', href: contact.social.youtube },
+  { label: 'LinkedIn', href: contact.social.linkedin, icon: Globe },
+  { label: 'Facebook', href: contact.social.facebook, icon: Link },
+  { label: 'Instagram', href: contact.social.instagram, icon: Camera },
 ]
 
 export default function Contact() {
@@ -100,12 +99,9 @@ export default function Contact() {
                     <div className="mt-1 space-y-0.5">
                       {contact.phone.map((p) => (
                         <p
-                          key={p.label}
+                          key={p.number}
                           className="font-sans text-sm text-elvitra-text"
                         >
-                          <span className="font-medium text-elvitra-pink-dark">
-                            {p.label}:
-                          </span>{' '}
                           {p.number}
                         </p>
                       ))}
@@ -124,12 +120,9 @@ export default function Contact() {
                     <div className="mt-1 space-y-0.5">
                       {contact.email.map((e) => (
                         <p
-                          key={e.label}
+                          key={e.address}
                           className="font-sans text-sm text-elvitra-text"
                         >
-                          <span className="font-medium text-elvitra-pink-dark">
-                            {e.label}:
-                          </span>{' '}
                           {e.address}
                         </p>
                       ))}
@@ -158,16 +151,13 @@ export default function Contact() {
                 Follow Us
               </p>
               <div className="flex gap-3">
-                {socialLinks.map((link) => (
+                {socialLinks.map((link, index) => (
                   <a
-                    key={link.label}
+                    key={index}
                     href={link.href}
                     className="flex h-10 w-10 items-center justify-center rounded-lg border border-elvitra-silver/60 bg-elvitra-white text-elvitra-text-light transition-colors duration-300 hover:border-elvitra-pink-dark hover:bg-elvitra-pink-dark/10 hover:text-elvitra-pink-dark"
-                    aria-label={link.label}
                   >
-                    <span className="font-sans text-xs font-bold uppercase tracking-wide">
-                      {link.label.slice(0, 2)}
-                    </span>
+                    <link.icon className="h-5 w-5" />
                   </a>
                 ))}
               </div>

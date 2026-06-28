@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { company, stats } from '../../data/brochure'
+import { company } from '../../data/brochure'
 import ScrollReveal from '../animations/ScrollReveal'
 
 function ElevatorShaftGraphic() {
@@ -85,7 +85,7 @@ export default function AboutSection() {
           </ScrollReveal>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 gap-6 md:grid-cols-4">
+        {/* <div className="mt-20 grid grid-cols-2 gap-6 md:grid-cols-4">
           {stats.map((stat, index) => (
             <ScrollReveal key={stat.label} delay={index * 0.1}>
               <div className="rounded-lg border border-elvitra-pink-dark/20 bg-elvitra-pearl p-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
@@ -98,7 +98,7 @@ export default function AboutSection() {
               </div>
             </ScrollReveal>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   )

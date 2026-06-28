@@ -36,6 +36,7 @@ export default function ScrollReveal({
   return (
     <div ref={ref} className={className}>
       <motion.div
+        className="h-full w-full"
         initial={{
           opacity: 0,
           x: offset.x * distance,

@@ -10,44 +10,32 @@ export default function ElevatorFeatures({ elevator }: ElevatorFeaturesProps) {
   return (
     <div className="space-y-8">
       {/* Key Features */}
-      <div>
-        <div className="mb-4 flex items-center gap-2">
-          <div
-            className="h-5 w-1 rounded-full"
-            style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
-          />
-          <h3 className="font-serif text-lg font-bold text-elvitra-white">
+      <div className="bg-elvitra-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-elvitra-silver/50">
+        <div className="mb-6 flex items-center gap-3">
+          <div className="h-6 w-1 rounded-full bg-elvitra-pink-dark" />
+          <h3 className="font-serif text-xl font-bold text-elvitra-dark">
             Key Features
           </h3>
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2">
           {elevator.features.map((feature, index) => (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.05, duration: 0.3 }}
-              className="group rounded-xl p-4 transition-all duration-300 hover:scale-[1.02]"
-              style={{
-                background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-                border: '1px solid rgba(214,122,146,0.08)',
-              }}
+              className="group rounded-xl p-5 transition-all duration-300 hover:-translate-y-1 bg-elvitra-pearl border border-elvitra-silver/30 hover:border-elvitra-pink-dark/30 hover:shadow-sm"
             >
-              <div className="mb-2 flex items-center gap-2">
-                <div
-                  className="flex h-6 w-6 items-center justify-center rounded-md"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(214,122,146,0.15), rgba(214,122,146,0.05))',
-                  }}
-                >
-                  <Check className="h-3.5 w-3.5 text-elvitra-pink-dark" />
+              <div className="mb-3 flex items-center gap-3">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-elvitra-pink-dark/10 group-hover:bg-elvitra-pink-dark transition-colors">
+                  <Check className="h-4 w-4 text-elvitra-pink-dark group-hover:text-elvitra-white transition-colors" />
                 </div>
-                <h4 className="text-sm font-semibold text-elvitra-white/90">
+                <h4 className="text-sm font-bold text-elvitra-dark">
                   {feature.title}
                 </h4>
               </div>
-              <p className="text-xs leading-relaxed text-elvitra-text-light/70">
+              <p className="text-sm leading-relaxed text-elvitra-text">
                 {feature.description}
               </p>
             </motion.div>
@@ -56,81 +44,30 @@ export default function ElevatorFeatures({ elevator }: ElevatorFeaturesProps) {
       </div>
 
       {/* Safety Features */}
-      <div>
-        <div className="mb-4 flex items-center gap-2">
-          <div
-            className="h-5 w-1 rounded-full"
-            style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
-          />
-          <Shield className="h-4 w-4 text-elvitra-pink-dark" />
-          <h3 className="font-serif text-lg font-bold text-elvitra-white">
+      <div className="bg-elvitra-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-elvitra-silver/50">
+        <div className="mb-6 flex items-center gap-3">
+          <div className="h-6 w-1 rounded-full bg-elvitra-pink-dark" />
+          <Shield className="h-5 w-5 text-elvitra-pink-dark" />
+          <h3 className="font-serif text-xl font-bold text-elvitra-dark">
             Safety Features
           </h3>
         </div>
 
-        <div
-          className="rounded-xl p-5"
-          style={{
-            background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-            border: '1px solid rgba(214,122,146,0.08)',
-          }}
-        >
-          <div className="grid gap-2.5 sm:grid-cols-2">
+        <div className="rounded-xl p-6 bg-elvitra-pearl border border-elvitra-silver/30">
+          <div className="grid gap-4 sm:grid-cols-2">
             {elevator.safetyFeatures.map((feature, index) => (
               <motion.div
                 key={feature}
                 initial={{ opacity: 0, x: -8 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 + index * 0.04, duration: 0.25 }}
-                className="flex items-center gap-2.5"
+                className="flex items-center gap-3"
               >
-                <div
-                  className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
-                  style={{
-                    backgroundColor: '#d67a92',
-                    boxShadow: '0 0 4px rgba(214,122,146,0.4)',
-                  }}
-                />
-                <span className="text-xs text-elvitra-white/70">{feature}</span>
+                <div className="h-2 w-2 flex-shrink-0 rounded-full bg-elvitra-pink-dark" />
+                <span className="text-sm font-medium text-elvitra-dark">{feature}</span>
               </motion.div>
             ))}
           </div>
-        </div>
-      </div>
-
-      {/* Applications */}
-      <div>
-        <div className="mb-4 flex items-center gap-2">
-          <div
-            className="h-5 w-1 rounded-full"
-            style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
-          />
-          <h3 className="font-serif text-lg font-bold text-elvitra-white">
-            Applications
-          </h3>
-        </div>
-
-        <div className="grid gap-3 sm:grid-cols-2">
-          {elevator.applications.map((app, index) => (
-            <motion.div
-              key={app.title}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 + index * 0.06, duration: 0.3 }}
-              className="rounded-xl p-4"
-              style={{
-                background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-                border: '1px solid rgba(214,122,146,0.08)',
-              }}
-            >
-              <h4 className="text-sm font-semibold text-elvitra-pink-dark">
-                {app.title}
-              </h4>
-              <p className="mt-1 text-xs leading-relaxed text-elvitra-text-light/60">
-                {app.description}
-              </p>
-            </motion.div>
-          ))}
         </div>
       </div>
     </div>

@@ -54,22 +54,23 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
         />
 
         {/* Title & Description */}
-        <div className="mt-8">
+        <div className="mt-8 bg-elvitra-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-elvitra-silver/50">
           <motion.div
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.15, duration: 0.4 }}
           >
-            <p className="mb-2 font-sans text-xs font-semibold tracking-[0.2em] text-elvitra-pink-dark/70 uppercase">
+            <p className="mb-2 font-sans text-xs font-bold tracking-[0.2em] text-elvitra-pink-dark uppercase">
               {elevator.subtitle}
             </p>
-            <h2 className="font-serif text-3xl font-bold text-elvitra-white md:text-4xl">
+            <h2 className="font-serif text-3xl font-bold text-elvitra-dark md:text-4xl">
               {elevator.title}
             </h2>
+            <div className="mt-4 h-1 w-16 rounded bg-elvitra-pink-dark" />
           </motion.div>
 
           <motion.p
-            className="mt-4 max-w-3xl text-sm leading-relaxed text-elvitra-text-light/80"
+            className="mt-6 max-w-3xl text-sm leading-relaxed text-elvitra-text lg:text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.25, duration: 0.4 }}
@@ -79,7 +80,7 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
 
           {/* Quick stats */}
           <motion.div
-            className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4"
+            className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.4 }}
@@ -92,16 +93,12 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-xl px-4 py-3"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(214,122,146,0.08), rgba(214,122,146,0.02))',
-                  border: '1px solid rgba(214,122,146,0.1)',
-                }}
+                className="rounded-xl bg-elvitra-pearl px-5 py-4 border border-elvitra-silver/40 transition-colors hover:border-elvitra-pink-dark/30 hover:bg-elvitra-white shadow-sm"
               >
-                <p className="text-[10px] font-semibold tracking-wider text-elvitra-pink-dark/50 uppercase">
+                <p className="text-[10px] font-bold tracking-wider text-elvitra-pink-dark uppercase">
                   {stat.label}
                 </p>
-                <p className="mt-1 text-sm font-bold text-elvitra-white/90">
+                <p className="mt-1 text-sm font-bold text-elvitra-dark">
                   {stat.value}
                 </p>
               </div>
@@ -111,133 +108,71 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
 
         {/* Use Cases */}
         <motion.div
-          className="mt-8"
+          className="mt-8 bg-elvitra-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-elvitra-silver/50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.35, duration: 0.4 }}
         >
-          <div className="mb-4 flex items-center gap-2">
-            <div
-              className="h-5 w-1 rounded-full"
-              style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
-            />
-            <h3 className="font-serif text-lg font-bold text-elvitra-white">
-              Use Cases
+          <div className="mb-6 flex items-center gap-3">
+            <div className="h-6 w-1 rounded-full bg-elvitra-pink-dark" />
+            <h3 className="font-serif text-xl font-bold text-elvitra-dark">
+              Applications
             </h3>
           </div>
-          <div className="space-y-2">
+          <div className="grid gap-3 sm:grid-cols-2">
             {elevator.useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                className="flex items-start gap-3 rounded-lg px-4 py-2.5"
-                style={{
-                  background: 'rgba(214,122,146,0.03)',
-                }}
+                className="flex items-center gap-3 rounded-lg bg-elvitra-pearl px-5 py-3 border border-elvitra-silver/30"
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 + index * 0.05, duration: 0.3 }}
               >
-                <ArrowRight className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-elvitra-pink-dark/60" />
-                <span className="text-sm text-elvitra-white/70">{useCase}</span>
+                <div className="flex h-6 w-6 items-center justify-center rounded-full bg-elvitra-pink-dark/10">
+                  <ArrowRight className="h-3.5 w-3.5 flex-shrink-0 text-elvitra-pink-dark" />
+                </div>
+                <span className="text-sm font-medium text-elvitra-dark">{useCase}</span>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
         {/* Divider */}
-        <div
-          className="my-8 h-px"
-          style={{
-            background: 'linear-gradient(90deg, transparent, rgba(214,122,146,0.2), transparent)',
-          }}
-        />
+        <div className="my-8 h-px bg-elvitra-silver/50" />
 
-        {/* Features & Safety */}
-        <ElevatorFeatures elevator={elevator} />
+        <div className="grid gap-8 lg:grid-cols-5">
+          {/* Main Features Column */}
+          <div className="lg:col-span-3">
+            <ElevatorFeatures elevator={elevator} />
+          </div>
 
-        {/* Divider */}
-        <div
-          className="my-8 h-px"
-          style={{
-            background: 'linear-gradient(90deg, transparent, rgba(214,122,146,0.2), transparent)',
-          }}
-        />
+          {/* Specs Sidebar Column */}
+          <div className="lg:col-span-2 space-y-6">
+            <ElevatorSpecs specifications={elevator.specifications} />
 
-        {/* Specs */}
-        <ElevatorSpecs elevator={elevator} />
-
-        {/* CTA Buttons */}
-        <motion.div
-          className="mt-10 flex flex-col gap-4 sm:flex-row"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.4 }}
-        >
-          <Button
-            variant="primary"
-            size="lg"
-            onClick={() => {
-              const el = document.getElementById('contact')
-              if (el) el.scrollIntoView({ behavior: 'smooth' })
-            }}
-          >
-            <span className="flex items-center gap-2">
-              <MessageSquare className="h-4 w-4" />
-              Get a Quote
-            </span>
-          </Button>
-          <button
-            className="flex items-center justify-center gap-2 rounded-lg border px-6 py-3 font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:scale-[1.02]"
-            style={{
-              borderColor: 'rgba(214,122,146,0.3)',
-              color: '#d67a92',
-              background: 'rgba(214,122,146,0.05)',
-            }}
-          >
-            <Download className="h-4 w-4" />
-            Download Brochure
-          </button>
-        </motion.div>
-
-        {/* FAQs */}
-        {elevator.faqs.length > 0 && (
-          <motion.div
-            className="mt-10"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.55, duration: 0.4 }}
-          >
-            <div className="mb-4 flex items-center gap-2">
-              <div
-                className="h-5 w-1 rounded-full"
-                style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
-              />
-              <h3 className="font-serif text-lg font-bold text-elvitra-white">
-                Frequently Asked Questions
-              </h3>
-            </div>
-
-            <div className="space-y-3">
-              {elevator.faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="rounded-xl p-5"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-                    border: '1px solid rgba(214,122,146,0.08)',
-                  }}
-                >
-                  <h4 className="text-sm font-semibold text-elvitra-white/90">
-                    {faq.question}
-                  </h4>
-                  <p className="mt-2 text-xs leading-relaxed text-elvitra-text-light/60">
-                    {faq.answer}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        )}
+            {/* Quick Actions */}
+            <motion.div
+              className="rounded-xl bg-elvitra-pearl p-6 shadow-sm border border-elvitra-silver/40"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+            >
+              <h4 className="mb-4 font-serif text-lg font-bold text-elvitra-dark">
+                Interested in this model?
+              </h4>
+              <div className="flex flex-col gap-3">
+                <Button variant="primary" className="w-full justify-center">
+                  <MessageSquare className="mr-2 h-4 w-4" />
+                  Request a Quote
+                </Button>
+                <Button variant="outline" className="w-full justify-center">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Brochure
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
       </motion.div>
     </AnimatePresence>
   )

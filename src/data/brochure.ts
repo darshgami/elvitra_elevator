@@ -8,7 +8,7 @@ export const company = {
     'To be a globally recognized leader in the elevator industry, setting new standards in vertical transportation through continuous innovation, uncompromising quality, and exceptional customer experience.',
   mission:
     'To deliver safe, reliable, and technologically advanced elevator solutions that enhance urban mobility. We are committed to engineering excellence, customer satisfaction, and sustainable practices in everything we do.',
-  founded: 2010,
+  founded:2021,
   headquarters: 'Mumbai, India',
   serviceRegions: ['India', 'Middle East', 'Southeast Asia', 'Africa'],
   employees: '500+',
@@ -286,44 +286,26 @@ export const certifications = [
   {
     name: 'ISO 9001:2015',
     description: 'Quality Management Systems',
+    image: '/certi.1.jpeg',
   },
   {
-    name: 'ISO 14001:2015',
-    description: 'Environmental Management Systems',
-  },
-  {
-    name: 'ISO 45001:2018',
-    description: 'Occupational Health & Safety',
-  },
-  {
-    name: 'CE Marking',
-    description: 'European Conformity Standards',
-  },
-  {
-    name: 'BIS Certification',
-    description: 'Bureau of Indian Standards',
-  },
-  {
-    name: 'TUV Rheinland',
-    description: 'German Technical Inspection',
+    name: 'IOS 8100-1:2019',
+    description: 'Quality Management Systems',
+    image: '/certi2.jpeg',
   },
 ];
 
 export const contact = {
   address: {
-    line1: 'Elvitra House, MIDC Industrial Area',
-    line2: 'Andheri East, Mumbai – 400093',
-    country: 'Maharashtra, India',
+    line1: 'Capital market, F-96,',
+    line2: 'Ravapar Chowkdi, ',
+    country: 'Morbi, Gujarat 363641',
   },
   phone: [
-    { label: 'Sales', number: '+91 22 6789 1000' },
-    { label: 'Service', number: '+91 22 6789 2000' },
-    { label: 'Toll Free', number: '1800-123-ELVITRA' },
+    { number: '+91 9313161636' },
   ],
   email: [
-    { label: 'General', address: 'info@elvitra.com' },
-    { label: 'Sales', address: 'sales@elvitra.com' },
-    { label: 'Support', address: 'support@elvitra.com' },
+    { address: 'info.elvitraelevator@gmail.com' },
   ],
   hours: '24/7 Emergency Support · Mon–Sat: 9:00 AM – 6:00 PM',
   social: {
@@ -335,9 +317,8 @@ export const contact = {
 };
 
 export const stats = [
-  { value: '2000+', label: 'Projects Delivered' },
-  { value: '500+', label: 'Skilled Professionals' },
-  { value: '15+', label: 'Countries Served' },
+  { value: '50+', label: 'Projects Delivered' },
+  { value: '9+', label: 'Cities Served' },
   { value: '99.7%', label: 'Service Uptime' },
 ];
 

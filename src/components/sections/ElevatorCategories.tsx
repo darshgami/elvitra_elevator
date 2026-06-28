@@ -35,7 +35,7 @@ export default function ElevatorCategories() {
             const IconComponent = iconMap[category.id] || ArrowUpDown
 
             return (
-              <ScrollReveal key={category.id} delay={index * 0.08}>
+              <ScrollReveal key={category.id} delay={index * 0.08} className="h-full">
                 <div className="group flex h-full flex-col rounded-lg bg-elvitra-white p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
                   <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-elvitra-pink-dark/10">
                     <IconComponent className="h-7 w-7 text-elvitra-pink-dark" />

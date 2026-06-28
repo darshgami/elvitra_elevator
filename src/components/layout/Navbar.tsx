@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ArrowUpFromLine } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import Button from '../ui/Button'
 
 const linkVariants: any = {
@@ -62,87 +62,88 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`fixed left-0 right-0 top-0 z-50 h-[80px] px-6 lg:px-12 transition-all duration-500 ${
-          scrolled || !isHome
-            ? 'bg-elvitra-dark/92 shadow-[0_4px_30px_rgba(0,0,0,0.3)] backdrop-blur-xl'
-            : 'bg-transparent'
-        }`}
+        className="fixed left-0 right-0 top-0 z-50 px-4 pt-4 lg:pt-6 pb-2 transition-all duration-500 pointer-events-none"
       >
-        <div className="mx-auto flex h-full max-w-7xl items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="group flex items-center">
-            <img 
-              src="/logo.png" 
-              alt="Elvitra Logo Mark" 
-              className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
-            />
-            <img 
-              src="/elvitraname.png" 
-              alt="Elvitra Elevator" 
-              className="-ml-9 h-10 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80 md:-ml-[22]" 
-            />
-          </Link>
+        <div className={`mx-auto flex h-[72px] lg:h-[80px] w-full max-w-7xl items-center justify-between rounded-full px-6 lg:px-8 pointer-events-auto transition-all duration-500 ${
+          scrolled || !isHome
+            ? 'bg-elvitra-dark/92 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-xl border border-white/5'
+            : 'bg-transparent border border-transparent'
+        }`}>
+          {/* Logo Container (Left) */}
+          <div className="flex shrink-0 items-center">
+            <Link to="/" className="group flex items-center">
+              <img 
+                src="/logo.png" 
+                alt="Elvitra Logo Mark" 
+                className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              />
+              <img 
+                src="/elvitraname.png" 
+                alt="Elvitra Elevator" 
+                className="-ml-8 h-10 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80" 
+              />
+            </Link>
+          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden items-center gap-1 lg:flex">
+          {/* Desktop Navigation Links & CTA (Right) */}
+          <div className="hidden flex-1 items-center justify-end gap-4 lg:flex">
             <button
               onClick={() => handleNav('/')}
-              className={`px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
+              className={`group relative px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
                 isHome
                   ? 'text-elvitra-pink-dark'
                   : 'text-elvitra-white/80 hover:text-elvitra-pink-dark'
               }`}
             >
               Home
+              <span className="absolute bottom-0 left-3 right-3 h-[2px] origin-left transform scale-x-0 bg-elvitra-pink-dark transition-transform duration-300 group-hover:scale-x-100" />
             </button>
 
             <button
               onClick={() => handleNav('/elevators')}
-              className={`px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
+              className={`group relative px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
                 location.pathname.startsWith('/elevators')
                   ? 'text-elvitra-pink-dark'
                   : 'text-elvitra-white/80 hover:text-elvitra-pink-dark'
               }`}
             >
               Elevators
+              <span className="absolute bottom-0 left-3 right-3 h-[2px] origin-left transform scale-x-0 bg-elvitra-pink-dark transition-transform duration-300 group-hover:scale-x-100" />
             </button>
 
             <button
               onClick={() => handleNav('/services')}
-              className={`px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
+              className={`group relative px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
                 location.pathname.startsWith('/services')
                   ? 'text-elvitra-pink-dark'
                   : 'text-elvitra-white/80 hover:text-elvitra-pink-dark'
               }`}
             >
               Services
+              <span className="absolute bottom-0 left-3 right-3 h-[2px] origin-left transform scale-x-0 bg-elvitra-pink-dark transition-transform duration-300 group-hover:scale-x-100" />
             </button>
 
-            <button
-              onClick={() => handleNav('/#features')}
-              className="px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-pink-dark"
-            >
-              Features
-            </button>
-
-            <button
+            {/* <button
               onClick={() => handleNav('/#safety')}
-              className="px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-pink-dark"
+              className="group relative px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-pink-dark"
             >
               Safety
-            </button>
+              <span className="absolute bottom-0 left-3 right-3 h-[2px] origin-left transform scale-x-0 bg-elvitra-pink-dark transition-transform duration-300 group-hover:scale-x-100" />
+            </button> */}
 
             <button
               onClick={() => handleNav('/#contact')}
-              className="px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-pink-dark"
+              className="group relative px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-pink-dark"
             >
               Contact
+              <span className="absolute bottom-0 left-3 right-3 h-[2px] origin-left transform scale-x-0 bg-elvitra-pink-dark transition-transform duration-300 group-hover:scale-x-100" />
             </button>
 
-            <div className="ml-3">
+            <div className="ml-2 ">
               <Button
                 variant="primary"
                 size="sm"
+                className="rounded-full"
                 onClick={() => handleNav('/#contact')}
               >
                 Get a Quote
@@ -152,7 +153,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="relative z-50 flex h-10 w-10 items-center justify-center text-elvitra-white lg:hidden"
+            className="relative z-50 flex h-10 w-10 items-center justify-center text-elvitra-white lg:hidden ml-auto"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             <AnimatePresence mode="wait">
@@ -256,18 +257,6 @@ export default function Navbar() {
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
-                onClick={() => handleNav('/#features')}
-                className="font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-pink-dark"
-              >
-                Features
-              </motion.button>
-
-              <motion.button
-                custom={4}
-                variants={linkVariants}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
                 onClick={() => handleNav('/#safety')}
                 className="font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-pink-dark"
               >
@@ -275,7 +264,7 @@ export default function Navbar() {
               </motion.button>
 
               <motion.button
-                custom={5}
+                custom={4}
                 variants={linkVariants}
                 initial="hidden"
                 animate="visible"
@@ -287,7 +276,7 @@ export default function Navbar() {
               </motion.button>
 
               <motion.div
-                custom={6}
+                custom={5}
                 variants={linkVariants}
                 initial="hidden"
                 animate="visible"

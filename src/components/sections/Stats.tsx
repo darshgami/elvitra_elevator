@@ -54,12 +54,12 @@ export default function Stats() {
   return (
     <section className="relative bg-elvitra-pearl px-6 py-16 md:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-2 gap-12 md:gap-8 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-3 md:gap-8 lg:grid-cols-3">
           {stats.map((stat, i) => (
             <div key={stat.label} className="relative flex items-center justify-center">
               <AnimatedStat value={stat.value} label={stat.label} index={i} />
               {i < stats.length - 1 && (
-                <div className="hidden h-16 w-px bg-gradient-to-b from-transparent via-elvitra-pink-dark/30 to-transparent lg:absolute lg:right-0 lg:block" />
+                <div className="hidden h-16 w-px bg-gradient-to-b from-transparent via-elvitra-pink-dark/30 to-transparent md:absolute md:right-0 md:block" />
               )}
             </div>
           ))}

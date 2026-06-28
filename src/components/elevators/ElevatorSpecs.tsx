@@ -9,7 +9,6 @@ import {
   Zap,
   Settings,
 } from 'lucide-react'
-import type { Elevator } from '../../data/elevators'
 
 const specIcons: Record<string, React.ElementType> = {
   capacity: Weight,
@@ -34,31 +33,22 @@ const specLabels: Record<string, string> = {
 }
 
 interface ElevatorSpecsProps {
-  elevator: Elevator
+  specifications: Record<string, string>
 }
 
-export default function ElevatorSpecs({ elevator }: ElevatorSpecsProps) {
-  const specs = Object.entries(elevator.specifications) as [string, string][]
+export default function ElevatorSpecs({ specifications }: ElevatorSpecsProps) {
+  const specs = Object.entries(specifications) as [string, string][]
 
   return (
-    <div>
-      <div className="mb-4 flex items-center gap-2">
-        <div
-          className="h-5 w-1 rounded-full"
-          style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
-        />
-        <h3 className="font-serif text-lg font-bold text-elvitra-white">
+    <div className="bg-elvitra-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-elvitra-silver/50">
+      <div className="mb-6 flex items-center gap-3">
+        <div className="h-6 w-1 rounded-full bg-elvitra-pink-dark" />
+        <h3 className="font-serif text-xl font-bold text-elvitra-dark">
           Technical Specifications
         </h3>
       </div>
 
-      <div
-        className="overflow-hidden rounded-xl"
-        style={{
-          background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-          border: '1px solid rgba(214,122,146,0.1)',
-        }}
-      >
+      <div className="overflow-hidden rounded-xl bg-elvitra-pearl border border-elvitra-silver/40 divide-y divide-elvitra-silver/30">
         {specs.map(([key, value], index) => {
           const IconComponent = specIcons[key] || Settings
           const label = specLabels[key] || key
@@ -69,29 +59,17 @@ export default function ElevatorSpecs({ elevator }: ElevatorSpecsProps) {
               initial={{ opacity: 0, x: -10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.04, duration: 0.25 }}
-              className="flex items-center gap-4 px-5 py-3.5 transition-colors duration-300 hover:bg-elvitra-pink-dark/[0.03]"
-              style={{
-                borderBottom:
-                  index < specs.length - 1
-                    ? '1px solid rgba(214,122,146,0.06)'
-                    : 'none',
-              }}
+              className="flex items-center gap-4 px-5 py-4 transition-colors duration-300 hover:bg-elvitra-white"
             >
-              <div
-                className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
-                style={{
-                  background: 'rgba(214,122,146,0.08)',
-                  border: '1px solid rgba(214,122,146,0.1)',
-                }}
-              >
-                <IconComponent className="h-3.5 w-3.5 text-elvitra-pink-dark/70" />
+              <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-elvitra-pink-dark/10">
+                <IconComponent className="h-4 w-4 text-elvitra-pink-dark" />
               </div>
 
               <div className="flex flex-1 items-center justify-between gap-4">
-                <span className="text-xs font-medium tracking-wider text-elvitra-text-light/60 uppercase">
+                <span className="text-xs font-bold tracking-wider text-elvitra-text uppercase">
                   {label}
                 </span>
-                <span className="text-right text-sm font-semibold text-elvitra-white/90">
+                <span className="text-right text-sm font-semibold text-elvitra-dark">
                   {value}
                 </span>
               </div>
