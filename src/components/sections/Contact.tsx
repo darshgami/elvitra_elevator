@@ -85,12 +85,12 @@ export default function Contact() {
                       <br />
                       {contact.address.country}
                     </p>
-                    <div className="overflow-hidden rounded-xl border border-elvitra-silver/60 shadow-sm transition-all duration-300 hover:border-elvitra-pink-dark/50">
+                    <div className="mt-4 overflow-hidden rounded-xl border border-elvitra-pink-dark/20 shadow-sm transition-all duration-300 hover:border-elvitra-pink-dark/50 mr-40">
                       <iframe 
                         title="Elvitra Elevators Contact Location"
                         src="https://www.google.com/maps?q=Capital+market,+F-96,+Ravapar+Chowkdi,+Morbi,+Gujarat+363641&output=embed" 
                         width="100%" 
-                        height="150" 
+                        height="160"
                         style={{ border: 0 }} 
                         allowFullScreen={false} 
                         loading="lazy" 

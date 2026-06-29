@@ -1,10 +1,10 @@
 You are working on my existing production project.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ACTIVATE SPECIALIST AGENTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Before making ANY changes, activate these specialist agents:
+Before making ANY changes, activate the following specialist agents:
 
 @agency-engineering-software-architect
 @agency-engineering-frontend-developer
@@ -18,117 +18,103 @@ Apply ALL methodologies from:
 
 .ui-ux-pro-max-skill
 
-Use every applicable:
+Follow every applicable:
 
-• Design System Standards
-• UI/UX Best Practices
-• Accessibility Guidelines
+• UI/UX Guidelines
+• Design System Rules
+• Accessibility Standards
 • Responsive Standards
-• Animation Standards
 • Component Architecture
-• Production Checklist
-• QA Checklist
-• Anti-patterns
-• Typography Rules
-• Spacing System
+• Animation Guidelines
+• Typography System
 • Color System
-• Code Quality Standards
+• Spacing System
+• Anti-patterns
+• Performance Guidelines
+• QA Checklist
+• Production Checklist
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PROJECT CONTEXT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-The Services page currently uses a dark dashboard-style interface.
+This project already has an established premium light theme.
 
-The Home page already represents the correct visual identity of the website.
+Pages completed:
 
-Recently, the Elevators page has been redesigned to follow the Home page's premium light theme.
+• Home Page
+• Elevators Page
+• Services Page
 
-Now I want the Services page to follow EXACTLY the same design language.
+The Contact page MUST become part of this same design system.
 
-The Services page should feel like another section of the Home page—not like a different application.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VERY IMPORTANT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-The website must have ONE unified design system across all pages. Reusing the same design tokens, components, spacing, and typography improves consistency and maintainability across products. :contentReference[oaicite:0]{index=0}
+DO NOT CREATE A NEW DESIGN.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DO NOT CREATE A NEW THEME.
+
+DO NOT INTRODUCE NEW COLORS.
+
+DO NOT CHANGE BRANDING.
+
+Everything must reuse the existing project's design language.
+
+The Contact page should feel like it has always been part of the website.
+
+A high-quality contact page should make it easy to reach the business through multiple channels while keeping forms simple, mobile-friendly, and visually consistent with the rest of the site. :contentReference[oaicite:0]{index=0}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PRIMARY OBJECTIVE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Completely redesign the Services page into a premium light theme using ONLY the existing Home page design system.
+Create a modern premium corporate Contact page suitable for an elevator manufacturing company.
 
-This is NOT a new theme.
+The page should feel:
 
-This is NOT a redesign from scratch.
+✓ Premium
 
-This is a design system migration.
+✓ Luxury
 
-Reuse the existing Home page visual language everywhere.
+✓ Professional
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-CRITICAL REQUIREMENTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Corporate
 
-DO NOT change:
+✓ Modern
 
-✓ Routing
+✓ Trustworthy
 
-✓ Backend
+✓ Clean
 
-✓ APIs
+✓ Enterprise Grade
 
-✓ Database
+Reuse ONLY existing project components, colors, typography, spacing, shadows, borders, and UI patterns.
 
-✓ State Management
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DESIGN SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✓ React Logic
+Reuse from the existing project:
 
-✓ Components Logic
+✓ Navbar
 
-✓ Existing Animations (unless visually refined)
+✓ Footer
 
-✓ Existing Data
+✓ Section headings
 
-✓ Existing Services
-
-✓ Existing Navigation
-
-✓ Existing Filters
-
-✓ Existing Functionality
-
-✓ Existing SEO
-
-✓ Existing Accessibility
-
-✓ Existing Responsive Breakpoints
-
-Everything should work exactly as before.
-
-ONLY redesign the UI.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DO NOT CREATE A NEW DESIGN SYSTEM
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Reuse everything from the Home page:
-
-✓ Backgrounds
+✓ Buttons
 
 ✓ Cards
 
-✓ Containers
-
-✓ Section spacing
+✓ Border radius
 
 ✓ Shadows
 
-✓ Borders
-
-✓ Border Radius
+✓ Background colors
 
 ✓ Typography
-
-✓ Buttons
 
 ✓ Accent colors
 
@@ -136,379 +122,441 @@ Reuse everything from the Home page:
 
 ✓ Icons
 
+✓ Container width
+
+✓ Section spacing
+
 ✓ Grid system
 
-✓ Design Tokens
+✓ Responsive breakpoints
 
-✓ Utility classes
+DO NOT duplicate CSS.
 
-Do NOT duplicate CSS.
+Reuse existing utility classes and design tokens.
 
-Do NOT create new color variables.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONTACT PAGE STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Do NOT create another visual identity.
+Create the page using these sections.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 1 — HERO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Large premium hero.
+
+Include:
+
+Small label
+
+Main Heading
+
+Professional description
+
+Example:
+
+CONTACT US
+
+Let's Build Better Vertical Mobility Together
+
+Short corporate description explaining that customers can contact Elvitra Elevators for installations, modernization, maintenance, AMC, technical consultation, and quotations.
+
+Add a premium CTA button:
+
+Get a Free Quote
+
+Use the existing button style.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 2 — CONTACT INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create elegant information cards.
+
+Cards:
+
+📞 Phone
+
+📧 Email
+
+📍 Office Address
+
+🕒 Business Hours
+
+Each card should contain:
+
+Large icon
+
+Title
+
+Value
+
+Short description
+
+Cards must match the Home page card design.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 3 — CONTACT FORM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Create a premium inquiry form.
+
+Fields:
+
+Full Name
+
+Company Name (Optional)
+
+Phone Number
+
+Email
+
+Service Interested In
+
+Elevator Type
+
+City
+
+Message
+
+Preferred Contact Method
+
+Submit Button
+
+Use the existing project input styles.
+
+Do NOT create new form styles.
+
+Keep the form short and focused to reduce friction and encourage more inquiries. :contentReference[oaicite:1]{index=1}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 4 — WHY CHOOSE ELVITRA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Premium feature cards.
+
+Examples:
+
+✔ Fast Response
+
+✔ Expert Engineers
+
+✔ Certified Products
+
+✔ 24/7 Support
+
+✔ Quality Installation
+
+✔ AMC Services
+
+Reuse existing card styling.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 5 — SERVICE COVERAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Professional coverage section.
+
+Example:
+
+We proudly serve:
+
+• Residential Projects
+
+• Commercial Buildings
+
+• Hospitals
+
+• Hotels
+
+• Shopping Malls
+
+• Industrial Facilities
+
+• Government Projects
+
+• Educational Institutions
+
+Display using premium cards or icon grid.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 6 — GOOGLE MAP
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Embed Google Map.
+
+Display office location.
+
+Responsive.
+
+Rounded container.
+
+Soft shadow.
+
+Reuse existing card style.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 7 — FAQ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Professional FAQ accordion.
+
+Examples:
+
+How can I request a quotation?
+
+What elevator types do you provide?
+
+Do you provide AMC?
+
+What is your response time?
+
+Do you provide installation services?
+
+Reuse existing accordion styles if available.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SECTION 8 — FINAL CTA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Premium CTA section.
+
+Heading:
+
+Ready to Upgrade Your Building?
+
+Short paragraph.
+
+Buttons:
+
+Get a Quote
+
+Call Now
+
+Use existing button styles.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 COLOR SYSTEM
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Remove every dark section.
+Reuse ONLY existing project colors.
 
-Replace using the Home page palette.
+NO new palette.
+
+NO gradients unless already used.
+
+NO dark theme.
+
+NO dashboard appearance.
 
 Use:
 
-• White
+White backgrounds
 
-• Off-white
+Off-white sections
 
-• Soft gray backgrounds
+Existing brand accent
 
-• Existing brand pink accent
+Existing text colors
 
-• Existing typography colors
+Existing shadows
 
-• Existing border colors
+Existing borders
 
-• Existing shadows
-
-Do NOT introduce new colors.
-
-Maintain complete brand consistency.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-REDESIGN EVERY SECTION
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Every section on the Services page must match the Home page style.
-
-Including:
-
-• Hero Section
-
-• Service Categories
-
-• Service Cards
-
-• Service Details
-
-• Feature Sections
-
-• Process / Workflow
-
-• Benefits
-
-• Icons
-
-• CTA Sections
-
-• Information Cards
-
-• Pricing (if any)
-
-• FAQ (if available)
-
-• Contact CTA
-
-• Every List
-
-• Every Badge
-
-• Every Table
-
-• Every Container
-
-• Every Divider
-
-• Every Card
-
-Nothing should retain the current dashboard appearance.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CARD DESIGN
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-All cards should match the Home page.
+Reuse Home page cards.
 
-Use:
+White background.
 
-✓ White cards
+Soft shadow.
 
-✓ Soft shadows
+Rounded corners.
 
-✓ Thin borders
+Elegant padding.
 
-✓ Rounded corners
+Luxury spacing.
 
-✓ Elegant spacing
+Consistent border.
 
-✓ Premium hover
+Subtle hover.
 
-✓ Luxury padding
-
-✓ Clean typography
-
-✓ Consistent hierarchy
-
-Cards should look clean, readable, and consistent with the site's existing visual language rather than introducing a different style. :contentReference[oaicite:1]{index=1}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TYPOGRAPHY
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Reuse Home page typography.
-
-Maintain:
-
-• Heading sizes
-
-• Font weights
-
-• Paragraph spacing
-
-• Line height
-
-• Section titles
-
-• Accent headings
-
-Everything should visually match the Home page.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-BUTTONS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Reuse existing buttons.
-
-Same:
-
-✓ Colors
-
-✓ Radius
-
-✓ Hover
-
-✓ Shadow
-
-✓ Padding
-
-✓ Transition
-
-Do not invent new button styles.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ICONS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Reuse existing icon styling.
-
-Same:
-
-✓ Size
-
-✓ Color
-
-✓ Alignment
-
-✓ Stroke
-
-✓ Spacing
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SPACING
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Improve consistency.
-
-Use the Home page spacing system.
-
-Maintain:
-
-• Equal section spacing
-
-• Proper container width
-
-• Balanced whitespace
-
-• Better readability
-
-• Better visual rhythm
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-RESPONSIVE DESIGN
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RESPONSIVE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Desktop
 
-• Premium spacing
-
-• Balanced layouts
+Balanced multi-column layout.
 
 Tablet
 
-• Adaptive grids
-
-• Proper stacking
+Adaptive layout.
 
 Mobile
 
-• Touch-friendly
+Single-column.
 
-• Excellent readability
+Large touch targets.
 
-• Single-column where appropriate
+Readable typography.
 
-• No overflow
+No overflow.
 
-• No layout breaking
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ACCESSIBILITY
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Maintain:
 
 ✓ Semantic HTML
 
-✓ WCAG compliance
+✓ WCAG Compliance
 
-✓ Keyboard navigation
+✓ Keyboard Navigation
 
-✓ Focus states
+✓ Focus States
 
-✓ Screen reader support
+✓ Screen Reader Support
 
-✓ Proper heading hierarchy
+✓ Proper Labels
 
-✓ Alt text
+✓ Accessible Forms
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Proper Heading Hierarchy
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PERFORMANCE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Reuse existing components.
+Reuse components.
 
-Reuse existing CSS.
+Reuse CSS.
 
-Avoid duplicate styling.
+Avoid duplicate code.
 
-Avoid unnecessary renders.
+Avoid unnecessary state.
 
 Avoid unnecessary packages.
 
-Keep implementation lightweight.
+Lazy load map if possible.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Optimize rendering.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 STRICTLY DO NOT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ❌ Create a new theme
-
-❌ Create new colors
-
-❌ Create new typography
 
 ❌ Change branding
 
 ❌ Change logo
 
-❌ Change routing
+❌ Change navbar
 
-❌ Change backend
+❌ Change footer
+
+❌ Change typography family
+
+❌ Create new colors
+
+❌ Change routing
 
 ❌ Change APIs
 
-❌ Change business logic
+❌ Change backend
 
-❌ Change responsiveness
+❌ Change database
+
+❌ Change functionality
 
 ❌ Create duplicate components
 
-❌ Create duplicate CSS
+❌ Introduce inconsistent UI
 
-❌ Introduce dashboard styling
+Everything must look like it belongs to the existing website.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 IMPLEMENTATION PLAN
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Phase 1
 
-Analyze the Home page design system.
+Analyze the existing project design system.
 
 Phase 2
 
-Audit every Services page component.
+Audit reusable components.
 
 Phase 3
 
-Map existing Services components to the Home page design language.
+Design the Contact page using existing UI patterns.
 
 Phase 4
 
-Replace all dark UI with premium light UI.
+Implement responsive layout.
 
 Phase 5
 
-Reuse existing design tokens and shared components.
+Build inquiry form.
 
 Phase 6
 
-Optimize spacing and typography.
+Add contact information cards.
 
 Phase 7
 
-Validate responsiveness.
+Add Google Map.
 
 Phase 8
 
-Accessibility Audit.
+Add FAQ.
 
 Phase 9
 
-Performance optimization.
+Optimize accessibility.
 
 Phase 10
 
-Complete QA verification.
+Run QA.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-QUALITY ASSURANCE CHECKLIST
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+QUALITY ASSURANCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Verify:
 
-✓ Entire Services page matches the Home page
+✓ Matches Home page
 
-✓ Visual consistency with Elevators page
+✓ Matches Elevators page
 
-✓ Existing functionality preserved
+✓ Matches Services page
 
-✓ Existing routing preserved
+✓ Existing colors reused
 
-✓ Existing APIs preserved
+✓ Existing typography reused
 
-✓ Existing business logic preserved
+✓ Existing buttons reused
 
-✓ Existing animations preserved
+✓ Existing card styles reused
 
-✓ Premium light appearance
+✓ Fully responsive
 
-✓ White premium cards
+✓ Mobile optimized
 
-✓ Elegant shadows
+✓ Tablet optimized
 
-✓ Thin borders
+✓ Desktop optimized
 
-✓ Better typography
+✓ Contact form responsive
 
-✓ Better spacing
+✓ Google Map responsive
 
-✓ Responsive on Desktop
-
-✓ Responsive on Tablet
-
-✓ Responsive on Mobile
+✓ FAQ works
 
 ✓ Accessibility maintained
 
@@ -516,34 +564,32 @@ Verify:
 
 ✓ No warnings
 
+✓ Clean reusable code
+
 ✓ Zero regression
 
-✓ Production-ready code
+✓ Production-ready implementation
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 EXPECTED OUTPUT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Analyze the Home page design system.
+1. Analyze the existing project design system.
 
-2. Analyze every component on the Services page.
+2. List every file that requires modification or creation.
 
-3. List every file that requires modification.
+3. Explain why each file is needed.
 
-4. Explain why each file will be modified.
+4. Build the Contact page using ONLY the existing project design system.
 
-5. Redesign every Services page section using the existing Home page design language.
+5. Reuse existing colors, typography, spacing, buttons, cards, shadows, borders, and components.
 
-6. Reuse existing colors, components, spacing, typography, shadows, borders, and design tokens.
+6. Ensure complete responsiveness and accessibility.
 
-7. Preserve 100% functionality.
+7. Preserve existing routing, functionality, backend, and architecture.
 
-8. Validate responsiveness, accessibility, and performance.
+8. Deliver clean, scalable, maintainable, enterprise-grade production-ready code.
 
-9. Deliver clean, scalable, maintainable, enterprise-grade production-ready code.
+FINAL GOAL:
 
-FINAL GOAL
-
-The Services page should no longer feel like a separate dark dashboard.
-
-It should feel like a natural continuation of the Home page and the redesigned Elevators page, sharing one cohesive premium light design system, identical visual language, and consistent branding while preserving every existing feature, interaction, and behavior.
+The Contact page should look like a premium corporate page for Elvitra Elevators, perfectly matching the Home, Elevators, and Services pages. It should feel cohesive with the existing website, inspire trust, make contacting the company effortless, and avoid introducing any new visual theme or inconsistent design patterns.

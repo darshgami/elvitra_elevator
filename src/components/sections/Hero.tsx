@@ -77,7 +77,7 @@ export default function Hero() {
         <img 
           src={logoBg} 
           alt="Logo Background" 
-          className="h-[700px] w-full  object-cover opacity-10" 
+          className="h-[760px] w-full object-contain opacity-10" 
         />
       </div>
 
@@ -147,11 +147,11 @@ export default function Hero() {
         </div>
 
         {/* Elevator visualization */}
-        <div className="mt-16 flex-shrink-0 lg:mt-0 lg:ml-6">
+        <div className="mt-16 flex-shrink-0 lg:mt-0 -ml-4 pr-8 lg:-ml-12 lg:pr-24 pt-15">
           <ScrollReveal direction="right" delay={0.6}>
-            <div className="flex items-start gap-3">
+            <div className="flex items-center gap-6 lg:gap-10">
               {/* Floor indicator panel - left side */}
-              <div className="pt-10">
+              <div className="z-10 relative ">
                 <FloorIndicator
                   currentFloor={currentFloor}
                   totalFloors={15}
@@ -159,7 +159,7 @@ export default function Hero() {
               </div>
 
               {/* Elevator shaft assembly */}
-              <div className="relative flex flex-col items-center">
+              <div className="relative flex flex-col items-center scale-[1.15] sm:scale-[1.35] md:scale-[1.5] origin-left pl-2">
                 {/* Cable lines above elevator */}
                 <div className="relative mb-2" style={{ width: 200, height: 40 }}>
                   {/* Left cable */}

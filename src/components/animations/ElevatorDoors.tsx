@@ -19,11 +19,11 @@ export default function ElevatorDoors({
       style={{ width: 200, height: 280 }}
       onClick={onToggle}
     >
-      {/* Outer frame - brushed gold with depth */}
+      {/* Outer frame - solid pink */}
       <div
         className="absolute inset-0 rounded-lg"
         style={{
-          background: 'linear-gradient(135deg, #f4d0d9 0%, #d67a92 30%, #d67a92 60%, #8a7530 100%)',
+          background: '#d67a92',
           boxShadow: '0 0 30px rgba(214,122,146,0.2), 0 8px 32px rgba(0,0,0,0.4)',
         }}
       />
@@ -333,7 +333,7 @@ export default function ElevatorDoors({
           left: 10,
           right: 10,
           height: 4,
-          background: 'linear-gradient(90deg, #8a7530, #d67a92, #f4d0d9, #d67a92, #8a7530)',
+          background: '#d67a92',
           borderRadius: '0 0 2px 2px',
           boxShadow: '0 2px 8px rgba(214,122,146,0.2)',
         }}
