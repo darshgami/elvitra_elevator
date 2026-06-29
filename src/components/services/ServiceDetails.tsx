@@ -19,22 +19,22 @@ interface ServiceDetailsProps {
 
 const serviceVisuals: Record<string, { gradient: string; accent: string; icon: React.ElementType }> = {
   installation: {
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #1c273a 50%, #0f0f1a 100%)',
+    gradient: 'linear-gradient(135deg, #ffffff 0%, #fafafa 50%, #f5f5f5 100%)',
     accent: '#d67a92',
     icon: HardHat,
   },
   maintenance: {
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #1b2d35 50%, #0f0f1a 100%)',
+    gradient: 'linear-gradient(135deg, #ffffff 0%, #f8faf9 50%, #f0fdf4 100%)',
     accent: '#10b981',
     icon: Wrench,
   },
   amc: {
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #2e281d 50%, #0f0f1a 100%)',
+    gradient: 'linear-gradient(135deg, #ffffff 0%, #fffbf5 50%, #fffbeb 100%)',
     accent: '#f59e0b',
     icon: FileCheck,
   },
   modernization: {
-    gradient: 'linear-gradient(135deg, #1a1a2e 0%, #271d3a 50%, #0f0f1a 100%)',
+    gradient: 'linear-gradient(135deg, #ffffff 0%, #faf5ff 50%, #f3e8ff 100%)',
     accent: '#8b5cf6',
     icon: RefreshCw,
   },
@@ -85,8 +85,8 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
           className="relative overflow-hidden rounded-2xl p-8 md:p-12"
           style={{
             background: visual.gradient,
-            border: '1px solid rgba(214,122,146,0.12)',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+            border: '1px solid rgba(214,122,146,0.15)',
+            boxShadow: '0 8px 30px rgba(0,0,0,0.06)',
           }}
         >
           {/* Decorative Grid */}
@@ -126,7 +126,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
             <div
               className="flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-2xl"
               style={{
-                background: 'rgba(0,0,0,0.4)',
+                background: 'rgba(255,255,255,0.8)',
                 border: `2px solid ${visual.accent}40`,
                 boxShadow: `0 0 20px ${visual.accent}20`,
               }}
@@ -142,10 +142,10 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
               <p className="font-sans text-xs font-semibold tracking-[0.25em] text-elvitra-pink-dark uppercase">
                 Service Domain
               </p>
-              <h2 className="mt-1 font-serif text-2xl font-bold text-elvitra-white md:text-3xl">
+              <h2 className="mt-1 font-serif text-2xl font-bold text-elvitra-dark md:text-3xl">
                 {service.title}
               </h2>
-              <p className="mt-2 text-xs leading-relaxed text-elvitra-text-light/80 md:text-sm">
+              <p className="mt-2 text-xs leading-relaxed text-elvitra-text md:text-sm">
                 {service.description}
               </p>
             </div>
@@ -159,11 +159,11 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
               className="h-5 w-1 rounded-full"
               style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
             />
-            <h3 className="font-serif text-lg font-bold text-elvitra-white">
+            <h3 className="font-serif text-lg font-bold text-elvitra-dark">
               Service Overview
             </h3>
           </div>
-          <p className="text-sm leading-relaxed text-elvitra-text-light/70">
+          <p className="text-sm leading-relaxed text-elvitra-text">
             {service.overview}
           </p>
         </div>
@@ -175,7 +175,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
               className="h-5 w-1 rounded-full"
               style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
             />
-            <h3 className="font-serif text-lg font-bold text-elvitra-white">
+            <h3 className="font-serif text-lg font-bold text-elvitra-dark">
               Key Benefits & Commitments
             </h3>
           </div>
@@ -187,17 +187,13 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
                 initial={{ opacity: 0, x: -12 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.05, duration: 0.3 }}
-                className="flex items-start gap-3 rounded-xl p-4"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-                  border: '1px solid rgba(214,122,146,0.08)',
-                }}
+                className="flex items-start gap-3 rounded-xl p-4 bg-elvitra-pearl border border-elvitra-silver/40 shadow-sm"
               >
                 <CheckCircle2
                   className="mt-0.5 h-4 w-4 flex-shrink-0"
                   style={{ color: visual.accent }}
                 />
-                <span className="text-xs leading-relaxed text-elvitra-white/80">
+                <span className="text-xs leading-relaxed text-elvitra-text">
                   {benefit}
                 </span>
               </motion.div>
@@ -212,7 +208,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
               className="h-5 w-1 rounded-full"
               style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
             />
-            <h3 className="font-serif text-lg font-bold text-elvitra-white">
+            <h3 className="font-serif text-lg font-bold text-elvitra-dark">
               Methodology & Process Flow
             </h3>
           </div>
@@ -230,7 +226,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
                 <div
                   className="absolute -left-[20px] top-1.5 flex h-6 w-6 items-center justify-center rounded-full border text-[10px] font-bold"
                   style={{
-                    backgroundColor: '#1a1a2e',
+                    backgroundColor: '#ffffff',
                     borderColor: '#d67a92',
                     color: '#d67a92',
                     boxShadow: '0 0 6px rgba(214,122,146,0.3)',
@@ -239,17 +235,11 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
                   {index + 1}
                 </div>
 
-                <div
-                  className="rounded-xl p-4"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(26,26,46,0.5), rgba(15,15,26,0.7))',
-                    border: '1px solid rgba(214,122,146,0.06)',
-                  }}
-                >
-                  <h4 className="text-sm font-semibold text-elvitra-white">
+                <div className="rounded-xl p-4 bg-elvitra-white border border-elvitra-silver/40 shadow-sm">
+                  <h4 className="text-sm font-semibold text-elvitra-dark">
                     {proc.step}
                   </h4>
-                  <p className="mt-1.5 text-xs leading-relaxed text-elvitra-text-light/60">
+                  <p className="mt-1.5 text-xs leading-relaxed text-elvitra-text">
                     {proc.description}
                   </p>
                 </div>
@@ -265,7 +255,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
               className="h-5 w-1 rounded-full"
               style={{ background: 'linear-gradient(180deg, #f4d0d9, #d67a92)' }}
             />
-            <h3 className="font-serif text-lg font-bold text-elvitra-white">
+            <h3 className="font-serif text-lg font-bold text-elvitra-dark">
               Service FAQs
             </h3>
           </div>
@@ -274,16 +264,12 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
             {service.faqs.map((faq, index) => (
               <div
                 key={index}
-                className="rounded-xl p-5"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(26,26,46,0.6), rgba(15,15,26,0.8))',
-                  border: '1px solid rgba(214,122,146,0.08)',
-                }}
+                className="rounded-xl p-5 bg-elvitra-pearl border border-elvitra-silver/40 shadow-sm"
               >
-                <h4 className="text-sm font-semibold text-elvitra-white/90">
+                <h4 className="text-sm font-semibold text-elvitra-dark">
                   {faq.question}
                 </h4>
-                <p className="mt-2 text-xs leading-relaxed text-elvitra-text-light/60">
+                <p className="mt-2 text-xs leading-relaxed text-elvitra-text">
                   {faq.answer}
                 </p>
               </div>

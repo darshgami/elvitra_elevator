@@ -33,7 +33,7 @@ export default function ServicePage() {
 
   if (!service) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-elvitra-dark px-6">
+      <div className="flex min-h-screen items-center justify-center bg-elvitra-white px-6">
         <div className="text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export default function ServicePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
-            className="mt-4 font-serif text-2xl text-elvitra-white"
+            className="mt-4 font-serif text-2xl text-elvitra-dark"
           >
             Service Not Found
           </motion.p>
@@ -54,7 +54,7 @@ export default function ServicePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="mt-3 text-elvitra-text-light"
+            className="mt-3 text-elvitra-text"
           >
             The service you are looking for does not exist or may have been removed.
           </motion.p>
@@ -93,7 +93,7 @@ export default function ServicePage() {
 
 function HeroSection({ service, Icon }: { service: typeof servicesData[0]; Icon: React.ElementType }) {
   return (
-    <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-elvitra-dark px-6">
+    <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-elvitra-white px-6">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div
           className="absolute -left-32 -top-32 h-[500px] w-[500px] rounded-full opacity-[0.03]"
@@ -137,11 +137,11 @@ function HeroSection({ service, Icon }: { service: typeof servicesData[0]; Icon:
                   Our Services
                 </span>
               </div>
-              <h1 className="font-serif text-5xl font-bold leading-tight text-elvitra-white md:text-7xl">
+              <h1 className="font-serif text-5xl font-bold leading-tight text-elvitra-dark md:text-7xl">
                 {service.title}
               </h1>
               <div className="mt-4 h-1 w-24 rounded bg-elvitra-pink-dark" />
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-elvitra-text-light md:text-lg">
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-elvitra-text md:text-lg">
                 {service.description}
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
@@ -163,17 +163,17 @@ function HeroSection({ service, Icon }: { service: typeof servicesData[0]; Icon:
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
                 className="relative mx-auto h-[400px] w-[350px]"
               >
-                <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-elvitra-pink-dark/20 bg-gradient-to-b from-elvitra-pink-dark/5 to-transparent p-8 backdrop-blur-sm">
-                  <Icon className="mb-6 h-24 w-24 text-elvitra-pink-dark/30" />
-                  <span className="font-serif text-3xl font-bold text-elvitra-white/80">
+                <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-elvitra-silver/40 bg-elvitra-pearl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
+                  <Icon className="mb-6 h-24 w-24 text-elvitra-pink-dark/40" />
+                  <span className="font-serif text-3xl font-bold text-elvitra-dark">
                     {service.title}
                   </span>
                   <div className="mt-4 h-px w-16 bg-elvitra-pink-dark/40" />
                   <div className="mt-6 space-y-3">
                     {service.benefits.slice(0, 4).map((b) => (
                       <div key={b} className="flex items-center gap-3">
-                        <CheckCircle className="h-4 w-4 text-elvitra-pink-dark/60" />
-                        <span className="text-xs text-elvitra-text-light">{b}</span>
+                        <CheckCircle className="h-4 w-4 text-elvitra-pink-dark/80" />
+                        <span className="text-xs text-elvitra-text">{b}</span>
                       </div>
                     ))}
                   </div>
@@ -196,7 +196,7 @@ function HeroSection({ service, Icon }: { service: typeof servicesData[0]; Icon:
           transition={{ duration: 2, repeat: Infinity }}
           className="flex flex-col items-center gap-2"
         >
-          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-elvitra-text-light">
+          <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-elvitra-text">
             Scroll
           </span>
           <ChevronDown className="h-4 w-4 text-elvitra-pink-dark" />
@@ -453,7 +453,7 @@ function FaqItem({
 
 function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-elvitra-dark px-6 py-20 md:py-28">
+    <section className="relative overflow-hidden bg-elvitra-pearl px-6 py-20 md:py-28">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
@@ -471,10 +471,10 @@ function CTASection() {
 
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         <ScrollReveal>
-          <h2 className="font-serif text-4xl font-bold text-elvitra-white md:text-5xl lg:text-6xl">
+          <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl lg:text-6xl">
             Ready to Get Started?
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-elvitra-text-light md:text-lg">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-elvitra-text md:text-lg">
             Contact our team today to discuss your service requirements. We offer free consultations
             and customized service plans for every need.
           </p>
@@ -496,7 +496,7 @@ function CTASection() {
           <p className="mt-8 font-serif text-xl text-elvitra-pink-dark md:text-2xl">
             {contact.phone[2].number}
           </p>
-          <p className="mt-2 text-sm text-elvitra-text-light">{contact.hours}</p>
+          <p className="mt-2 text-sm text-elvitra-text">{contact.hours}</p>
         </ScrollReveal>
       </div>
     </section>

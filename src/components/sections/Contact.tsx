@@ -74,17 +74,29 @@ export default function Contact() {
                   <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-elvitra-pink-dark/10 text-elvitra-pink-dark">
                     <MapPin className="h-5 w-5" />
                   </div>
-                  <div>
+                  <div className="w-full">
                     <p className="font-sans text-sm font-semibold text-elvitra-dark">
                       Our Address
                     </p>
-                    <p className="mt-1 font-sans text-sm leading-relaxed text-elvitra-text">
+                    <p className="mt-1 font-sans text-sm leading-relaxed text-elvitra-text mb-4">
                       {contact.address.line1}
                       <br />
                       {contact.address.line2}
                       <br />
                       {contact.address.country}
                     </p>
+                    <div className="overflow-hidden rounded-xl border border-elvitra-silver/60 shadow-sm transition-all duration-300 hover:border-elvitra-pink-dark/50">
+                      <iframe 
+                        title="Elvitra Elevators Contact Location"
+                        src="https://www.google.com/maps?q=Capital+market,+F-96,+Ravapar+Chowkdi,+Morbi,+Gujarat+363641&output=embed" 
+                        width="100%" 
+                        height="150" 
+                        style={{ border: 0 }} 
+                        allowFullScreen={false} 
+                        loading="lazy" 
+                        referrerPolicy="no-referrer-when-downgrade"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -98,12 +110,13 @@ export default function Contact() {
                     </p>
                     <div className="mt-1 space-y-0.5">
                       {contact.phone.map((p) => (
-                        <p
+                        <a
                           key={p.number}
-                          className="font-sans text-sm text-elvitra-text"
+                          href={`tel:${p.number.replace(/\s/g, '')}`}
+                          className="block font-sans text-sm text-elvitra-text transition-colors hover:text-elvitra-pink-dark"
                         >
                           {p.number}
-                        </p>
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -119,12 +132,13 @@ export default function Contact() {
                     </p>
                     <div className="mt-1 space-y-0.5">
                       {contact.email.map((e) => (
-                        <p
+                        <a
                           key={e.address}
-                          className="font-sans text-sm text-elvitra-text"
+                          href={`mailto:${e.address}`}
+                          className="block font-sans text-sm text-elvitra-text transition-colors hover:text-elvitra-pink-dark"
                         >
                           {e.address}
-                        </p>
+                        </a>
                       ))}
                     </div>
                   </div>

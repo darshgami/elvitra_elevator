@@ -31,7 +31,7 @@ export default function ServicesPage() {
   }, [activeService.id])
 
   return (
-    <main className="min-h-screen bg-elvitra-dark pt-20">
+    <main className="min-h-screen bg-elvitra-white pt-20">
       {/* Decorative Header Block */}
       <section className="relative overflow-hidden px-6 py-16 md:py-20">
         <div
@@ -43,7 +43,7 @@ export default function ServicesPage() {
             `,
           }}
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-elvitra-dark/0 via-elvitra-dark/50 to-elvitra-dark" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-elvitra-white/0 via-elvitra-white/50 to-elvitra-white" />
 
         <div className="relative z-10 mx-auto max-w-7xl">
           <motion.div
@@ -54,7 +54,7 @@ export default function ServicesPage() {
             <p className="mb-3 font-sans text-xs font-semibold tracking-[0.25em] text-elvitra-pink-dark uppercase">
               Full Lifecycle Engineering
             </p>
-            <h1 className="font-serif text-3xl font-bold leading-tight text-elvitra-white md:text-5xl">
+            <h1 className="font-serif text-3xl font-bold leading-tight text-elvitra-dark md:text-5xl">
               Our <span className="text-elvitra-pink-dark">Services</span>
             </h1>
           </motion.div>

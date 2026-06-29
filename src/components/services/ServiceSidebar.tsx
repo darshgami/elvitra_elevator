@@ -31,12 +31,10 @@ export default function ServiceSidebar({
       {/* Desktop / Tablet Sidebar */}
       <aside className="hidden md:block">
         <div
-          className="sticky top-[100px] w-[280px] overflow-hidden rounded-2xl"
+          className="sticky top-[100px] w-[280px] overflow-hidden rounded-2xl bg-elvitra-white"
           style={{
-            background: 'linear-gradient(180deg, rgba(26,26,46,0.95) 0%, rgba(15,15,26,0.98) 100%)',
             border: '1px solid rgba(214,122,146,0.15)',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(214,122,146,0.1)',
-            backdropFilter: 'blur(20px)',
+            boxShadow: '0 8px 30px rgba(0,0,0,0.06)',
           }}
         >
           {/* Header */}
@@ -50,7 +48,7 @@ export default function ServiceSidebar({
             <p className="font-sans text-[10px] font-semibold tracking-[0.2em] text-elvitra-pink-dark/60 uppercase">
               Our Expertise
             </p>
-            <h3 className="mt-1 font-serif text-lg font-bold text-elvitra-white">
+            <h3 className="mt-1 font-serif text-lg font-bold text-elvitra-dark">
               Professional Services
             </h3>
           </div>
@@ -68,7 +66,7 @@ export default function ServiceSidebar({
                   className="relative flex w-full items-center gap-3 rounded-xl px-4 py-3.5 text-left transition-all duration-300"
                   style={{
                     background: isActive
-                      ? 'linear-gradient(135deg, rgba(214,122,146,0.12) 0%, rgba(214,122,146,0.05) 100%)'
+                      ? 'linear-gradient(135deg, rgba(214,122,146,0.08) 0%, rgba(214,122,146,0.02) 100%)'
                       : 'transparent',
                   }}
                   whileHover={{
@@ -100,13 +98,13 @@ export default function ServiceSidebar({
                     className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg"
                     style={{
                       background: isActive
-                        ? 'linear-gradient(135deg, rgba(214,122,146,0.2), rgba(214,122,146,0.1))'
-                        : 'rgba(214,122,146,0.06)',
+                        ? 'linear-gradient(135deg, rgba(214,122,146,0.15), rgba(214,122,146,0.05))'
+                        : 'rgba(214,122,146,0.04)',
                       border: isActive
-                        ? '1px solid rgba(214,122,146,0.3)'
+                        ? '1px solid rgba(214,122,146,0.2)'
                         : '1px solid rgba(214,122,146,0.08)',
                       boxShadow: isActive
-                        ? '0 0 12px rgba(214,122,146,0.15)'
+                        ? '0 0 12px rgba(214,122,146,0.1)'
                         : 'none',
                     }}
                     animate={{
@@ -121,7 +119,7 @@ export default function ServiceSidebar({
                     <IconComponent
                       className="h-4.5 w-4.5 transition-colors duration-300"
                       style={{
-                        color: isActive ? '#d67a92' : 'rgba(138,138,154,0.6)',
+                        color: isActive ? '#d67a92' : 'rgba(0,0,0,0.4)',
                       }}
                     />
                   </motion.div>
@@ -131,7 +129,7 @@ export default function ServiceSidebar({
                     <p
                       className="truncate font-sans text-sm font-semibold transition-colors duration-300"
                       style={{
-                        color: isActive ? '#d67a92' : 'rgba(255,255,255,0.7)',
+                        color: isActive ? '#d67a92' : 'rgba(0,0,0,0.7)',
                       }}
                     >
                       {service.shortTitle}
@@ -139,7 +137,7 @@ export default function ServiceSidebar({
                     <p
                       className="truncate text-[11px] transition-colors duration-300"
                       style={{
-                        color: isActive ? 'rgba(214,122,146,0.6)' : 'rgba(138,138,154,0.4)',
+                        color: isActive ? 'rgba(214,122,146,0.8)' : 'rgba(0,0,0,0.4)',
                       }}
                     >
                       {service.title}
@@ -185,9 +183,9 @@ export default function ServiceSidebar({
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="flex w-full items-center justify-between rounded-xl px-4 py-3"
             style={{
-              background: 'linear-gradient(135deg, rgba(214,122,146,0.15), rgba(214,122,146,0.05))',
+              background: 'linear-gradient(135deg, rgba(255,255,255,1), rgba(250,250,250,1))',
               border: '1px solid rgba(214,122,146,0.3)',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.2)'
+              boxShadow: '0 4px 20px rgba(0,0,0,0.06)'
             }}
           >
             <div className="flex items-center gap-3">
@@ -198,7 +196,7 @@ export default function ServiceSidebar({
                 <span className="font-sans text-[10px] font-bold uppercase tracking-widest text-elvitra-pink-dark/70">
                   Our Expertise
                 </span>
-                <span className="font-serif text-sm font-bold text-elvitra-white">
+                <span className="font-serif text-sm font-bold text-elvitra-dark">
                   {activeService.shortTitle}
                 </span>
               </div>
@@ -220,10 +218,9 @@ export default function ServiceSidebar({
                 transition={{ duration: 0.2 }}
                 className="absolute left-0 right-0 top-full z-50 mt-2 overflow-hidden rounded-xl"
                 style={{
-                  background: 'rgba(15,15,26,0.98)',
+                  background: 'rgba(255,255,255,1)',
                   border: '1px solid rgba(214,122,146,0.2)',
-                  boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
-                  backdropFilter: 'blur(20px)'
+                  boxShadow: '0 8px 30px rgba(0,0,0,0.08)',
                 }}
               >
                 <div className="max-h-[300px] overflow-y-auto p-2">
@@ -245,11 +242,11 @@ export default function ServiceSidebar({
                       >
                         <IconComponent
                           className="h-4 w-4"
-                          style={{ color: isActive ? '#d67a92' : 'rgba(138,138,154,0.6)' }}
+                          style={{ color: isActive ? '#d67a92' : 'rgba(0,0,0,0.4)' }}
                         />
                         <span
                           className="text-sm font-medium"
-                          style={{ color: isActive ? '#d67a92' : 'rgba(255,255,255,0.7)' }}
+                          style={{ color: isActive ? '#d67a92' : 'rgba(0,0,0,0.7)' }}
                         >
                           {service.shortTitle}
                         </span>

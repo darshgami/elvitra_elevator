@@ -136,6 +136,22 @@ export default function Footer() {
                   </p>
                 </div>
               </li>
+
+              {/* Google Map */}
+              <li className="pt-4">
+                <div className="overflow-hidden rounded-xl border border-elvitra-pink-dark/20 shadow-sm transition-all duration-300 hover:border-elvitra-pink-dark/50">
+                  <iframe 
+                    title="Elvitra Elevators Location"
+                    src="https://www.google.com/maps?q=Capital+market,+F-96,+Ravapar+Chowkdi,+Morbi,+Gujarat+363641&output=embed" 
+                    width="100%" 
+                    height="180" 
+                    style={{ border: 0 }} 
+                    allowFullScreen={false} 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </li>
             </ul>
           </div>
         </div>

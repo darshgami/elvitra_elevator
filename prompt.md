@@ -1,10 +1,10 @@
 You are working on my existing production project.
 
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ACTIVATE SPECIALIST AGENTS
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Before making ANY changes, activate the following specialist agents:
+Before making ANY changes, activate these specialist agents:
 
 @agency-engineering-software-architect
 @agency-engineering-frontend-developer
@@ -18,220 +18,217 @@ Apply ALL methodologies from:
 
 .ui-ux-pro-max-skill
 
-Follow every applicable:
+Use every applicable:
 
-• UI/UX Guidelines
-• Accessibility Standards
-• Design System Rules
-• Anti-patterns
-• Component Architecture
+• Design System Standards
+• UI/UX Best Practices
+• Accessibility Guidelines
 • Responsive Standards
-• Typography Rules
-• Spacing System
-• Color Usage Rules
-• Animation Guidelines
+• Animation Standards
+• Component Architecture
 • Production Checklist
 • QA Checklist
+• Anti-patterns
+• Typography Rules
+• Spacing System
+• Color System
+• Code Quality Standards
 
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PROJECT CONTEXT
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-The Elevators page is currently designed using a completely dark theme.
+The Services page currently uses a dark dashboard-style interface.
 
-My Home page already has the correct premium light theme and professional corporate appearance.
+The Home page already represents the correct visual identity of the website.
 
-I want the ENTIRE Elevators page to follow the same premium design language as the Home page.
+Recently, the Elevators page has been redesigned to follow the Home page's premium light theme.
 
-IMPORTANT:
+Now I want the Services page to follow EXACTLY the same design language.
 
-DO NOT create a new design system.
+The Services page should feel like another section of the Home page—not like a different application.
 
-DO NOT introduce a new color palette.
+The website must have ONE unified design system across all pages. Reusing the same design tokens, components, spacing, and typography improves consistency and maintainability across products. :contentReference[oaicite:0]{index=0}
 
-DO NOT invent a new theme.
-
-Reuse the existing Home page design system so the entire website feels like one cohesive product. Consistent layouts, spacing, card styles, and color usage reduce cognitive load and improve usability. :contentReference[oaicite:0]{index=0}
-
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PRIMARY OBJECTIVE
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Completely redesign the Elevators page into a premium light theme.
+Completely redesign the Services page into a premium light theme using ONLY the existing Home page design system.
 
-The page should feel like it naturally belongs with the Home page.
+This is NOT a new theme.
 
-When users navigate between Home and Elevators, there should be no visual disconnect.
+This is NOT a redesign from scratch.
 
-The experience should feel seamless.
+This is a design system migration.
 
-------------------------------------------------------------
-VERY IMPORTANT
-------------------------------------------------------------
+Reuse the existing Home page visual language everywhere.
 
-THIS IS NOT JUST A COLOR CHANGE.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CRITICAL REQUIREMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-This is a complete UI redesign while preserving all functionality.
-
-Everything should be rebuilt using the Home page's existing visual language.
-
-------------------------------------------------------------
-KEEP EVERYTHING FUNCTIONAL
-------------------------------------------------------------
-
-Do NOT change:
+DO NOT change:
 
 ✓ Routing
 
-✓ Navigation
+✓ Backend
 
 ✓ APIs
-
-✓ Backend
 
 ✓ Database
 
 ✓ State Management
 
+✓ React Logic
+
 ✓ Components Logic
 
-✓ Data
+✓ Existing Animations (unless visually refined)
 
-✓ Filtering
+✓ Existing Data
 
-✓ Carousel functionality
+✓ Existing Services
 
-✓ Animations (unless visually improved)
+✓ Existing Navigation
 
-✓ Scroll behavior
+✓ Existing Filters
 
-✓ Existing interactions
+✓ Existing Functionality
 
-✓ Business logic
+✓ Existing SEO
 
-✓ Responsive behavior
+✓ Existing Accessibility
 
-✓ Accessibility
+✓ Existing Responsive Breakpoints
 
-Only redesign the UI.
+Everything should work exactly as before.
 
-------------------------------------------------------------
-REUSE HOME PAGE DESIGN SYSTEM
-------------------------------------------------------------
+ONLY redesign the UI.
 
-Reuse existing:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DO NOT CREATE A NEW DESIGN SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-• Background colors
+Reuse everything from the Home page:
 
-• Card styles
+✓ Backgrounds
 
-• Borders
+✓ Cards
 
-• Border radius
+✓ Containers
 
-• Shadows
+✓ Section spacing
 
-• Section spacing
+✓ Shadows
 
-• Typography hierarchy
+✓ Borders
 
-• Button styles
+✓ Border Radius
 
-• Accent colors
+✓ Typography
 
-• Container widths
+✓ Buttons
 
-• Grid system
+✓ Accent colors
 
-• Hover effects
+✓ Hover effects
 
-• Icon styles
+✓ Icons
 
-• Title styles
+✓ Grid system
 
-• Section dividers
+✓ Design Tokens
 
-• Visual rhythm
+✓ Utility classes
 
-DO NOT create duplicate CSS.
+Do NOT duplicate CSS.
 
-Reuse existing variables, utilities, and design tokens whenever possible.
+Do NOT create new color variables.
 
-------------------------------------------------------------
-PAGE LAYOUT
-------------------------------------------------------------
+Do NOT create another visual identity.
 
-Redesign every section.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+COLOR SYSTEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-This includes:
+Remove every dark section.
 
-Hero Section
+Replace using the Home page palette.
 
-Sidebar
+Use:
 
-Elevator Preview
+• White
 
-Carousel
+• Off-white
 
-Elevator Information
+• Soft gray backgrounds
 
-Feature Cards
+• Existing brand pink accent
 
-Safety Features
+• Existing typography colors
 
-Applications
+• Existing border colors
 
-Specifications
+• Existing shadows
 
-Technical Information
+Do NOT introduce new colors.
 
-Every card
+Maintain complete brand consistency.
 
-Every list
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REDESIGN EVERY SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Every table
+Every section on the Services page must match the Home page style.
 
-Every badge
+Including:
 
-Every icon
+• Hero Section
 
-Every container
+• Service Categories
 
-Every section background
+• Service Cards
 
-Every heading
+• Service Details
 
-Every divider
+• Feature Sections
 
-Everything should match the Home page.
+• Process / Workflow
 
-------------------------------------------------------------
-BACKGROUND
-------------------------------------------------------------
+• Benefits
 
-Remove the heavy dark background.
+• Icons
 
-Replace it using the same light backgrounds already used throughout the Home page.
+• CTA Sections
 
-Examples:
+• Information Cards
 
-White
+• Pricing (if any)
 
-Off-white
+• FAQ (if available)
 
-Light gray sections
+• Contact CTA
 
-Subtle section separation
+• Every List
 
-NO pure black sections.
+• Every Badge
 
-NO navy backgrounds.
+• Every Table
 
-------------------------------------------------------------
+• Every Container
+
+• Every Divider
+
+• Every Card
+
+Nothing should retain the current dashboard appearance.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 CARD DESIGN
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Every card should match the Home page.
+All cards should match the Home page.
 
 Use:
 
@@ -243,339 +240,197 @@ Use:
 
 ✓ Rounded corners
 
-✓ Luxury spacing
+✓ Elegant spacing
 
-✓ Elegant hover
+✓ Premium hover
 
-✓ Premium depth
+✓ Luxury padding
 
-✓ Consistent padding
+✓ Clean typography
 
-Cards should feel clean, spacious, and easy to scan. Use subtle contrast, borders, and shadows to separate cards from light backgrounds without adding visual noise. :contentReference[oaicite:1]{index=1}
+✓ Consistent hierarchy
 
-------------------------------------------------------------
+Cards should look clean, readable, and consistent with the site's existing visual language rather than introducing a different style. :contentReference[oaicite:1]{index=1}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 TYPOGRAPHY
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Use the exact typography hierarchy already established on the Home page.
+Reuse Home page typography.
 
-Proper heading sizes.
+Maintain:
 
-Better line height.
+• Heading sizes
 
-Readable paragraphs.
+• Font weights
 
-Elegant spacing.
+• Paragraph spacing
 
-Consistent font weights.
+• Line height
 
-------------------------------------------------------------
-COLOR SYSTEM
-------------------------------------------------------------
+• Section titles
 
-DO NOT create new colors.
+• Accent headings
 
-Reuse existing colors from:
+Everything should visually match the Home page.
 
-Home page
-
-Navbar
-
-Buttons
-
-Footer
-
-Accent colors
-
-Primary Brand Color
-
-Secondary Brand Color
-
-Everything should be visually consistent.
-
-------------------------------------------------------------
-SIDEBAR
-------------------------------------------------------------
-
-Current sidebar feels like a dashboard.
-
-Redesign it into a premium website sidebar.
-
-Requirements:
-
-White background
-
-Soft shadow
-
-Thin border
-
-Luxury spacing
-
-Rounded corners
-
-Professional active state
-
-Elegant hover
-
-Better icon alignment
-
-Consistent spacing
-
-Sticky if already supported
-
-------------------------------------------------------------
-ELEVATOR PREVIEW
-------------------------------------------------------------
-
-Redesign preview section.
-
-Remove dashboard appearance.
-
-Create a premium product showcase.
-
-Improve:
-
-Container
-
-Border
-
-Background
-
-Shadow
-
-Spacing
-
-Alignment
-
-Visual hierarchy
-
-------------------------------------------------------------
-FEATURE CARDS
-------------------------------------------------------------
-
-Completely redesign.
-
-Use:
-
-White cards
-
-Soft shadow
-
-Rounded corners
-
-Premium icons
-
-Better spacing
-
-Readable typography
-
-Balanced layout
-
-------------------------------------------------------------
-TECHNICAL SPECIFICATIONS
-------------------------------------------------------------
-
-Current section looks like software dashboard data.
-
-Convert into premium specification cards or elegant specification table matching the Home page design.
-
-Improve:
-
-Spacing
-
-Icons
-
-Typography
-
-Hierarchy
-
-Borders
-
-------------------------------------------------------------
-APPLICATIONS
-------------------------------------------------------------
-
-Redesign cards.
-
-More whitespace.
-
-Better hierarchy.
-
-Better icons.
-
-Luxury appearance.
-
-------------------------------------------------------------
-SAFETY FEATURES
-------------------------------------------------------------
-
-Improve readability.
-
-Better spacing.
-
-Use premium check icons.
-
-Better grouping.
-
-Cleaner layout.
-
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 BUTTONS
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Reuse existing Home page buttons.
+Reuse existing buttons.
 
-Same hover.
+Same:
 
-Same radius.
+✓ Colors
 
-Same colors.
+✓ Radius
 
-Same shadows.
+✓ Hover
 
-Same animations.
+✓ Shadow
 
-------------------------------------------------------------
+✓ Padding
+
+✓ Transition
+
+Do not invent new button styles.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ICONS
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Use the existing icon system.
+Reuse existing icon styling.
 
-Same size.
+Same:
 
-Same colors.
+✓ Size
 
-Same spacing.
+✓ Color
 
-Same visual weight.
+✓ Alignment
 
-------------------------------------------------------------
-ANIMATIONS
-------------------------------------------------------------
+✓ Stroke
 
-Very subtle only.
+✓ Spacing
 
-Allowed:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SPACING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✓ Fade
+Improve consistency.
 
-✓ Small lift
+Use the Home page spacing system.
 
-✓ Soft shadow
+Maintain:
 
-✓ Border transition
+• Equal section spacing
 
-✓ Opacity
+• Proper container width
 
-NOT allowed:
+• Balanced whitespace
 
-✗ Bounce
+• Better readability
 
-✗ Rotation
+• Better visual rhythm
 
-✗ Flash
-
-✗ Large scaling
-
-✗ Heavy animations
-
-------------------------------------------------------------
-RESPONSIVE
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RESPONSIVE DESIGN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Desktop
 
-Luxury spacing.
+• Premium spacing
 
-Wide layout.
-
-Balanced grid.
+• Balanced layouts
 
 Tablet
 
-Adaptive spacing.
+• Adaptive grids
 
-Proper stacking.
+• Proper stacking
 
 Mobile
 
-Excellent readability.
+• Touch-friendly
 
-Single-column where appropriate.
+• Excellent readability
 
-Touch-friendly.
+• Single-column where appropriate
 
-No overflow.
+• No overflow
 
-No broken layouts.
+• No layout breaking
 
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ACCESSIBILITY
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Maintain:
 
 ✓ Semantic HTML
 
+✓ WCAG compliance
+
 ✓ Keyboard navigation
 
 ✓ Focus states
 
-✓ WCAG compliance
-
-✓ Screen reader compatibility
+✓ Screen reader support
 
 ✓ Proper heading hierarchy
 
 ✓ Alt text
 
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PERFORMANCE
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Reuse existing components.
 
-Reuse CSS.
+Reuse existing CSS.
 
-Avoid duplicate code.
+Avoid duplicate styling.
 
 Avoid unnecessary renders.
 
-No unnecessary packages.
+Avoid unnecessary packages.
 
 Keep implementation lightweight.
 
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 STRICTLY DO NOT
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ❌ Create a new theme
 
-❌ Create a new color palette
+❌ Create new colors
+
+❌ Create new typography
 
 ❌ Change branding
 
 ❌ Change logo
 
-❌ Change typography family
-
-❌ Change routes
-
-❌ Change APIs
+❌ Change routing
 
 ❌ Change backend
 
-❌ Change functionality
+❌ Change APIs
+
+❌ Change business logic
+
+❌ Change responsiveness
 
 ❌ Create duplicate components
 
-❌ Introduce inconsistent UI
+❌ Create duplicate CSS
 
-Everything must feel like the Home page.
+❌ Introduce dashboard styling
 
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 IMPLEMENTATION PLAN
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Phase 1
 
@@ -583,51 +438,71 @@ Analyze the Home page design system.
 
 Phase 2
 
-Analyze every component on the Elevators page.
+Audit every Services page component.
 
 Phase 3
 
-Map Home page components to corresponding Elevators components.
+Map existing Services components to the Home page design language.
 
 Phase 4
 
-Redesign every section.
+Replace all dark UI with premium light UI.
 
 Phase 5
 
-Unify spacing and typography.
+Reuse existing design tokens and shared components.
 
 Phase 6
 
-Optimize responsiveness.
+Optimize spacing and typography.
 
 Phase 7
 
-Accessibility audit.
+Validate responsiveness.
 
 Phase 8
 
-Performance optimization.
+Accessibility Audit.
 
 Phase 9
 
-QA Verification.
+Performance optimization.
 
-------------------------------------------------------------
+Phase 10
+
+Complete QA verification.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 QUALITY ASSURANCE CHECKLIST
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Verify:
 
-✓ Entire page follows Home page design language
+✓ Entire Services page matches the Home page
 
-✓ No dark dashboard appearance remains
-
-✓ Existing brand colors preserved
+✓ Visual consistency with Elevators page
 
 ✓ Existing functionality preserved
 
-✓ Existing routes preserved
+✓ Existing routing preserved
+
+✓ Existing APIs preserved
+
+✓ Existing business logic preserved
+
+✓ Existing animations preserved
+
+✓ Premium light appearance
+
+✓ White premium cards
+
+✓ Elegant shadows
+
+✓ Thin borders
+
+✓ Better typography
+
+✓ Better spacing
 
 ✓ Responsive on Desktop
 
@@ -635,54 +510,40 @@ Verify:
 
 ✓ Responsive on Mobile
 
-✓ Proper spacing
-
-✓ Proper typography
-
-✓ White premium cards
-
-✓ Elegant shadows
-
-✓ Professional borders
-
-✓ Better visual hierarchy
-
 ✓ Accessibility maintained
 
 ✓ No console errors
 
 ✓ No warnings
 
-✓ Clean reusable code
-
 ✓ Zero regression
 
-✓ Production-ready implementation
+✓ Production-ready code
 
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 EXPECTED OUTPUT
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 1. Analyze the Home page design system.
 
-2. Analyze every Elevators page component.
+2. Analyze every component on the Services page.
 
 3. List every file that requires modification.
 
-4. Explain why each file is modified.
+4. Explain why each file will be modified.
 
-5. Redesign every Elevators page section using the existing Home page design language.
+5. Redesign every Services page section using the existing Home page design language.
 
-6. Reuse existing colors, components, spacing, and UI patterns.
+6. Reuse existing colors, components, spacing, typography, shadows, borders, and design tokens.
 
-7. Keep 100% functionality unchanged.
+7. Preserve 100% functionality.
 
-8. Verify responsiveness and accessibility.
+8. Validate responsiveness, accessibility, and performance.
 
 9. Deliver clean, scalable, maintainable, enterprise-grade production-ready code.
 
-FINAL GOAL:
+FINAL GOAL
 
-The Elevators page should no longer feel like a separate dark dashboard.
+The Services page should no longer feel like a separate dark dashboard.
 
-It should look like a premium extension of the Home page, using the exact same visual language, color system, spacing, typography, component styling, and overall brand identity while preserving every existing feature and interaction.
+It should feel like a natural continuation of the Home page and the redesigned Elevators page, sharing one cohesive premium light design system, identical visual language, and consistent branding while preserving every existing feature, interaction, and behavior.

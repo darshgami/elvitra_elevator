@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import logoBg from '../../../images/logo-removebg-preview.png'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 import { company } from '../../data/brochure'
 import ElevatorDoors from '../animations/ElevatorDoors'
@@ -71,6 +72,14 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-elvitra-dark/0 via-elvitra-dark/50 to-elvitra-dark" />
 
       <div className="pointer-events-none absolute left-0 top-0 h-full w-1/2 bg-gradient-to-r from-elvitra-pink-dark/[0.02] to-transparent" />
+
+      <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center opacity-50">
+        <img 
+          src={logoBg} 
+          alt="Logo Background" 
+          className="h-[700px] w-full  object-cover opacity-10" 
+        />
+      </div>
 
       {cableLines.map((line, i) => (
         <motion.div
