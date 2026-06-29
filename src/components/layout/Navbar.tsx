@@ -132,8 +132,12 @@ export default function Navbar() {
             </button> */}
 
             <button
-              onClick={() => handleNav('/#contact')}
-              className="group relative px-3 py-2 font-sans text-sm font-medium tracking-wider text-elvitra-white/80 uppercase transition-colors duration-300 hover:text-elvitra-pink-dark"
+              onClick={() => handleNav('/contact')}
+              className={`group relative px-3 py-2 font-sans text-sm font-medium tracking-wider uppercase transition-colors duration-300 ${
+                location.pathname.startsWith('/contact')
+                  ? 'text-elvitra-pink-dark'
+                  : 'text-elvitra-white/80 hover:text-elvitra-pink-dark'
+              }`}
             >
               Contact
               <span className="absolute bottom-0 left-3 right-3 h-[2px] origin-left transform scale-x-0 bg-elvitra-pink-dark transition-transform duration-300 group-hover:scale-x-100" />
@@ -144,7 +148,7 @@ export default function Navbar() {
                 variant="primary"
                 size="sm"
                 className="rounded-full"
-                onClick={() => handleNav('/#contact')}
+                onClick={() => handleNav('/contact')}
               >
                 Get a Quote
               </Button>
@@ -269,8 +273,12 @@ export default function Navbar() {
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
-                onClick={() => handleNav('/#contact')}
-                className="font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-pink-dark"
+                onClick={() => handleNav('/contact')}
+                className={`font-serif text-3xl font-medium tracking-wider transition-colors duration-300 ${
+                  location.pathname.startsWith('/contact')
+                    ? 'text-elvitra-pink-dark'
+                    : 'text-elvitra-white/90 hover:text-elvitra-pink-dark'
+                }`}
               >
                 Contact
               </motion.button>
@@ -286,7 +294,7 @@ export default function Navbar() {
                 <Button
                   variant="primary"
                   size="lg"
-                  onClick={() => handleNav('/#contact')}
+                  onClick={() => handleNav('/contact')}
                 >
                   Get a Quote
                 </Button>
