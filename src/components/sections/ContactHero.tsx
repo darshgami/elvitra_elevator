@@ -64,6 +64,7 @@ export default function ContactHero() {
               <Button
                 variant="primary"
                 size="lg"
+                className="rounded-full"
                 onClick={() => scrollToSection('contact-form')}
               >
                 Get a Free Quote

@@ -127,6 +127,7 @@ export default function Hero() {
               <Button
                 variant="primary"
                 size="lg"
+                className='rounded-full'
                 onClick={() => scrollToSection('elevators')}
               >
                 <span className="flex items-center gap-2">
@@ -137,7 +138,7 @@ export default function Hero() {
               <Button
                 variant="ghost"
                 size="lg"
-                className="border border-elvitra-white/20 text-elvitra-white hover:border-elvitra-pink-dark/50 hover:text-elvitra-pink-dark"
+                className="border border-elvitra-white/20 text-elvitra-white hover:border-elvitra-pink-dark/50 hover:text-elvitra-pink-dark rounded-full"
                 onClick={() => scrollToSection('contact')}
               >
                 Get in Touch

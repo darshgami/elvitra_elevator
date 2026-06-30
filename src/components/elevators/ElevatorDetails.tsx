@@ -161,11 +161,11 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
                 Interested in this model?
               </h4>
               <div className="flex flex-col gap-3">
-                <Button variant="primary" className="w-full justify-center">
+                <Button variant="primary" className="w-full justify-center" href="/contact">
                   <MessageSquare className="mr-2 h-4 w-4" />
                   Request a Quote
                 </Button>
-                <Button variant="outline" className="w-full justify-center">
+                <Button variant="outline" className="w-full justify-center" href="/ELVITRA ELEVATOR CATALOGUE 2021.pdf" target="_blank">
                   <Download className="mr-2 h-4 w-4" />
                   Download Brochure
                 </Button>

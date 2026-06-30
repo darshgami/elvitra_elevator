@@ -59,6 +59,15 @@ export default function ElevatorDoors({
           }}
         />
 
+        {/* Logo inside elevator */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none pb-[35%] px-[15%]">
+          <img 
+            src="/images/fulllogo-removebg-preview.png" 
+            alt="Elvitra Logo"
+            className="w-full h-auto object-contain opacity-80 drop-shadow-[0_0_12px_rgba(214,122,146,0.2)]"
+          />
+        </div>
+
         {/* Interior mirror/panel effect */}
         <div
           className="absolute"

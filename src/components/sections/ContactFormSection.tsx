@@ -59,6 +59,21 @@ export default function ContactFormSection() {
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault()
+    
+    const text = `*New Detailed Inquiry*
+*Name:* ${form.fullName}
+*Company:* ${form.companyName || 'N/A'}
+*Phone:* ${form.phone}
+*Email:* ${form.email}
+*Service:* ${form.serviceInterested}
+*Elevator Type:* ${form.elevatorType || 'N/A'}
+*City/Location:* ${form.city}
+*Preferred Contact:* ${form.preferredContact || 'N/A'}
+*Message:* ${form.message}`
+
+    const whatsappUrl = `https://wa.me/919313161636?text=${encodeURIComponent(text)}`
+    window.open(whatsappUrl, '_blank')
+    
     setSubmitted(true)
   }
 

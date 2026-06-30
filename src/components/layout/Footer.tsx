@@ -30,7 +30,7 @@ export default function Footer() {
     <footer className="relative bg-elvitra-dark">
       <div className="h-px bg-gradient-to-r from-transparent via-elvitra-pink-dark/40 to-transparent" />
 
-      <div className="mx-auto max-w-7xl px-6 pt-16 pb-8 lg:pt-20">
+      <div className="mx-auto max-w-7xl px-6 pt-12 pb-8 lg:pt-20">
         <div className="grid gap-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_2fr_1fr] lg:gap-16">
           
           {/* Column 1: Company Description */}
@@ -69,6 +69,7 @@ export default function Footer() {
             <div>
               <h4 className="mb-6 font-sans text-sm font-semibold tracking-widest text-elvitra-white uppercase">
                 Services
+
               </h4>
               <ul className="space-y-3">
                 {services.map((service) => (
@@ -114,7 +115,9 @@ export default function Footer() {
               {contact.email.map((e) => (
                 <li key={e.address}>
                   <a
-                    href={`mailto:${e.address}`}
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${e.address}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-start gap-3 text-sm text-elvitra-text-light transition-colors duration-300 hover:text-elvitra-pink-dark"
                   >
                     <Mail className="mt-0.5 h-4 w-4 shrink-0 text-elvitra-pink-dark" />
@@ -150,6 +153,18 @@ export default function Footer() {
                     loading="lazy" 
                     referrerPolicy="no-referrer-when-downgrade"
                   />
+                </div>
+              </li>
+
+              {/* Branches */}
+              <li className="pt-4">
+                <div className="rounded-xl border border-elvitra-pink-dark/20 bg-elvitra-pink-dark/5 px-4 py-3">
+                  <p className="mb-1.5 font-sans text-xs font-bold tracking-widest text-elvitra-pink-dark uppercase">
+                    Branches
+                  </p>
+                  <p className="text-sm leading-relaxed text-elvitra-text-light">
+                    Ahmedabad, Junagadh, Jamnagar, Rajkot, Surat, Valsad‑Vapi, Vadodara, Navsari, Bhavnagar
+                  </p>
                 </div>
               </li>
             </ul>

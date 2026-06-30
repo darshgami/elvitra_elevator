@@ -46,6 +46,17 @@ export default function Contact() {
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault()
+    
+    const text = `*New Website Inquiry*
+*Name:* ${form.name}
+*Email:* ${form.email}
+*Phone:* ${form.phone}
+*Subject:* ${form.subject}
+*Message:* ${form.message}`
+
+    const whatsappUrl = `https://wa.me/919313161636?text=${encodeURIComponent(text)}`
+    window.open(whatsappUrl, '_blank')
+    
     setSubmitted(true)
   }
 
@@ -134,7 +145,9 @@ export default function Contact() {
                       {contact.email.map((e) => (
                         <a
                           key={e.address}
-                          href={`mailto:${e.address}`}
+                          href={`https://mail.google.com/mail/?view=cm&fs=1&to=${e.address}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="block font-sans text-sm text-elvitra-text transition-colors hover:text-elvitra-pink-dark"
                         >
                           {e.address}

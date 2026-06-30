@@ -284,7 +284,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, duration: 0.4 }}
         >
-          <Button
+          {/* <Button
             variant="primary"
             size="lg"
             onClick={() => {
@@ -296,9 +296,10 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
               <CalendarDays className="h-4 w-4" />
               Book Consultation
             </span>
-          </Button>
+          </Button> */}
 
-          <button
+          <a
+            href="tel:+919313161636"
             className="flex items-center justify-center gap-2 rounded-lg border px-6 py-3 font-sans text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:scale-[1.02]"
             style={{
               borderColor: 'rgba(214,122,146,0.3)',
@@ -308,7 +309,7 @@ export default function ServiceDetails({ service }: ServiceDetailsProps) {
           >
             <PhoneCall className="h-4 w-4" />
             Contact Service Desk
-          </button>
+          </a>
         </motion.div>
       </motion.div>
     </AnimatePresence>

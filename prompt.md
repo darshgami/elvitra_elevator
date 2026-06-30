@@ -4,385 +4,264 @@ You are working on my existing production project.
 ACTIVATE SPECIALIST AGENTS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Before making ANY changes, activate the following specialist agents:
+Before making ANY changes, activate these specialist agents:
 
 @agency-engineering-software-architect
 @agency-engineering-frontend-developer
+@agency-design-ux-architect
 @agency-engineering-backend-developer
-@agency-database-architect
 @agency-security-engineer
 @agency-qa-engineer
-@agency-design-ux-architect
 
 Apply ALL methodologies from:
 
 .ui-ux-pro-max-skill
 
-Follow every applicable:
+Apply all applicable:
 
-• UI/UX Guidelines
-• Design System Rules
-• Accessibility Standards
-• Responsive Standards
-• Component Architecture
-• Animation Guidelines
 • Typography System
-• Color System
-• Spacing System
-• Anti-patterns
-• Performance Guidelines
-• QA Checklist
+• UI Design Standards
+• Component Architecture
+• Accessibility Standards
+• Responsive Design Standards
+• Performance Optimization
 • Production Checklist
+• QA Checklist
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PROJECT CONTEXT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-This project already has an established premium light theme.
+The entire website currently uses a mixture of serif and other fonts.
 
-Pages completed:
+I want to migrate the ENTIRE website to a single font family:
 
-• Home Page
-• Elevators Page
-• Services Page
+✅ Nunito
 
-The Contact page MUST become part of this same design system.
+This should become the global typography system for the entire project.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-VERY IMPORTANT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-DO NOT CREATE A NEW DESIGN.
-
-DO NOT CREATE A NEW THEME.
-
-DO NOT INTRODUCE NEW COLORS.
-
-DO NOT CHANGE BRANDING.
-
-Everything must reuse the existing project's design language.
-
-The Contact page should feel like it has always been part of the website.
-
-A high-quality contact page should make it easy to reach the business through multiple channels while keeping forms simple, mobile-friendly, and visually consistent with the rest of the site. :contentReference[oaicite:0]{index=0}
+Use Google's Nunito font with appropriate weights and `font-display: swap` for better loading performance. :contentReference[oaicite:0]{index=0}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PRIMARY OBJECTIVE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Create a modern premium corporate Contact page suitable for an elevator manufacturing company.
+Replace every serif font and every existing font with:
 
-The page should feel:
+Nunito
 
-✓ Premium
+Apply it consistently across the whole project.
 
-✓ Luxury
-
-✓ Professional
-
-✓ Corporate
-
-✓ Modern
-
-✓ Trustworthy
-
-✓ Clean
-
-✓ Enterprise Grade
-
-Reuse ONLY existing project components, colors, typography, spacing, shadows, borders, and UI patterns.
+This is a typography-only update.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DESIGN SYSTEM
+IMPORTANT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Reuse from the existing project:
+DO NOT redesign anything.
 
-✓ Navbar
+DO NOT change layout.
+
+DO NOT change spacing.
+
+DO NOT change colors.
+
+DO NOT change section structure.
+
+DO NOT change animations.
+
+DO NOT change button styling.
+
+DO NOT change responsiveness.
+
+DO NOT change functionality.
+
+ONLY change the font system.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GLOBAL FONT IMPLEMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Replace every font with:
+
+font-family:
+"Nunito", sans-serif
+
+Use a centralized global typography configuration.
+
+Do NOT assign fonts component-by-component unless absolutely necessary.
+
+Remove all unnecessary font imports.
+
+Remove unused font variables.
+
+Remove unused typography utilities.
+
+There should be ONE global font system.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+APPLY TO ENTIRE WEBSITE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Apply Nunito to every page, including:
+
+✓ Home
+
+✓ Elevators
+
+✓ Elevator Details
+
+✓ Services
+
+✓ Service Details
+
+✓ Contact
 
 ✓ Footer
 
-✓ Section headings
+✓ Navbar
 
-✓ Buttons
+✓ Hero
 
 ✓ Cards
 
-✓ Border radius
+✓ Buttons
 
-✓ Shadows
+✓ Forms
 
-✓ Background colors
+✓ Inputs
 
-✓ Typography
+✓ Labels
 
-✓ Accent colors
+✓ FAQ
 
-✓ Hover effects
+✓ Tables
 
-✓ Icons
+✓ Modals
 
-✓ Container width
+✓ Dialogs
 
-✓ Section spacing
+✓ Badges
 
-✓ Grid system
+✓ Tooltips
 
-✓ Responsive breakpoints
+✓ Breadcrumbs
 
-DO NOT duplicate CSS.
+✓ Accordions
 
-Reuse existing utility classes and design tokens.
+✓ All Headings
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-CONTACT PAGE STRUCTURE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ All Paragraphs
 
-Create the page using these sections.
+✓ Lists
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SECTION 1 — HERO
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Navigation
 
-Large premium hero.
+✓ Mobile Menu
 
-Include:
+✓ Error Messages
 
-Small label
+✓ Success Messages
 
-Main Heading
+✓ Loading Components
 
-Professional description
+✓ Every reusable component
 
-Example:
-
-CONTACT US
-
-Let's Build Better Vertical Mobility Together
-
-Short corporate description explaining that customers can contact Elvitra Elevators for installations, modernization, maintenance, AMC, technical consultation, and quotations.
-
-Add a premium CTA button:
-
-Get a Free Quote
-
-Use the existing button style.
+✓ Every dynamically rendered component
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SECTION 2 — CONTACT INFORMATION
+TYPOGRAPHY SCALE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Create elegant information cards.
+Use Nunito weights consistently:
 
-Cards:
+Light
 
-📞 Phone
+300
 
-📧 Email
+Regular
 
-📍 Office Address
+400
 
-🕒 Business Hours
+Medium
 
-Each card should contain:
+500
 
-Large icon
+SemiBold
 
-Title
+600
 
-Value
+Bold
 
-Short description
+700
 
-Cards must match the Home page card design.
+ExtraBold
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SECTION 3 — CONTACT FORM
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+800
 
-Create a premium inquiry form.
+Maintain the existing visual hierarchy.
 
-Fields:
-
-Full Name
-
-Company Name (Optional)
-
-Phone Number
-
-Email
-
-Service Interested In
-
-Elevator Type
-
-City
-
-Message
-
-Preferred Contact Method
-
-Submit Button
-
-Use the existing project input styles.
-
-Do NOT create new form styles.
-
-Keep the form short and focused to reduce friction and encourage more inquiries. :contentReference[oaicite:1]{index=1}
+Do not arbitrarily enlarge or shrink text.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SECTION 4 — WHY CHOOSE ELVITRA
+FONT WEIGHTS
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Premium feature cards.
+Recommended mapping:
 
-Examples:
+Hero Titles → 800
 
-✔ Fast Response
+Section Titles → 700
 
-✔ Expert Engineers
+Card Titles → 700
 
-✔ Certified Products
+Navigation → 700
 
-✔ 24/7 Support
+Buttons → 700
 
-✔ Quality Installation
+Paragraphs → 400
 
-✔ AMC Services
+Descriptions → 400
 
-Reuse existing card styling.
+Labels → 600
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SECTION 5 — SERVICE COVERAGE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Captions → 400
 
-Professional coverage section.
-
-Example:
-
-We proudly serve:
-
-• Residential Projects
-
-• Commercial Buildings
-
-• Hospitals
-
-• Hotels
-
-• Shopping Malls
-
-• Industrial Facilities
-
-• Government Projects
-
-• Educational Institutions
-
-Display using premium cards or icon grid.
+Statistics → 700
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SECTION 6 — GOOGLE MAP
+DO NOT CHANGE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Embed Google Map.
+❌ Font sizes
 
-Display office location.
+❌ Line spacing (unless required to prevent clipping)
 
-Responsive.
+❌ Letter spacing
 
-Rounded container.
+❌ Colors
 
-Soft shadow.
+❌ Layout
 
-Reuse existing card style.
+❌ Margins
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SECTION 7 — FAQ
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+❌ Padding
 
-Professional FAQ accordion.
+❌ Shadows
 
-Examples:
+❌ Border Radius
 
-How can I request a quotation?
+❌ Theme
 
-What elevator types do you provide?
+❌ Components
 
-Do you provide AMC?
+❌ Icons
 
-What is your response time?
+❌ Images
 
-Do you provide installation services?
+❌ Animations
 
-Reuse existing accordion styles if available.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-SECTION 8 — FINAL CTA
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Premium CTA section.
-
-Heading:
-
-Ready to Upgrade Your Building?
-
-Short paragraph.
-
-Buttons:
-
-Get a Quote
-
-Call Now
-
-Use existing button styles.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-COLOR SYSTEM
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Reuse ONLY existing project colors.
-
-NO new palette.
-
-NO gradients unless already used.
-
-NO dark theme.
-
-NO dashboard appearance.
-
-Use:
-
-White backgrounds
-
-Off-white sections
-
-Existing brand accent
-
-Existing text colors
-
-Existing shadows
-
-Existing borders
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-CARD DESIGN
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Reuse Home page cards.
-
-White background.
-
-Soft shadow.
-
-Rounded corners.
-
-Elegant padding.
-
-Luxury spacing.
-
-Consistent border.
-
-Subtle hover.
+Only replace typography.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 RESPONSIVE
@@ -390,21 +269,39 @@ RESPONSIVE
 
 Desktop
 
-Balanced multi-column layout.
+Typography should remain balanced.
 
 Tablet
 
-Adaptive layout.
+No wrapping issues.
 
 Mobile
 
-Single-column.
-
-Large touch targets.
-
-Readable typography.
-
 No overflow.
+
+No clipping.
+
+No broken layouts.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PERFORMANCE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Optimize font loading.
+
+Load only required Nunito weights.
+
+Remove unused font imports.
+
+Avoid duplicate imports.
+
+Avoid importing fonts multiple times.
+
+Use a single global import.
+
+Use font-display: swap.
+
+Keep bundle size minimal. Loading only the required font weights improves performance and `font-display: swap` helps avoid invisible text while fonts load. :contentReference[oaicite:1]{index=1}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ACCESSIBILITY
@@ -412,73 +309,17 @@ ACCESSIBILITY
 
 Maintain:
 
-✓ Semantic HTML
+✓ WCAG compliance
 
-✓ WCAG Compliance
+✓ Readability
 
-✓ Keyboard Navigation
+✓ Contrast
 
-✓ Focus States
+✓ Proper heading hierarchy
 
-✓ Screen Reader Support
+✓ Keyboard accessibility
 
-✓ Proper Labels
-
-✓ Accessible Forms
-
-✓ Proper Heading Hierarchy
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PERFORMANCE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Reuse components.
-
-Reuse CSS.
-
-Avoid duplicate code.
-
-Avoid unnecessary state.
-
-Avoid unnecessary packages.
-
-Lazy load map if possible.
-
-Optimize rendering.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STRICTLY DO NOT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-❌ Create a new theme
-
-❌ Change branding
-
-❌ Change logo
-
-❌ Change navbar
-
-❌ Change footer
-
-❌ Change typography family
-
-❌ Create new colors
-
-❌ Change routing
-
-❌ Change APIs
-
-❌ Change backend
-
-❌ Change database
-
-❌ Change functionality
-
-❌ Create duplicate components
-
-❌ Introduce inconsistent UI
-
-Everything must look like it belongs to the existing website.
+✓ Screen reader compatibility
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 IMPLEMENTATION PLAN
@@ -486,41 +327,33 @@ IMPLEMENTATION PLAN
 
 Phase 1
 
-Analyze the existing project design system.
+Audit every font used in the project.
 
 Phase 2
 
-Audit reusable components.
+Locate all typography imports.
 
 Phase 3
 
-Design the Contact page using existing UI patterns.
+Replace with a centralized Nunito configuration.
 
 Phase 4
 
-Implement responsive layout.
+Remove obsolete font references.
 
 Phase 5
 
-Build inquiry form.
+Update global theme or CSS variables.
 
 Phase 6
 
-Add contact information cards.
+Verify every page.
 
 Phase 7
 
-Add Google Map.
+Run responsive testing.
 
 Phase 8
-
-Add FAQ.
-
-Phase 9
-
-Optimize accessibility.
-
-Phase 10
 
 Run QA.
 
@@ -530,66 +363,58 @@ QUALITY ASSURANCE
 
 Verify:
 
-✓ Matches Home page
+✓ Every page uses Nunito.
 
-✓ Matches Elevators page
+✓ No serif fonts remain.
 
-✓ Matches Services page
+✓ No mixed font families remain.
 
-✓ Existing colors reused
+✓ Existing design preserved.
 
-✓ Existing typography reused
+✓ Existing spacing preserved.
 
-✓ Existing buttons reused
+✓ Existing colors preserved.
 
-✓ Existing card styles reused
+✓ Existing layout preserved.
 
-✓ Fully responsive
+✓ Existing responsiveness preserved.
 
-✓ Mobile optimized
+✓ No overflow.
 
-✓ Tablet optimized
+✓ No clipping.
 
-✓ Desktop optimized
+✓ No broken cards.
 
-✓ Contact form responsive
+✓ No broken buttons.
 
-✓ Google Map responsive
+✓ No console errors.
 
-✓ FAQ works
+✓ No warnings.
 
-✓ Accessibility maintained
+✓ Zero regression.
 
-✓ No console errors
-
-✓ No warnings
-
-✓ Clean reusable code
-
-✓ Zero regression
-
-✓ Production-ready implementation
+✓ Production-ready implementation.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 EXPECTED OUTPUT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Analyze the existing project design system.
+1. Analyze the project's current typography system.
 
-2. List every file that requires modification or creation.
+2. Identify every file where fonts are defined or imported.
 
-3. Explain why each file is needed.
+3. Explain why each file needs modification.
 
-4. Build the Contact page using ONLY the existing project design system.
+4. Replace all existing fonts with a centralized global Nunito typography system.
 
-5. Reuse existing colors, typography, spacing, buttons, cards, shadows, borders, and components.
+5. Remove redundant font imports and unused typography definitions.
 
-6. Ensure complete responsiveness and accessibility.
+6. Ensure every page, reusable component, and dynamic component uses Nunito consistently.
 
-7. Preserve existing routing, functionality, backend, and architecture.
+7. Preserve the existing UI, layout, spacing, responsiveness, colors, animations, and functionality.
 
-8. Deliver clean, scalable, maintainable, enterprise-grade production-ready code.
+8. Run a complete QA pass to confirm zero visual regressions.
 
-FINAL GOAL:
+FINAL GOAL
 
-The Contact page should look like a premium corporate page for Elvitra Elevators, perfectly matching the Home, Elevators, and Services pages. It should feel cohesive with the existing website, inspire trust, make contacting the company effortless, and avoid introducing any new visual theme or inconsistent design patterns.
+The entire Elvitra Elevators website should use **Nunito** as its single, consistent font family, creating a modern, clean, professional, and highly readable experience while keeping the existing design, theme, and functionality completely unchanged.

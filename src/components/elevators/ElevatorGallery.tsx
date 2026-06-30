@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, FileDown } from 'lucide-react'
 
 interface ElevatorGalleryProps {
   images: string[]
@@ -83,87 +83,33 @@ export default function ElevatorGallery({
           }}
         />
 
-        {/* Elevator illustration */}
+        {/* Elevator Image */}
         <AnimatePresence mode="wait">
           <motion.div
             key={`${elevatorId}-${activeIndex}`}
-            className="absolute inset-0 flex items-center justify-center"
-            initial={{ opacity: 0, scale: 1.05, y: 10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: -10 }}
+            className="absolute inset-0 flex flex-col items-center justify-end"
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
           >
-            {/* Central elevator icon graphic */}
-            <div className="relative flex flex-col items-center">
-              {/* Glow ring */}
-              <motion.div
-                className="absolute rounded-full"
-                style={{
-                  width: 200,
-                  height: 200,
-                  background: `radial-gradient(circle, ${style.accent}20 0%, transparent 70%)`,
-                }}
-                animate={{
-                  scale: [1, 1.15, 1],
-                  opacity: [0.5, 0.8, 0.5],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
-
-              {/* Elevator shape */}
-              <div
-                className="relative z-10 flex flex-col items-center justify-center rounded-xl bg-white shadow-[0_8px_30px_rgba(0,0,0,0.06)]"
-                style={{
-                  width: 120,
-                  height: 160,
-                  border: `2px solid ${style.accent}40`,
-                }}
-              >
-                {/* Interior lines */}
-                <div
-                  className="mb-3 w-16"
-                  style={{ height: 1, background: `${style.accent}30` }}
-                />
-                <div
-                  className="mb-2 w-12"
-                  style={{ height: 1, background: `${style.accent}20` }}
-                />
-                <div
-                  className="w-14"
-                  style={{ height: 1, background: `${style.accent}25` }}
-                />
-
-                {/* Door seam */}
-                <div
-                  className="absolute"
-                  style={{
-                    top: '10%',
-                    bottom: '10%',
-                    left: '50%',
-                    width: 1,
-                    background: `linear-gradient(180deg, transparent, ${style.accent}50, transparent)`,
-                  }}
-                />
-              </div>
-
-              {/* Floor label */}
-              <div
-                className="mt-6 rounded-md px-4 py-2 bg-white shadow-sm"
-                style={{
-                  border: `1px solid ${style.accent}30`,
-                }}
-              >
-                <span
-                  className="font-sans text-xs font-bold tracking-wider uppercase"
-                  style={{ color: style.accent }}
-                >
-                  {images[activeIndex]}
-                </span>
-              </div>
+            <img 
+              src={`/images/elevators/${elevatorId}/${activeIndex + 1}.png`} 
+              alt={images[activeIndex]}
+              className="absolute inset-0 w-full h-full object-contain mix-blend-multiply"
+              onError={(e) => {
+                // Keep the placeholder gradient if image fails to load
+                e.currentTarget.style.opacity = '0';
+              }}
+            />
+            {/* Overlay gradient for text readability */}
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent" />
+            
+            {/* Caption */}
+            <div className="relative z-10 w-full p-6 text-center">
+              <span className="font-sans text-sm md:text-base font-medium tracking-wide text-white drop-shadow-md">
+                {images[activeIndex]}
+              </span>
             </div>
           </motion.div>
         </AnimatePresence>
@@ -228,6 +174,32 @@ export default function ElevatorGallery({
           ))}
         </div>
       )}
+
+      {/* Download Brochure Button */}
+      <div className="flex justify-center pt-2">
+        <a
+          href="/ELVITRA ELEVATOR CATALOGUE 2021.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 shadow-sm hover:shadow-md hover:scale-105"
+          style={{
+            background: `${style.accent}15`,
+            color: style.accent,
+            border: `1.5px solid ${style.accent}40`,
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = `${style.accent}25`
+            e.currentTarget.style.borderColor = `${style.accent}80`
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = `${style.accent}15`
+            e.currentTarget.style.borderColor = `${style.accent}40`
+          }}
+        >
+          <FileDown className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5" />
+          Download Brochure
+        </a>
+      </div>
     </div>
   )
 }

@@ -36,7 +36,7 @@ export default function ContactCTA() {
 
         <ScrollReveal direction="up" delay={0.2}>
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button
+            {/* <Button
               variant="primary"
               size="lg"
               onClick={() => scrollToSection('contact-form')}
@@ -45,7 +45,7 @@ export default function ContactCTA() {
                 Get a Quote
                 <ArrowRight className="h-4 w-4" />
               </span>
-            </Button>
+            </Button> */}
             
             <a href={`tel:${contact.phone[0].number.replace(/\s/g, '')}`}>
               <Button

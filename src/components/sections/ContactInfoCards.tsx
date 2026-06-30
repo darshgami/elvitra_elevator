@@ -81,7 +81,9 @@ export default function ContactInfoCards() {
               {contact.email.map((e) => (
                 <a
                   key={e.address}
-                  href={`mailto:${e.address}`}
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${e.address}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block font-sans text-sm text-elvitra-text transition-colors hover:text-elvitra-pink-dark"
                 >
                   {e.address}
