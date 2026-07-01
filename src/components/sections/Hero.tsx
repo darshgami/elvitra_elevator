@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import logoBg from '../../../images/logo-removebg-preview.png'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 import { company } from '../../data/brochure'
-import ElevatorDoors from '../animations/ElevatorDoors'
-import FloorIndicator from '../animations/FloorIndicator'
 import ScrollReveal from '../animations/ScrollReveal'
+import { lazy, Suspense } from 'react'
 import Button from '../ui/Button'
+
+const HeroElevatorAnimation = lazy(() => import('./HeroElevatorAnimation'))
 
 function scrollToSection(id: string) {
   const el = document.getElementById(id)
@@ -15,41 +14,11 @@ function scrollToSection(id: string) {
   }
 }
 
-const cableLines = [
-  { left: '8%', height: '70%', top: '0%', delay: 0 },
-  { left: '15%', height: '50%', top: '10%', delay: 0.3 },
-  { left: '85%', height: '60%', top: '5%', delay: 0.6 },
-  { left: '92%', height: '45%', top: '15%', delay: 0.2 },
-]
-
 export default function Hero() {
-  const [doorsOpen, setDoorsOpen] = useState(false)
-  const [currentFloor, setCurrentFloor] = useState(1)
-
-  useEffect(() => {
-    // Continuous door open/close cycle
-    const doorCycle = () => {
-      setDoorsOpen(true)
-      setTimeout(() => setDoorsOpen(false), 3000)
-    }
-    const openTimer = setTimeout(doorCycle, 800)
-    const doorInterval = setInterval(doorCycle, 6000)
-
-    const floorInterval = setInterval(() => {
-      setCurrentFloor((prev) => (prev >= 15 ? 1 : prev + 1))
-    }, 3000)
-
-    return () => {
-      clearTimeout(openTimer)
-      clearInterval(doorInterval)
-      clearInterval(floorInterval)
-    }
-  }, [])
-
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden bg-elvitra-dark"
+      className="relative flex min-h-screen flex-col overflow-hidden bg-elvitra-dark pt-32 md:pt-40 pb-20 lg:pt-32"
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
@@ -75,54 +44,39 @@ export default function Hero() {
 
       <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center opacity-50">
         <img 
-          src={logoBg} 
-          alt="Logo Background" 
+          src="/hero-bg.png" 
+          alt="Logo Background"
+          width="760"
+          height="760"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           className="h-[760px] w-full object-contain opacity-10" 
         />
       </div>
 
-      {cableLines.map((line, i) => (
-        <motion.div
-          key={i}
-          className="pointer-events-none absolute w-px bg-gradient-to-b from-transparent via-elvitra-pink-dark/10 to-transparent"
-          style={{ left: line.left, top: line.top, height: line.height }}
-          animate={{ opacity: [0.3, 0.6, 0.3], scaleY: [1, 1.02, 1] }}
-          transition={{
-            duration: 3,
-            delay: line.delay,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-      ))}
+      {/* Decorative vertical lines */}
+      <div className="pointer-events-none absolute w-px h-[70%] bg-gradient-to-b from-transparent via-elvitra-pink-dark/10 to-transparent left-[8%] top-0" />
+      <div className="pointer-events-none absolute w-px h-[50%] bg-gradient-to-b from-transparent via-elvitra-pink-dark/10 to-transparent left-[15%] top-[10%]" />
+      <div className="pointer-events-none absolute w-px h-[60%] bg-gradient-to-b from-transparent via-elvitra-pink-dark/10 to-transparent left-[85%] top-[5%]" />
+      <div className="pointer-events-none absolute w-px h-[45%] bg-gradient-to-b from-transparent via-elvitra-pink-dark/10 to-transparent left-[92%] top-[15%]" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-6 lg:flex-row lg:items-center lg:justify-between lg:px-12">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-6 lg:flex-row lg:items-center lg:justify-between lg:px-12 my-auto">
         <div className="flex-1 text-center lg:text-left">
+          <p className="mb-4 font-sans text-sm font-semibold tracking-[0.25em] text-elvitra-pink-dark uppercase">
+            Since {company.founded}
+          </p>
+
+          <h1 className="font-audiowide text-3xl leading-tight tracking-tight text-elvitra-white md:text-6xl lg:text-7xl">
+            {company.tagline}{' '}
+            <br /><span className="font-stack-notch font-semibold tracking-[0.10em] text-elvitra-pink-dark">RISE HIGH</span>
+          </h1>
+
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-elvitra-text-light lg:mx-0">
+            {company.description}
+          </p>
+
           <ScrollReveal direction="up" delay={0.2}>
-            <motion.p
-              className="mb-4 font-sans text-sm font-semibold tracking-[0.25em] text-elvitra-pink-dark uppercase"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              Since {company.founded}
-            </motion.p>
-          </ScrollReveal>
-
-          <ScrollReveal direction="up" delay={0.4}>
-            <h1 className="font-sans text-2xl font leading-tight tracking-tight text-elvitra-white md:text-6xl lg:text-7xl">
-              {company.tagline}{' '}
-              <br /><span className=" font-sans text-elvitra-pink-dark tracking-wider">RISE HIGH</span>
-            </h1>
-          </ScrollReveal>
-
-          <ScrollReveal direction="up" delay={0.6}>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-elvitra-text-light lg:mx-0">
-              {company.description}
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal direction="up" delay={0.8}>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
               <Button
                 variant="primary"
@@ -130,7 +84,7 @@ export default function Hero() {
                 className='rounded-full'
                 onClick={() => scrollToSection('elevators')}
               >
-                <span className="flex items-center gap-2">
+                <span className="flex items-center gap-2 font-bold">
                   Explore Our Solutions
                   <ArrowRight className="h-4 w-4" />
                 </span>
@@ -147,80 +101,10 @@ export default function Hero() {
           </ScrollReveal>
         </div>
 
-        {/* Elevator visualization */}
-        <div className="mt-16 flex-shrink-0 lg:mt-0 -ml-4 pr-8 lg:-ml-12 lg:pr-24 pt-15">
-          <ScrollReveal direction="right" delay={0.6}>
-            <div className="flex items-center gap-6 lg:gap-10">
-              {/* Floor indicator panel - left side */}
-              <div className="z-10 relative ">
-                <FloorIndicator
-                  currentFloor={currentFloor}
-                  totalFloors={15}
-                />
-              </div>
-
-              {/* Elevator shaft assembly */}
-              <div className="relative flex flex-col items-center scale-[1.15] sm:scale-[1.35] md:scale-[1.5] origin-left pl-2">
-                {/* Cable lines above elevator */}
-                <div className="relative mb-2" style={{ width: 200, height: 40 }}>
-                  {/* Left cable */}
-                  <motion.div
-                    className="absolute"
-                    style={{
-                      left: '30%',
-                      top: 0,
-                      bottom: 0,
-                      width: 1,
-                      background: 'linear-gradient(180deg, rgba(214,122,146,0.1), rgba(214,122,146,0.3))',
-                    }}
-                    animate={{ opacity: [0.5, 1, 0.5] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                  />
-                  {/* Right cable */}
-                  <motion.div
-                    className="absolute"
-                    style={{
-                      right: '30%',
-                      top: 0,
-                      bottom: 0,
-                      width: 1,
-                      background: 'linear-gradient(180deg, rgba(214,122,146,0.1), rgba(214,122,146,0.3))',
-                    }}
-                    animate={{ opacity: [0.5, 1, 0.5] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
-                  />
-                </div>
-
-                {/* Elevator doors */}
-                <ElevatorDoors
-                  isOpen={doorsOpen}
-                  currentFloor={currentFloor}
-                />
-
-                {/* Floor base / landing */}
-                <div
-                  className="mt-1"
-                  style={{
-                    width: 220,
-                    height: 3,
-                    background: 'linear-gradient(90deg, transparent, rgba(214,122,146,0.3), rgba(214,122,146,0.5), rgba(214,122,146,0.3), transparent)',
-                    borderRadius: 2,
-                  }}
-                />
-
-                {/* Ambient glow beneath */}
-                <div
-                  style={{
-                    width: 180,
-                    height: 20,
-                    background: 'radial-gradient(ellipse at top, rgba(214,122,146,0.08), transparent)',
-                    marginTop: -2,
-                  }}
-                />
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
+        {/* Elevator visualization Component */}
+        <Suspense fallback={<div className="flex-1 min-h-[500px]" />}>
+          <HeroElevatorAnimation />
+        </Suspense>
       </div>
 
       <motion.button

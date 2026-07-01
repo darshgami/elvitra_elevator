@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { elevators } from '../data/elevators'
 import ElevatorSidebar from '../components/elevators/ElevatorSidebar'
 import ElevatorDetails from '../components/elevators/ElevatorDetails'
+import { useSEO } from '../hooks/useSEO'
 
 export default function ElevatorsPage() {
   const { id } = useParams<{ id: string }>()
@@ -26,9 +27,25 @@ export default function ElevatorsPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [activeId])
 
+  useSEO({
+    title: `${activeElevator.title} | Elvitra Elevators`,
+    description: activeElevator.description || `Discover Elvitra's premium ${activeElevator.title.toLowerCase()} solutions for modern buildings.`,
+    canonicalUrl: `https://www.elvitra.com/elevators/${activeElevator.id}`,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": activeElevator.title,
+      "description": activeElevator.description,
+      "brand": {
+        "@type": "Brand",
+        "name": "Elvitra Elevators"
+      }
+    }
+  })
+
   return (
     <main className="min-h-screen bg-elvitra-pearl pt-16">
-      <section className="px-6 py-12 md:py-16">
+      <section className="px-6 py-16 md:py-20 lg:py-24">
         <div className="relative z-10 mx-auto max-w-7xl mb-12 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

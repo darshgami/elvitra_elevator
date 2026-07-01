@@ -75,11 +75,15 @@ export default function Navbar() {
               <img 
                 src="/logo.png" 
                 alt="Elvitra Logo Mark" 
+                width="40"
+                height="40"
                 className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
               />
               <img 
                 src="/elvitraname.png" 
-                alt="Elvitra Elevator" 
+                alt="Elvitra Elevator"
+                width="160"
+                height="40"
                 className="-ml-8 h-10 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80" 
               />
             </Link>
@@ -155,10 +159,10 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="relative z-50 flex h-10 w-10 items-center justify-center text-elvitra-white lg:hidden ml-auto"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
             <AnimatePresence mode="wait">
               {menuOpen ? (
@@ -255,7 +259,7 @@ export default function Navbar() {
                 Services
               </motion.button>
 
-              <motion.button
+              {/* <motion.button
                 custom={3}
                 variants={linkVariants}
                 initial="hidden"
@@ -265,7 +269,7 @@ export default function Navbar() {
                 className="font-serif text-3xl font-medium tracking-wider text-elvitra-white/90 transition-colors duration-300 hover:text-elvitra-pink-dark"
               >
                 Safety
-              </motion.button>
+              </motion.button> */}
 
               <motion.button
                 custom={4}

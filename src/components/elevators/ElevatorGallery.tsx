@@ -96,6 +96,10 @@ export default function ElevatorGallery({
             <img 
               src={`/images/elevators/${elevatorId}/${activeIndex + 1}.png`} 
               alt={images[activeIndex]}
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-contain mix-blend-multiply"
               onError={(e) => {
                 // Keep the placeholder gradient if image fails to load
@@ -119,6 +123,7 @@ export default function ElevatorGallery({
           <>
             <button
               onClick={prev}
+              aria-label="Previous image"
               className="absolute left-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full transition-all duration-300 hover:scale-110 shadow-sm"
               style={{
                 background: 'rgba(255,255,255,0.9)',
@@ -130,6 +135,7 @@ export default function ElevatorGallery({
             </button>
             <button
               onClick={next}
+              aria-label="Next image"
               className="absolute right-4 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full transition-all duration-300 hover:scale-110 shadow-sm"
               style={{
                 background: 'rgba(255,255,255,0.9)',
@@ -162,6 +168,7 @@ export default function ElevatorGallery({
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
+              aria-label={`Go to image ${index + 1}`}
               className="relative h-2 rounded-full transition-all duration-300"
               style={{
                 width: index === activeIndex ? 32 : 12,

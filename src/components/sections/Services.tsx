@@ -21,7 +21,7 @@ export default function Services() {
             <div className="mx-auto mt-3 h-1 w-20 rounded bg-elvitra-pink-dark" />
           </div>
           <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-elvitra-text">
-            End-to-end elevator solutions from expert installation to lifetime maintenance and
+            End-to-end elevator solutions from expert installation to<br /> Annual maintenance and
             modernization.
           </p>
         </ScrollReveal>

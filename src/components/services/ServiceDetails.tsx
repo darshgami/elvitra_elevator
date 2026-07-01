@@ -6,10 +6,8 @@ import {
   FileCheck,
   RefreshCw,
   PhoneCall,
-  CalendarDays,
 } from 'lucide-react'
 import type { servicesData } from '../../data/services'
-import Button from '../ui/Button'
 
 type ServiceItem = (typeof servicesData)[number]
 

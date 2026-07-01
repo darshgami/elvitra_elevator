@@ -54,7 +54,7 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
         />
 
         {/* Title & Description */}
-        <div className="mt-8 bg-elvitra-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-elvitra-silver/50">
+        <div className="mt-8 bg-elvitra-white p-6 md:p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-elvitra-silver/50">
           <motion.div
             initial={{ opacity: 0, x: -15 }}
             animate={{ opacity: 1, x: 0 }}
@@ -108,7 +108,7 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
 
         {/* Use Cases */}
         <motion.div
-          className="mt-8 bg-elvitra-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-elvitra-silver/50"
+          className="mt-8 bg-elvitra-white p-6 md:p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-elvitra-silver/50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.35, duration: 0.4 }}
@@ -165,11 +165,13 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
                   <MessageSquare className="mr-2 h-4 w-4" />
                   Request a Quote
                 </Button>
-                <Button variant="outline" className="w-full justify-center" href="/ELVITRA ELEVATOR CATALOGUE 2021.pdf" target="_blank">
+                <Button variant="outline" className="w-full justify-center" href="/ELVITRA ELEVATOR CATALOGUE 2021.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="mr-2 h-4 w-4" />
                   Download Brochure
                 </Button>
               </div>
+
+              
             </motion.div>
           </div>
         </div>

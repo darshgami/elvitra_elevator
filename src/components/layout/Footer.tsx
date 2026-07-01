@@ -1,15 +1,7 @@
 
 import { useNavigate, useLocation } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, ChevronRight, Globe, Link, Camera, Play } from 'lucide-react'
+import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react'
 import { company, contact, categories, services } from '../../data/brochure'
-
-const socialIcons = [
-  { icon: Globe, href: contact.social.linkedin, label: 'LinkedIn' },
-  { icon: Link, href: contact.social.facebook, label: 'Facebook' },
-  { icon: Camera, href: contact.social.instagram, label: 'Instagram' },
-  { icon: Play, href: contact.social.youtube, label: 'YouTube' },
-]
 
 export default function Footer() {
   const navigate = useNavigate()
@@ -36,7 +28,7 @@ export default function Footer() {
           {/* Column 1: Company Description */}
           <div>
             <h3 className="font-serif text-2xl font-bold tracking-[0.15em] text-elvitra-pink-dark">
-              {company.name.split(' ')[0]}
+              Elvitra Elevator
             </h3>
             <p className="mt-4 text-sm leading-relaxed text-elvitra-text-light">
               {company.description}
@@ -177,7 +169,7 @@ export default function Footer() {
             <p className="text-sm text-elvitra-text-light">
               &copy; {new Date().getFullYear()} {company.name}. All rights reserved.
             </p>
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               {socialIcons.map((social) => (
                 <motion.a
                   key={social.label}
@@ -191,7 +183,7 @@ export default function Footer() {
                   <social.icon className="h-5 w-5" />
                 </motion.a>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

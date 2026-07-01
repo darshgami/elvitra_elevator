@@ -26,9 +26,6 @@ export interface Elevator {
   category: 'passenger' | 'residential' | 'commercial' | 'industrial'
 }
 
-export function getElevatorBySlug(slug: string): Elevator | undefined {
-  return elevators.find((e) => e.slug === slug)
-}
 
 export const elevators: Elevator[] = [
   {

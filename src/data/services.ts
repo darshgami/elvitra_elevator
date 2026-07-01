@@ -269,13 +269,3 @@ export const servicesData = [
   },
 ]
 
-export const serviceIconMap: Record<string, string> = {
-  installation: 'HardHat',
-  maintenance: 'Wrench',
-  amc: 'FileCheck',
-  modernization: 'RefreshCw',
-}
-
-export function getServiceBySlug(slug: string): (typeof servicesData)[number] | undefined {
-  return servicesData.find((s) => s.slug === slug)
-}

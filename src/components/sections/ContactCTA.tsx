@@ -1,15 +1,9 @@
-import { ArrowRight, Phone } from 'lucide-react'
+import { Phone } from 'lucide-react'
 import SectionWrapper from '../ui/SectionWrapper'
 import ScrollReveal from '../animations/ScrollReveal'
 import Button from '../ui/Button'
 import { contact } from '../../data/brochure'
 
-function scrollToSection(id: string) {
-  const el = document.getElementById(id)
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth' })
-  }
-}
 
 export default function ContactCTA() {
   return (

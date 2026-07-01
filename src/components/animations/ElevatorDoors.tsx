@@ -64,6 +64,10 @@ export default function ElevatorDoors({
           <img 
             src="/images/fulllogo-removebg-preview.png" 
             alt="Elvitra Logo"
+            width="200"
+            height="100"
+            loading="lazy"
+            decoding="async"
             className="w-full h-auto object-contain opacity-80 drop-shadow-[0_0_12px_rgba(214,122,146,0.2)]"
           />
         </div>

@@ -19,7 +19,7 @@ export default function ServiceCoverage() {
       <ScrollReveal>
         <div className="mb-14 text-center">
           <h2 className="font-serif text-3xl font-bold text-elvitra-dark md:text-4xl">
-            Sectors We <span className="text-elvitra-pink-dark">Serve</span>
+            Sectors We <span className="">Serve</span>
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-elvitra-pink-dark" />
           <p className="mx-auto mt-6 max-w-2xl font-sans text-sm text-elvitra-text">

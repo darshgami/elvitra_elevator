@@ -5,6 +5,7 @@ import { Check, X, ChevronDown, ChevronUp, ArrowLeft, BarChart3 } from 'lucide-r
 import { elevators, type Elevator } from '../data/elevators'
 import Button from '../components/ui/Button'
 import ScrollReveal from '../components/animations/ScrollReveal'
+import { useSEO } from '../hooks/useSEO'
 
 const categories = [
   { label: 'Overview', key: 'overview' },
@@ -51,9 +52,15 @@ export default function ComparePage() {
     setSearchParams(params)
   }
 
+  useSEO({
+    title: 'Compare Elevators | Elvitra Elevators',
+    description: 'Compare premium elevator models side-by-side to find the perfect vertical mobility solution for your project.',
+    canonicalUrl: 'https://www.elvitra.com/compare'
+  })
+
   return (
     <main className="min-h-screen bg-elvitra-white">
-      <section className="relative overflow-hidden bg-elvitra-dark px-6 py-24 md:py-32">
+      <section className="relative overflow-hidden bg-elvitra-dark px-6 py-20 lg:py-24">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.04]"
           style={{
@@ -89,7 +96,7 @@ export default function ComparePage() {
         </div>
       </section>
 
-      <section className="px-6 py-10">
+      <section className="px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <ScrollReveal>
             <div className="flex flex-wrap items-center gap-3">
@@ -125,7 +132,7 @@ export default function ComparePage() {
 
       {selectedElevators.length > 0 ? (
         <>
-          <section className="px-6 pb-8">
+          <section className="px-6 pb-12 md:pb-16">
             <div className="mx-auto max-w-7xl">
               <ScrollReveal delay={0.1}>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -184,7 +191,7 @@ export default function ComparePage() {
             </div>
           </section>
 
-          <section className="px-6 pb-12">
+          <section className="px-6 pb-16 md:pb-24">
             <div className="mx-auto max-w-7xl">
               <ScrollReveal delay={0.2}>
                 <div className="mb-6 hidden items-center gap-2 border-b border-elvitra-silver pb-4 md:flex">
@@ -249,7 +256,7 @@ export default function ComparePage() {
           </section>
         </>
       ) : (
-        <section className="px-6 pb-24">
+        <section className="px-6 pb-16 md:pb-24">
           <div className="mx-auto max-w-7xl">
             <motion.div
               initial={{ opacity: 0 }}
@@ -268,7 +275,7 @@ export default function ComparePage() {
         </section>
       )}
 
-      <section className="bg-elvitra-dark px-6 py-20">
+      <section className="bg-elvitra-dark px-6 py-16 md:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl text-center">
           <ScrollReveal>
             <h2 className="font-serif text-3xl font-bold text-elvitra-white md:text-4xl">

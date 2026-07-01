@@ -83,7 +83,7 @@ export default function ContactFormSection() {
         <ScrollReveal>
           <div className="mb-12 text-center">
             <h2 className="font-serif text-3xl font-bold text-elvitra-dark md:text-4xl">
-              Send us an <span className="text-elvitra-pink-dark">Inquiry</span>
+              Send us an <span className="">Inquiry</span>
             </h2>
             <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-elvitra-pink-dark" />
             <p className="mt-6 font-sans text-sm text-elvitra-text">
@@ -94,7 +94,7 @@ export default function ContactFormSection() {
 
         <ScrollReveal delay={0.2} direction="up">
           {submitted ? (
-            <div className="flex flex-col items-center justify-center rounded-lg border border-elvitra-pink-dark/20 bg-elvitra-white p-12 text-center shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
+            <div className="flex flex-col items-center justify-center rounded-lg border border-elvitra-pink-dark/20 bg-elvitra-white p-6 sm:p-8 md:p-12 text-center shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
               <div className="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-elvitra-pink-dark/10">
                 <Send className="h-10 w-10 text-elvitra-pink-dark" />
               </div>
@@ -108,7 +108,7 @@ export default function ContactFormSection() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="rounded-lg border border-elvitra-silver/50 bg-elvitra-white p-8 shadow-[0_4px_20px_rgba(0,0,0,0.06)] md:p-12"
+              className="rounded-lg border border-elvitra-silver/50 bg-elvitra-white p-6 sm:p-8 md:p-12 shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
             >
               <div className="space-y-6">
                 

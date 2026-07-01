@@ -10,7 +10,7 @@ export default function ContactInfoCards() {
       <ScrollReveal>
         <div className="mb-14 text-center">
           <h2 className="font-serif text-3xl font-bold text-elvitra-dark md:text-4xl">
-            How to Reach <span className="text-elvitra-pink-dark">Us</span>
+            How to Reach <span className="">Us</span>
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-elvitra-pink-dark" />
         </div>

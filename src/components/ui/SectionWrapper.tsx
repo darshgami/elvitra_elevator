@@ -22,7 +22,7 @@ export default function SectionWrapper({
   return (
     <section
       id={id}
-      className={`relative overflow-hidden ${noPadding ? '' : 'px-6 py-16 md:py-24 lg:py-32'} ${bgColor || ''} ${className}`}
+      className={`relative overflow-hidden ${noPadding ? '' : 'px-6 py-16 md:py-20 lg:py-24'} ${bgColor || ''} ${className}`}
     >
       <div ref={ref} className="mx-auto w-full max-w-7xl">
         <motion.div

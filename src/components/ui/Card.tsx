@@ -24,7 +24,7 @@ export default function Card({
     : {}
 
   const baseClasses =
-    'rounded-lg bg-elvitra-white p-8 shadow-[0_4px_20px_rgba(0,0,0,0.06)]'
+    'rounded-lg bg-elvitra-white p-6 md:p-8 shadow-[0_4px_20px_rgba(0,0,0,0.06)]'
 
   const interactiveClasses = onClick
     ? 'cursor-pointer text-left w-full'

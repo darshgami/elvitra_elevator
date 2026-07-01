@@ -51,8 +51,11 @@ export default function Certifications() {
                 <img
                   src={cert.image}
                   alt={cert.name}
+                  width="400"
+                  height="300"
                   className="h-full w-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-elvitra-pink-dark/0 transition-colors duration-300 group-hover:bg-elvitra-pink-dark/5" />
               </div>
@@ -103,6 +106,10 @@ export default function Certifications() {
               <img
                 src={selectedImage}
                 alt="Certificate Preview"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async"
                 className="max-h-[90vh] w-auto max-w-[90vw] object-contain"
               />
             </motion.div>

@@ -322,29 +322,3 @@ export const stats = [
   { value: '99.7%', label: 'Service Uptime' },
 ];
 
-export const features = [
-  {
-    title: 'Energy Efficient',
-    description:
-      'Our elevators feature regenerative drives and LED lighting to reduce energy consumption by up to 40%.',
-    icon: 'Zap',
-  },
-  {
-    title: 'Smart Controls',
-    description:
-      'Destination dispatch and AI-powered traffic management systems optimize wait times and building flow.',
-    icon: 'Cpu',
-  },
-  {
-    title: 'Premium Cabins',
-    description:
-      'Custom-designed interiors with premium materials, ambient lighting, and elegant finishes.',
-    icon: 'Gem',
-  },
-  {
-    title: 'Global Standards',
-    description:
-      'All elevators comply with international safety codes including EN 81, ASME A17.1, and IS 14665.',
-    icon: 'Globe',
-  },
-];

@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { servicesData } from '../data/services'
 import ServiceSidebar from '../components/services/ServiceSidebar'
 import ServiceDetails from '../components/services/ServiceDetails'
+import { useSEO } from '../hooks/useSEO'
 
 export default function ServicesPage() {
   const { id } = useParams<{ id: string }>()
@@ -30,10 +31,26 @@ export default function ServicesPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [activeService.id])
 
+  useSEO({
+    title: `${activeService.title} | Elvitra Elevator Services`,
+    description: activeService.description || `Professional ${activeService.title.toLowerCase()} services by Elvitra Elevators.`,
+    canonicalUrl: `https://www.elvitra.com/services/${activeService.slug || activeService.id}`,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": activeService.title,
+      "description": activeService.description,
+      "provider": {
+        "@type": "Organization",
+        "name": "Elvitra Elevators"
+      }
+    }
+  })
+
   return (
     <main className="min-h-screen bg-elvitra-white pt-20">
       {/* Decorative Header Block */}
-      <section className="relative overflow-hidden px-6 py-16 md:py-20">
+      <section className="relative overflow-hidden px-6 py-16 md:py-20 lg:py-24">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.04]"
           style={{
@@ -62,7 +79,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Master-Detail Page Layout */}
-      <section className="px-6 pb-24">
+      <section className="px-6 pb-16 md:pb-20 lg:pb-24">
         <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row lg:gap-12">
           {/* Left Navigation Sidebar */}
           <ServiceSidebar

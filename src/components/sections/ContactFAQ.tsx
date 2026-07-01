@@ -39,7 +39,7 @@ export default function ContactFAQ() {
       <ScrollReveal>
         <div className="mb-14 text-center">
           <h2 className="font-serif text-3xl font-bold text-elvitra-dark md:text-4xl">
-            Frequently Asked <span className="text-elvitra-pink-dark">Questions</span>
+            Frequently Asked <span className="">Questions</span>
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-elvitra-pink-dark" />
         </div>

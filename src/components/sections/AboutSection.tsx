@@ -158,7 +158,7 @@ function ElevatorShaftGraphic() {
 
 export default function AboutSection() {
   return (
-    <section className="bg-elvitra-white px-6 py-16 md:py-24 lg:py-32">
+    <section className="bg-elvitra-white px-6 py-16 md:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <ScrollReveal>
           <div className="mb-4 text-center">

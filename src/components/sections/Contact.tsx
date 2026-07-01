@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
-import { MapPin, Phone, Mail, Clock, Send, Link, Camera, Globe } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { contact } from '../../data/brochure'
 import SectionWrapper from '../ui/SectionWrapper'
 import ScrollReveal from '../animations/ScrollReveal'
@@ -22,9 +23,9 @@ const subjects = [
 ]
 
 const socialLinks = [
-  { label: 'LinkedIn', href: contact.social.linkedin, icon: Globe },
-  { label: 'Facebook', href: contact.social.facebook, icon: Link },
-  { label: 'Instagram', href: contact.social.instagram, icon: Camera },
+  { label: 'LinkedIn', href: contact.social.linkedin, icon: FaLinkedin },
+  { label: 'Facebook', href: contact.social.facebook, icon: FaFacebook },
+  { label: 'Instagram', href: contact.social.instagram, icon: FaInstagram },
 ]
 
 export default function Contact() {
@@ -66,7 +67,7 @@ export default function Contact() {
         <div className="mb-14 text-center">
           <h2 className="font-serif text-4xl font-bold text-elvitra-dark md:text-5xl">
             Get in{' '}
-            <span className="text-elvitra-pink-dark">Touch</span>
+            <span className="">Touch</span>
           </h2>
           <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-elvitra-pink-dark" />
         </div>
@@ -178,15 +179,19 @@ export default function Contact() {
                 Follow Us
               </p>
               <div className="flex gap-3">
-                {socialLinks.map((link, index) => (
+                {socialLinks.map((link, index) => {
+                  const Icon = link.icon
+                  return (
                   <a
                     key={index}
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex h-10 w-10 items-center justify-center rounded-lg border border-elvitra-silver/60 bg-elvitra-white text-elvitra-text-light transition-colors duration-300 hover:border-elvitra-pink-dark hover:bg-elvitra-pink-dark/10 hover:text-elvitra-pink-dark"
                   >
-                    <link.icon className="h-5 w-5" />
+                    <Icon className="h-5 w-5" />
                   </a>
-                ))}
+                )})}
               </div>
             </div>
           </div>

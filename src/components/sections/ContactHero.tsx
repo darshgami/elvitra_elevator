@@ -48,8 +48,7 @@ export default function ContactHero() {
 
           <ScrollReveal direction="up" delay={0.4}>
             <h1 className="font-sans text-3xl font-bold leading-tight tracking-tight text-elvitra-white md:text-5xl lg:text-6xl">
-              Let's Build Better <br className="hidden sm:block" />
-              <span className="text-elvitra-pink-dark tracking-wider">Vertical Mobility</span> Together
+              Let's Build Together
             </h1>
           </ScrollReveal>
 
