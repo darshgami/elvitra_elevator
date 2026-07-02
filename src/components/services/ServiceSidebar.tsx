@@ -177,7 +177,7 @@ export default function ServiceSidebar({
       </aside>
 
       {/* Mobile Dropdown */}
-      <div className="mb-6 md:hidden">
+      <div className="relative z-40 mb-6 md:hidden">
         <div className="relative">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

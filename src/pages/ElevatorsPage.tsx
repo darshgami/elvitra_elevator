@@ -44,7 +44,7 @@ export default function ElevatorsPage() {
   })
 
   return (
-    <main className="min-h-screen bg-elvitra-pearl pt-16">
+    <main className="min-h-screen bg-elvitra-pearl pt-24 md:pt-28">
       <section className="px-6 py-16 md:py-20 lg:py-24">
         <div className="relative z-10 mx-auto max-w-7xl mb-12 md:mb-16">
           <motion.div

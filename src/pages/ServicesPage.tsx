@@ -48,7 +48,7 @@ export default function ServicesPage() {
   })
 
   return (
-    <main className="min-h-screen bg-elvitra-white pt-20">
+    <main className="min-h-screen bg-elvitra-pearl pt-24 md:pt-28">
       {/* Decorative Header Block */}
       <section className="relative overflow-hidden px-6 py-16 md:py-20 lg:py-24">
         <div

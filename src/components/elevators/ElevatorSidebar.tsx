@@ -149,7 +149,7 @@ export default function ElevatorSidebar({
       </aside>
 
       {/* Mobile Dropdown */}
-      <div className="relative z-50 mb-6 md:hidden">
+      <div className="relative z-40 mb-6 md:hidden">
         <div className="relative">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
