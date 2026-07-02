@@ -1,9 +1,46 @@
 import { motion } from 'framer-motion'
-import { Check, Shield } from 'lucide-react'
+import { 
+  Check, 
+  Shield, 
+  Zap, 
+  Cpu, 
+  Bell, 
+  Sparkles, 
+  Activity, 
+  ShieldCheck, 
+  Scale, 
+  DoorOpen, 
+  VolumeX, 
+  Package, 
+  PhoneCall, 
+  BatteryMedium,
+  Settings
+} from 'lucide-react'
 import type { Elevator } from '../../data/elevators'
 
 interface ElevatorFeaturesProps {
   elevator: Elevator
+}
+
+function getFeatureIcon(title: string) {
+  const t = title.toLowerCase()
+  const iconClass = "h-4 w-4 text-elvitra-pink-dark group-hover:text-elvitra-white transition-colors"
+  
+  if (t.includes('energy') || t.includes('vvvf') || t.includes('power')) return <Zap className={iconClass} />
+  if (t.includes('acceleration') || t.includes('speed') || t.includes('smooth')) return <Activity className={iconClass} />
+  if (t.includes('microprocessor') || t.includes('control')) return <Cpu className={iconClass} />
+  if (t.includes('communication') || t.includes('phone') || t.includes('intercom')) return <PhoneCall className={iconClass} />
+  if (t.includes('emergency') || t.includes('rescue') || t.includes('alarm')) return <Bell className={iconClass} />
+  if (t.includes('battery')) return <BatteryMedium className={iconClass} />
+  if (t.includes('aesthetic') || t.includes('design') || t.includes('cabin') || t.includes('panoramic') || t.includes('interior')) return <Sparkles className={iconClass} />
+  if (t.includes('safet') || t.includes('protect') || t.includes('sensor')) return <ShieldCheck className={iconClass} />
+  if (t.includes('capacity') || t.includes('load') || t.includes('heavy') || t.includes('durable')) return <Scale className={iconClass} />
+  if (t.includes('door') || t.includes('access')) return <DoorOpen className={iconClass} />
+  if (t.includes('quiet') || t.includes('silent') || t.includes('vibration')) return <VolumeX className={iconClass} />
+  if (t.includes('machine room') || t.includes('mrl') || t.includes('compact') || t.includes('space') || t.includes('room-less')) return <Package className={iconClass} />
+  if (t.includes('maintenance')) return <Settings className={iconClass} />
+  
+  return <Check className={iconClass} />
 }
 
 export default function ElevatorFeatures({ elevator }: ElevatorFeaturesProps) {
@@ -29,7 +66,7 @@ export default function ElevatorFeatures({ elevator }: ElevatorFeaturesProps) {
             >
               <div className="mb-3 flex items-center gap-3">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-elvitra-pink-dark/10 group-hover:bg-elvitra-pink-dark transition-colors">
-                  <Check className="h-4 w-4 text-elvitra-pink-dark group-hover:text-elvitra-white transition-colors" />
+                  {getFeatureIcon(feature.title)}
                 </div>
                 <h4 className="text-sm font-bold text-elvitra-dark">
                   {feature.title}

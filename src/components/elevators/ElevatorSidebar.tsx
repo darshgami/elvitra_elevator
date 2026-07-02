@@ -41,9 +41,9 @@ export default function ElevatorSidebar({
   return (
     <>
       {/* Desktop / Tablet Sidebar */}
-      <aside className="hidden md:block">
+      <aside className="hidden md:block md:w-64 lg:w-72 md:flex-shrink-0">
         <div
-          className="sticky top-[100px] w-[280px] overflow-hidden rounded-2xl bg-elvitra-white"
+          className="sticky top-[100px] w-full overflow-hidden rounded-2xl bg-elvitra-white"
           style={{
             border: '1px solid rgba(214,122,146,0.15)',
             boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
@@ -149,7 +149,7 @@ export default function ElevatorSidebar({
       </aside>
 
       {/* Mobile Dropdown */}
-      <div className="mb-6 md:hidden">
+      <div className="relative z-50 mb-6 md:hidden">
         <div className="relative">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

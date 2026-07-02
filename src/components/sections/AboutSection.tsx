@@ -102,16 +102,21 @@ function ElevatorShaftGraphic() {
 
         {/* Cabin */}
         <motion.div 
-          className="absolute left-3.5 right-3.5 h-[72px] rounded-sm bg-white/95 shadow-md backdrop-blur-md border border-white/60 overflow-hidden flex flex-col z-10 transition-shadow duration-300 group-hover:shadow-[0_12px_30px_-5px_rgba(0,0,0,0.15)] group-hover:border-elvitra-pink-dark/40"
+          className="absolute left-3.5 right-3.5 h-[72px] rounded-sm bg-white/95 shadow-md backdrop-blur-md border border-white/60 overflow-hidden flex flex-col z-10 transition-shadow duration-300 group-hover:shadow-[0_12px_30px_-5px_rgba(0,0,0,0.15)] group-hover:border-gray-300"
           style={{ top: cabinY }}
         >
           {/* Cabin Roof / Light */}
-          <div className="h-1.5 w-full bg-gradient-to-r from-elvitra-pink-dark/60 via-elvitra-pink-dark to-elvitra-pink-dark/60 shadow-[0_2px_10px_rgba(214,122,146,0.6)]" />
+          <div className="h-1.5 w-full bg-white shadow-[0_2px_5px_rgba(255,255,255,0.8)] border-b border-gray-100" />
           
           {/* Interior & Doors */}
           <div className="relative flex-1 bg-gradient-to-b from-elvitra-dark/5 to-transparent flex items-center justify-center p-0.5">
             {/* Interior Glow (visible when doors open) */}
-            <div className="absolute inset-x-1 bottom-0 h-3/4 bg-gradient-to-t from-elvitra-pink-dark/15 to-transparent opacity-80" />
+            <div className="absolute inset-x-1 bottom-0 h-3/4 bg-gradient-to-t from-white/20 to-transparent opacity-80" />
+            
+            {/* Logo inside cabin */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none p-3">
+              <img src="/logo.png" alt="Elvitra Logo" className="w-full h-full object-contain opacity-80" />
+            </div>
             
             {/* Doors container */}
             <div className="absolute inset-0 flex">

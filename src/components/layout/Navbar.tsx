@@ -45,6 +45,17 @@ export default function Navbar() {
     setMenuOpen(false)
   }, [location.pathname])
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [menuOpen])
+
   function handleNav(href: string) {
     setMenuOpen(false)
     if (isHome && href.startsWith('/#')) {

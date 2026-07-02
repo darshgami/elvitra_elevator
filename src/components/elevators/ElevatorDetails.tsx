@@ -157,15 +157,15 @@ export default function ElevatorDetails({ elevator }: ElevatorDetailsProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
             >
-              <h4 className="mb-4 font-serif text-lg font-bold text-elvitra-dark">
+              <h4 className="mb-4 font-serif text-lg font-bold text-elvitra-dark ">
                 Interested in this model?
               </h4>
-              <div className="flex flex-col gap-3">
-                <Button variant="primary" className="w-full justify-center" href="/contact">
+              <div className="flex flex-col gap-3 ">
+                <Button variant="primary" className="w-full justify-center rounded-full" href="/contact">
                   <MessageSquare className="mr-2 h-4 w-4" />
                   Request a Quote
                 </Button>
-                <Button variant="outline" className="w-full justify-center" href="/ELVITRA ELEVATOR CATALOGUE 2021.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" className="w-full justify-center rounded-full" href="/ELVITRA ELEVATOR CATALOGUE 2021.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="mr-2 h-4 w-4" />
                   Download Brochure
                 </Button>

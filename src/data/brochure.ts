@@ -8,7 +8,7 @@ export const company = {
     'To be a globally recognized leader in the elevator industry, setting new standards in vertical transportation through continuous innovation, uncompromising quality, and exceptional customer experience.',
   mission:
     'To deliver safe, reliable, and technologically advanced elevator solutions that enhance urban mobility. We are committed to engineering excellence, customer satisfaction, and sustainable practices in everything we do.',
-  founded:2021,
+  founded: 2021,
   headquarters: 'Mumbai, India',
   serviceRegions: ['India', 'Middle East', 'Southeast Asia', 'Africa'],
   employees: '500+',
@@ -31,8 +31,8 @@ export const categories = [
       'Aesthetic cabin designs',
     ],
     specifications: {
-      capacity: '630 kg – 2500 kg',
-      speed: '1.0 m/s – 4.0 m/s',
+      capacity: '408 kg – 1360 kg',
+      speed: '1.0 m/s – 2.5 m/s',
       travel: 'Up to 60 floors',
       operation: 'Microprocessor-controlled',
     },
@@ -53,8 +53,8 @@ export const categories = [
       'Emergency communication systems',
     ],
     specifications: {
-      capacity: '1600 kg – 2500 kg',
-      speed: '1.0 m/s – 2.5 m/s',
+      capacity: '1020 kg – 1768 kg',
+      speed: '1.0 m/s – 1.5 m/s',
       travel: 'Up to 30 floors',
       operation: 'Fully automatic with emergency override',
     },
@@ -75,10 +75,10 @@ export const categories = [
       'Safety sensors and alarms',
     ],
     specifications: {
-      capacity: '250 kg – 450 kg',
-      speed: '0.3 m/s – 0.5 m/s',
+      capacity: '272 kg – 544 kg',
+      speed: '0.7 m/s – 1.5 m/s',
       travel: 'Up to 6 floors',
-      operation: 'Simple push-button control',
+      operation: 'Touch-button control',
     },
     image: 'home',
   },
@@ -97,8 +97,8 @@ export const categories = [
       'Customizable platform sizes',
     ],
     specifications: {
-      capacity: '1000 kg – 10000 kg',
-      speed: '0.3 m/s – 1.5 m/s',
+      capacity: '500 kg – 5000 kg',
+      speed: '0.7 m/s – 1 m/s',
       travel: 'Up to 20 floors',
       operation: 'Heavy-duty industrial control',
     },
@@ -119,7 +119,7 @@ export const categories = [
       'Cost-effective solution',
     ],
     specifications: {
-      capacity: '630 kg – 2500 kg',
+      capacity: '272 kg – 544 kg',
       speed: '0.5 m/s – 1.0 m/s',
       travel: 'Up to 6 floors',
       operation: 'Hydraulic power unit',
@@ -141,8 +141,8 @@ export const categories = [
       'Anti-glare treated glass',
     ],
     specifications: {
-      capacity: '450 kg – 1600 kg',
-      speed: '1.0 m/s – 2.5 m/s',
+      capacity: '408 kg – 1088 kg',
+      speed: '0.7 m/s – 1.5 m/s',
       travel: 'Up to 30 floors',
       operation: 'Microprocessor-controlled',
     },
@@ -163,8 +163,8 @@ export const categories = [
       'Advanced destination control',
     ],
     specifications: {
-      capacity: '630 kg – 1600 kg',
-      speed: '1.0 m/s – 2.5 m/s',
+      capacity: '408 kg – 884 kg',
+      speed: '1.0 m/s – 2.0 m/s',
       travel: 'Up to 40 floors',
       operation: 'Gearless permanent magnet motor',
     },
@@ -186,7 +186,7 @@ export const categories = [
     ],
     specifications: {
       capacity: '500 kg – 5000 kg',
-      speed: '0.3 m/s – 1.0 m/s',
+      speed: '0.5 m/s – 1.0 m/s',
       travel: 'Up to 15 floors',
       operation: 'Push-button or key-switch control',
     },
@@ -309,9 +309,8 @@ export const contact = {
   ],
   hours: '24/7 Emergency Support · Mon–Sat: 9:00 AM – 6:00 PM',
   social: {
-    linkedin: '#',
-    facebook: '#',
-    instagram: '#',
+    facebook: 'https://www.facebook.com/share/1U4HCnseKr/',
+    instagram: 'https://www.instagram.com/elvitra_elevator?igsh=MXdwZGFneWNobDlxdQ==',
     youtube: '#',
   },
 };

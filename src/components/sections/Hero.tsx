@@ -2,10 +2,8 @@ import { motion } from 'framer-motion'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 import { company } from '../../data/brochure'
 import ScrollReveal from '../animations/ScrollReveal'
-import { lazy, Suspense } from 'react'
 import Button from '../ui/Button'
-
-const HeroElevatorAnimation = lazy(() => import('./HeroElevatorAnimation'))
+import HeroElevatorAnimation from './HeroElevatorAnimation'
 
 function scrollToSection(id: string) {
   const el = document.getElementById(id)
@@ -43,15 +41,15 @@ export default function Hero() {
       <div className="pointer-events-none absolute left-0 top-0 h-full w-1/2 bg-gradient-to-r from-elvitra-pink-dark/[0.02] to-transparent" />
 
       <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center opacity-50">
-        <img 
-          src="/hero-bg.png" 
+        <img
+          src="/hero-bg.png"
           alt="Logo Background"
           width="760"
           height="760"
           loading="eager"
           decoding="async"
           fetchPriority="high"
-          className="h-[760px] w-full object-contain opacity-10" 
+          className="h-[760px] w-full object-contain opacity-10"
         />
       </div>
 
@@ -67,9 +65,9 @@ export default function Hero() {
             Since {company.founded}
           </p>
 
-          <h1 className="font-audiowide text-3xl leading-tight tracking-tight text-elvitra-white md:text-6xl lg:text-7xl">
+          <h1 className="font-sansation font-regular text-3xl leading-tight tracking-wider text-elvitra-white md:text-6xl lg:text-7xl">
             {company.tagline}{' '}
-            <br /><span className="font-stack-notch font-semibold tracking-[0.10em] text-elvitra-pink-dark">RISE HIGH</span>
+            <br /><span className="font-nunito-sans font-semibold tracking-[0.10em] text-elvitra-pink-dark">RISE HIGH</span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-elvitra-text-light lg:mx-0">
@@ -102,9 +100,7 @@ export default function Hero() {
         </div>
 
         {/* Elevator visualization Component */}
-        <Suspense fallback={<div className="flex-1 min-h-[500px]" />}>
-          <HeroElevatorAnimation />
-        </Suspense>
+        <HeroElevatorAnimation />
       </div>
 
       <motion.button

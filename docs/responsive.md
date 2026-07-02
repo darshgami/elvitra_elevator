@@ -1,189 +1,21 @@
-# MASTER IMPLEMENTATION PROMPT — Enterprise Production Responsive Audit & Complete Website Optimization (Zero Regression)
+MASTER PROMPT – COMPLETE RESPONSIVE WEBSITE AUDIT & PRODUCTION OPTIMIZATION
+ROLE
 
-```text
-You are working on my existing production project.
+Act as a Senior Frontend Architect, Senior React Engineer, UI/UX Engineer, Responsive Design Specialist, Accessibility Expert, and Performance Engineer.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-ACTIVATE SPECIALIST AGENTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Your task is to audit my entire React project and make it 100% production-ready with pixel-perfect responsive behavior across every screen size.
 
-Before making ANY changes, activate these specialist agents:
+This is NOT a partial fix.
 
-@agency-engineering-software-architect
-@agency-engineering-frontend-developer
-@agency-engineering-backend-developer
-@agency-design-ux-architect
-@agency-security-engineer
-@agency-qa-engineer
+You must review the entire codebase, every page, every component, every layout, every image, every button, every card, every section, every form, and every responsive breakpoint.
 
-Apply ALL methodologies from:
+Do NOT stop until the complete website is fully responsive.
 
-.ui-ux-pro-max-skill
+PRIMARY GOAL
 
-Apply every applicable methodology:
+The final website must work perfectly on:
 
-• Mobile First Design
-• Responsive UI Standards
-• Production Readiness Checklist
-• Accessibility (WCAG 2.2)
-• Component Architecture
-• Performance Optimization
-• Design System Standards
-• Cross Browser Compatibility
-• Responsive Testing Standards
-• QA Automation Standards
-• UI Consistency Standards
-• CSS Best Practices
-• Flexbox & Grid Best Practices
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PROJECT CONTEXT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-This is a production website for Elvitra Elevators.
-
-Current Pages:
-
-✓ Home
-✓ Elevators
-✓ Elevator Detail Pages
-✓ Services
-✓ Service Detail Pages
-✓ Contact
-✓ Footer
-✓ Navbar
-
-The complete design has already been finalized.
-
-The project theme is finalized.
-
-The color palette is finalized.
-
-Typography is finalized.
-
-Animations are finalized.
-
-DO NOT redesign anything.
-
-ONLY improve responsiveness and production quality.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PRIMARY OBJECTIVE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Perform a COMPLETE production-level responsive audit of the entire project.
-
-Review every page.
-
-Review every section.
-
-Review every reusable component.
-
-Review every layout.
-
-Review every card.
-
-Review every button.
-
-Review every form.
-
-Review every image.
-
-Review every icon.
-
-Review every animation.
-
-Review every modal.
-
-Review every navigation element.
-
-Review every footer component.
-
-Find every responsive issue and permanently fix it.
-
-The finished website must look perfect on every supported device. A thorough responsive review should include checking for horizontal scrolling, readable text, responsive navigation, usable forms, and touch-friendly controls. :contentReference[oaicite:0]{index=0}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-STRICT REQUIREMENTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-The website must NEVER have:
-
-❌ Horizontal scrolling
-
-❌ Cropped content
-
-❌ Hidden content
-
-❌ Overflowing cards
-
-❌ Overflowing buttons
-
-❌ Broken grids
-
-❌ Broken flex layouts
-
-❌ Clipped images
-
-❌ Clipped text
-
-❌ Layout jumping
-
-❌ Component overlap
-
-❌ Navbar overflow
-
-❌ Footer overflow
-
-❌ Broken spacing
-
-❌ Fixed widths causing responsive issues
-
-❌ Components larger than viewport
-
-❌ Scrollbars caused by CSS mistakes
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DO NOT CHANGE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-DO NOT change:
-
-❌ Theme
-
-❌ Color palette
-
-❌ Typography
-
-❌ Branding
-
-❌ Logo
-
-❌ UI Design
-
-❌ Animations
-
-❌ Icons
-
-❌ Routing
-
-❌ Backend
-
-❌ Database
-
-❌ Functionality
-
-❌ Business Logic
-
-❌ Existing Design System
-
-ONLY improve responsiveness.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-RESPONSIVE BREAKPOINTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Audit and optimize the entire website for:
+Mobile
 
 320px
 
@@ -193,6 +25,10 @@ Audit and optimize the entire website for:
 
 390px
 
+393px
+
+412px
+
 414px
 
 430px
@@ -201,19 +37,39 @@ Audit and optimize the entire website for:
 
 540px
 
+Tablets
+
 600px
 
 640px
 
+700px
+
 768px
+
+800px
 
 820px
 
+834px
+
 853px
+
+900px
 
 912px
 
 1024px
+
+Landscape
+
+Portrait
+
+Laptop
+
+1024px
+
+1152px
 
 1280px
 
@@ -223,447 +79,680 @@ Audit and optimize the entire website for:
 
 1536px
 
+1600px
+
 1728px
-
-1920px
-
-2560px
-
-Also verify portrait and landscape orientations where applicable. Test on real devices in addition to browser emulation whenever possible because emulators do not perfectly reproduce mobile browser behavior. :contentReference[oaicite:1]{index=1}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DEVICE TESTING
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Ensure excellent presentation on:
-
-Phones
-
-• iPhone SE
-• iPhone 13
-• iPhone 14
-• iPhone 15
-• Pixel
-• Samsung Galaxy
-
-Tablets
-
-• iPad Mini
-• iPad Air
-• iPad Pro
-• Android Tablets
-
-Laptops
-
-• 13"
-
-• 14"
-
-• 15"
-
-• 16"
 
 Desktop
 
-• Full HD
+1920px
 
-• 2K
+2048px
 
-• 4K
+2560px
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-COMPLETE PAGE AUDIT
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Ultra Wide
 
-Review every page completely.
+4K
 
-For EACH page verify:
+IMPORTANT
 
-✓ Navbar
+Do NOT write CSS specifically for devices.
 
-✓ Hero
+Use
 
-✓ Sections
+Mobile First
 
-✓ Cards
+Fluid Layouts
 
-✓ Buttons
+CSS Grid
 
-✓ Forms
+Flexbox
 
-✓ Inputs
+Clamp()
 
-✓ Icons
+Min()
 
-✓ Images
+Max()
 
-✓ Sliders
+Relative Units
 
-✓ FAQ
+Container Widths
 
-✓ Footer
+Adaptive Components
 
-✓ CTA
+Content-Based Breakpoints
 
-✓ Modals
+Avoid fixed pixel layouts and add breakpoints only when the content actually needs them.
 
-✓ Tables
+FULL PROJECT AUDIT
 
-✓ Accordions
+Audit
 
-✓ Hover states
+Every Page
 
-✓ Mobile Menu
+Every Component
 
-✓ Breadcrumbs
+Every Modal
 
-✓ All animations
+Every Drawer
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-LAYOUT RULES
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Every Card
 
-Verify:
+Every Hero
 
-✓ Flexbox
+Every Footer
 
-✓ CSS Grid
+Every Navbar
 
-✓ Gap spacing
+Every Form
 
-✓ Wrapping
+Every Gallery
 
-✓ Alignment
+Every Slider
 
-✓ Container widths
+Every CTA
 
-✓ Max widths
+Every FAQ
 
-✓ Min widths
+Every Product Page
 
-✓ Overflow handling
+Every Services Page
 
-✓ Padding
+Every Contact Page
 
-✓ Margins
+Every Reusable Component
 
-✓ Sticky components
+RESPONSIVE NAVBAR
 
-✓ Absolute positioned elements
+Fix
 
-✓ Fixed positioned elements
+Desktop Navbar
 
-Use flexible layouts instead of fixed widths, avoid unnecessary `100vw` containers, ensure images scale with `max-width:100%`, and use `min-width:0` where needed to prevent flex/grid overflow. :contentReference[oaicite:2]{index=2}
+Tablet Navbar
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TYPOGRAPHY CHECK
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Mobile Navbar
 
-Verify:
+Hamburger Menu
 
-✓ No clipped headings
+Dropdown
 
-✓ No overflow
+Drawer
 
-✓ Proper wrapping
+Logo Scaling
 
-✓ Readable font sizes
+Button Scaling
 
-✓ Correct line height
+Menu Animation
 
-✓ Consistent spacing
+Prevent Overflow
 
-✓ No text collisions
+Prevent Wrapping
 
-Body text should remain comfortably readable on mobile (generally around 16px minimum) without requiring zoom. :contentReference[oaicite:3]{index=3}
+Prevent Hidden Items
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-IMAGE CHECK
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Prevent Double Scrollbars
 
-Verify:
+Sticky Navbar
 
-✓ Responsive images
+Safe Area Support
 
-✓ No stretching
+HERO SECTION
 
-✓ No distortion
+Optimize Hero
 
-✓ Correct aspect ratio
+Responsive Heading
 
-✓ Lazy loading where appropriate
+Responsive Paragraph
 
-✓ Proper scaling
+Responsive Image
 
-✓ No overflow
+Responsive Elevator Animation
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-BUTTON CHECK
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Responsive CTA Buttons
 
-Verify:
+Responsive Grid
 
-✓ Full width where appropriate
+Proper Alignment
 
-✓ Touch-friendly
+No Cropping
 
-✓ No clipping
+No Overflow
 
-✓ Correct alignment
+No Horizontal Scroll
 
-✓ Proper spacing
+Perfect Vertical Center
 
-✓ No overflow
+TYPOGRAPHY
 
-✓ Proper wrapping
+Convert every font size into fluid typography.
 
-Ensure tap targets are large enough for comfortable interaction on touch devices. :contentReference[oaicite:4]{index=4}
+Use
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-FORM CHECK
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+clamp()
 
-Verify:
+Responsive line-height
 
-✓ Inputs
+Responsive spacing
 
-✓ Labels
+Readable text on every screen
 
-✓ Validation
+Prevent oversized desktop text
 
-✓ Mobile keyboard
+Prevent tiny mobile text
 
-✓ Submit button
+RESPONSIVE IMAGES
 
-✓ Dropdowns
+Every image must
 
-✓ Textareas
+Scale automatically
 
-✓ Error messages
+Never overflow
 
-✓ Success messages
+Never stretch
 
-✓ No clipping
+Never blur
 
-✓ No zoom issues
+Never crop unexpectedly
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-NAVIGATION CHECK
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Maintain aspect ratio
 
-Verify:
+Lazy Load
 
-✓ Desktop Navbar
+Responsive srcset if applicable
 
-✓ Tablet Navbar
+Use next-gen image formats where practical for production performance.
 
-✓ Mobile Menu
+RESPONSIVE CARDS
 
-✓ Hamburger
+Audit all cards.
 
-✓ Overlay
+Equal Heights
 
-✓ Scroll Lock
+Equal Padding
 
-✓ Sticky Header
+Equal Gap
 
-✓ Active Links
+Equal Margin
 
-✓ CTA Button
+Responsive Width
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Responsive Typography
+
+Responsive Icons
+
+Responsive Images
+
+Responsive Buttons
+
+GRID SYSTEM
+
+Every Grid
+
+Desktop
+
+Tablet
+
+Mobile
+
+Should automatically adapt.
+
+Never overflow.
+
+Never create uneven spacing.
+
+Never break alignment.
+
+FLEXBOX
+
+Replace unnecessary fixed widths.
+
+Use
+
+flex-wrap
+
+gap
+
+justify
+
+align
+
+grow
+
+shrink
+
+basis
+
+where appropriate.
+
+CONTAINERS
+
+Every page should use
+
+Same Max Width
+
+Same Horizontal Padding
+
+Same Container
+
+Same Alignment
+
+Same Section Width
+
+Same Responsive Behavior
+
+SPACING
+
+Standardize
+
+Section Padding
+
+Section Margin
+
+Card Padding
+
+Card Gap
+
+Grid Gap
+
+Heading Gap
+
+Paragraph Gap
+
+Button Gap
+
+Everything should follow one consistent spacing scale.
+
+BUTTONS
+
+Every button must
+
+Scale correctly
+
+Never overflow
+
+Never wrap incorrectly
+
+Proper Touch Size
+
+Minimum 44x44 interaction area
+
+Accessible focus state
+
+FORMS
+
+Every Input
+
+Textarea
+
+Checkbox
+
+Radio
+
+Button
+
+Dropdown
+
+Validation Message
+
+Must be responsive.
+
+No overflow.
+
+No clipping.
+
+FOOTER
+
+Optimize Footer
+
+Responsive Columns
+
+Responsive Links
+
+Responsive Icons
+
+Responsive Contact
+
+Responsive Copyright
+
+Stack correctly on mobile.
+
+TABLES
+
+If tables exist
+
+Convert into
+
+Responsive Table
+
+Horizontal Scroll
+
+Card View
+
+or Stack Layout
+
+depending on usability.
+
+ICONS
+
+Responsive
+
+Aligned
+
+Equal Size
+
+Equal Padding
+
+Equal Margins
+
+RESPONSIVE ANIMATIONS
+
+Do NOT break
+
+Framer Motion
+
+GSAP
+
+CSS Animations
+
+Hover Effects
+
+Loading Animations
+
+Transitions
+
+Scroll Animations
+
+All animations must remain smooth.
+
+RESPONSIVE ELEVATOR ANIMATION
+
+Optimize
+
+Animation Scaling
+
+SVG
+
+Canvas
+
+Images
+
+Position
+
+Container
+
+Performance
+
+No cropping.
+
+REMOVE HORIZONTAL SCROLL
+
+Find every cause of
+
+overflow-x
+
+Remove it.
+
+No page should scroll horizontally.
+
+FIX OVERFLOW
+
+Check
+
+Images
+
+Cards
+
+Buttons
+
+Grid
+
+Hero
+
+Footer
+
+Navbar
+
+Forms
+
+Tables
+
+Everything.
+
+SAFE AREA SUPPORT
+
+Support
+
+iPhone Notch
+
+Dynamic Island
+
+Android Safe Area
+
+Landscape Safe Area
+
+TOUCH OPTIMIZATION
+
+Improve
+
+Tap Targets
+
+Touch Padding
+
+Spacing
+
+Scrolling
+
+Gestures
+
+Buttons
+
+Menus
+
+Forms
+
+RESPONSIVE UTILITIES
+
+Replace hardcoded widths like
+
+width: 1200px
+
+height: 700px
+
+margin-left: 350px
+
+position absolute hacks
+
+with flexible layouts.
+
+CLEAN CSS
+
+Remove
+
+Unused Media Queries
+
+Duplicate CSS
+
+Conflicting Breakpoints
+
+Unused Classes
+
+Unused Styles
+
+Dead CSS
+
+CLEAN TAILWIND
+
+Remove
+
+Unused Utilities
+
+Duplicate Classes
+
+Repeated Responsive Classes
+
+Create reusable layout components.
+
 PERFORMANCE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Optimize:
+While making responsive improvements
 
-✓ CSS
+Do NOT reduce
 
-✓ Media Queries
+Lighthouse Score
 
-✓ Images
+SEO
 
-✓ Layout Rendering
+Accessibility
 
-✓ Paint
+Best Practices
 
-✓ GPU Animation
+Keep everything optimized.
 
-✓ Bundle Size
-
-✓ Lazy Loading
-
-✓ Code Splitting
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ACCESSIBILITY
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Maintain:
+Maintain
 
-✓ WCAG 2.2
+Keyboard Navigation
 
-✓ Keyboard Navigation
+ARIA Labels
 
-✓ Focus States
+Contrast
 
-✓ Screen Reader Support
+Screen Reader Support
 
-✓ Proper Contrast
+Focus Indicators
 
-✓ Semantic HTML
+Touch Targets
 
-✓ ARIA Labels
+Semantic HTML
 
-✓ Accessible Forms
+TESTING
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-TESTING REQUIREMENTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Test
 
-Perform a complete QA process.
+Portrait
 
-Inspect every breakpoint individually.
+Landscape
 
-Do NOT assume responsiveness.
+Zoom 100%
 
-Verify every section manually.
+Zoom 125%
 
-Inspect every page for overflow.
+Zoom 150%
 
-Inspect every page for clipping.
+Zoom 200%
 
-Inspect every page for responsiveness.
+Browser Resize
 
-Inspect every page for spacing.
+Chrome
 
-Inspect every page for alignment.
+Edge
 
-Inspect every page for mobile usability.
+Firefox
 
-Include production checks such as:
+Safari
 
-• No horizontal scroll (`scrollWidth <= clientWidth`)
+REGRESSION TEST
 
-• No overflow caused by fixed-width elements
+Verify
 
-• Responsive images and media
+No Broken Layout
 
-• Proper viewport behavior
+No Broken Animation
 
-• Consistent rendering across browsers and devices. :contentReference[oaicite:5]{index=5}
+No Broken Routing
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No Broken Images
+
+No Missing Text
+
+No Console Errors
+
+No Build Errors
+
+No Hydration Errors
+
+No Layout Shift
+
+No Hidden Content
+
 CODE QUALITY
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Improve only when necessary.
+Refactor
 
-Remove duplicated responsive CSS.
+Duplicate Components
 
-Reuse existing utilities.
+Repeated Responsive Logic
 
-Keep components reusable.
+Hardcoded Layouts
 
-Keep code maintainable.
+Create reusable responsive utilities
 
-Keep architecture scalable.
+Maintain clean architecture
 
-Avoid hacks.
+FINAL VALIDATION
 
-Avoid !important unless absolutely required.
+Before finishing
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-DELIVERABLES
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Run one final audit.
 
-Before implementing:
+Ensure
 
-1. Audit the entire project.
+✅ 100% Mobile Responsive
 
-2. List every responsive issue found.
+✅ 100% Tablet Responsive
 
-3. Group issues by page.
+✅ 100% Laptop Responsive
 
-4. Group issues by component.
+✅ 100% Desktop Responsive
 
-5. Explain the root cause.
+✅ No Cropping
 
-After implementation:
+✅ No Overflow
 
-✓ Fix every issue.
+✅ No Horizontal Scroll
 
-✓ Verify every page.
+✅ Consistent Spacing
 
-✓ Verify every breakpoint.
+✅ Responsive Typography
 
-✓ Verify every device category.
+✅ Responsive Images
 
-✓ Verify accessibility.
+✅ Responsive Buttons
 
-✓ Verify performance.
+✅ Responsive Forms
 
-✓ Verify responsiveness.
+✅ Responsive Navbar
 
-✓ Verify production readiness.
+✅ Responsive Footer
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-FINAL QUALITY CHECK
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✅ Responsive Hero
 
-The website must satisfy ALL of the following:
+✅ Smooth Animations
 
-✅ Pixel-perfect responsiveness
+✅ Accessibility Maintained
 
-✅ Mobile-first implementation
+✅ Performance Maintained
 
-✅ No cropped content
+✅ Production Ready
 
-✅ No hidden content
+FINAL REPORT
 
-✅ No overlapping components
+Generate a detailed report including:
 
-✅ No horizontal scrolling
-
-✅ Proper spacing on every device
-
-✅ Perfect tablet layout
-
-✅ Perfect laptop layout
-
-✅ Perfect desktop layout
-
-✅ Responsive images
-
-✅ Responsive typography
-
-✅ Responsive cards
-
-✅ Responsive forms
-
-✅ Responsive navigation
-
-✅ Responsive footer
-
-✅ Responsive buttons
-
-✅ Responsive animations
-
-✅ Clean architecture
-
-✅ Zero console errors
-
-✅ Zero warnings
-
-✅ Zero responsive regressions
-
-✅ Zero accessibility regressions
-
-✅ Production-ready code
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-FINAL GOAL
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Transform the entire Elvitra Elevators website into an enterprise-grade, production-ready, fully responsive application that delivers a flawless experience on every phone, tablet, laptop, and desktop without changing the existing design, theme, branding, functionality, or user experience. Every component must adapt gracefully to all supported screen sizes and be thoroughly tested before completion.
-```
+Total pages audited
+Total components optimized
+Responsive issues fixed
+Breakpoints improved
+Overflow issues removed
+Grid/Flexbox improvements
+Typography improvements
+Image optimizations
+Navigation improvements
+Form improvements
+Accessibility improvements
+Performance impact
+Regression test results
+Files modified
+Remaining recommendations (if any)

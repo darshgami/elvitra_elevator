@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronLeft, ChevronRight, FileDown } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 interface ElevatorGalleryProps {
   images: string[]
@@ -183,7 +183,7 @@ export default function ElevatorGallery({
       )}
 
       {/* Download Brochure Button */}
-      <div className="flex justify-center pt-2">
+      {/* <div className="flex justify-center pt-2">
         <a
           href="/ELVITRA ELEVATOR CATALOGUE 2021.pdf"
           target="_blank"
@@ -206,7 +206,7 @@ export default function ElevatorGallery({
           <FileDown className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5" />
           Download Brochure
         </a>
-      </div>
+      </div> */}
     </div>
   )
 }

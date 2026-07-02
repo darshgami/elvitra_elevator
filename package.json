@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/audiowide": "^5.2.7",
+    "@fontsource/nunito": "^5.2.7",
+    "@fontsource/nunito-sans": "^5.2.7",
+    "@fontsource/sansation": "^5.2.2",
     "framer-motion": "^12.40.0",
     "lucide-react": "^1.18.0",
     "react": "^19.2.6",

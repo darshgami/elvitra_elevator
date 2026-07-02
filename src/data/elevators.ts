@@ -58,8 +58,8 @@ export const elevators: Elevator[] = [
       { title: 'Government & Institutional', description: 'Compliant, accessible elevators meeting all building codes.' },
     ],
     specifications: {
-      capacity: '630 kg – 2500 kg',
-      speed: '1.0 m/s – 4.0 m/s',
+      capacity: '408 kg – 1360 kg',
+      speed: '1.0 m/s – 2.5 m/s',
       travel: 'Up to 60 floors',
       operation: 'Microprocessor-controlled',
       doorType: 'Automatic telescopic / centre-opening',
@@ -118,8 +118,8 @@ export const elevators: Elevator[] = [
       { title: 'Nursing Homes & Rehab Centers', description: 'Patient-friendly elevators with wheelchair-accessible controls and slow-start acceleration.' },
     ],
     specifications: {
-      capacity: '1600 kg – 2500 kg',
-      speed: '1.0 m/s – 2.5 m/s',
+      capacity: '1020 kg – 1768 kg',
+      speed: '0.7 m/s – 1.5 m/s',
       travel: 'Up to 30 floors',
       operation: 'Fully automatic with emergency override',
       doorType: 'Extra-wide automatic centre-opening',
@@ -178,13 +178,13 @@ export const elevators: Elevator[] = [
       { title: 'New Construction Residential', description: 'Pre-planned home lift integration in new residential projects.' },
     ],
     specifications: {
-      capacity: '250 kg – 450 kg',
-      speed: '0.3 m/s – 0.5 m/s',
+      capacity: '272 kg – 544 kg',
+      speed: '0.7 m/s – 1.5 m/s',
       travel: 'Up to 6 floors',
-      operation: 'Simple push-button control',
+      operation: 'Touch-button control',
       doorType: 'Manual swing / automatic sliding',
-      driveSystem: 'Screw-driven / hydraulic chain',
-      powerRequirement: 'Single-phase, 230V, 50Hz',
+      driveSystem: 'VVVF (Variable Voltage Variable Frequency)',
+      powerRequirement: 'Single-phase(230V 50Hz), 3-phase(415V ± 10%, 50Hz)',
       machineType: 'Machine-room-less (MRL)',
     },
     safetyFeatures: [
@@ -238,8 +238,8 @@ export const elevators: Elevator[] = [
       { title: 'Parking Structures & Service Centers', description: 'Vehicle-rated elevators with non-slip platforms and integrated wheel chocks.' },
     ],
     specifications: {
-      capacity: '1000 kg – 10000 kg',
-      speed: '0.3 m/s – 1.5 m/s',
+      capacity: '500 kg – 5000 kg',
+      speed: '0.7 m/s – 1 m/s',
       travel: 'Up to 20 floors',
       operation: 'Heavy-duty industrial control',
       doorType: 'Vertical bi-parting / horizontal sliding',
@@ -298,7 +298,7 @@ export const elevators: Elevator[] = [
       { title: 'Shopping Centers & Malls', description: 'Passenger-rated hydraulic elevators with attractive cabin finishes at competitive pricing.' },
     ],
     specifications: {
-      capacity: '630 kg – 2500 kg',
+      capacity: '272 kg – 544 kg',
       speed: '0.5 m/s – 1.0 m/s',
       travel: 'Up to 6 floors',
       operation: 'Hydraulic power unit',
@@ -358,8 +358,8 @@ export const elevators: Elevator[] = [
       { title: 'Luxury Residential Towers', description: 'Private capsule elevators with panoramic city or landscape views.' },
     ],
     specifications: {
-      capacity: '450 kg – 1600 kg',
-      speed: '1.0 m/s – 2.5 m/s',
+      capacity: '408 kg – 1088 kg',
+      speed: '0.7 m/s – 1.5 m/s',
       travel: 'Up to 30 floors',
       operation: 'Microprocessor-controlled',
       doorType: 'Automatic curved sliding',
@@ -418,8 +418,8 @@ export const elevators: Elevator[] = [
       { title: 'Green Buildings & Certified Projects', description: 'MRL elevators contributing to LEED and IGBC certification points.' },
     ],
     specifications: {
-      capacity: '630 kg – 1600 kg',
-      speed: '1.0 m/s – 2.5 m/s',
+      capacity: '408 kg – 884 kg',
+      speed: '1.0 m/s – 2.0 m/s',
       travel: 'Up to 40 floors',
       operation: 'Gearless permanent magnet motor',
       doorType: 'Automatic centre-opening',
@@ -479,7 +479,7 @@ export const elevators: Elevator[] = [
     ],
     specifications: {
       capacity: '500 kg – 5000 kg',
-      speed: '0.3 m/s – 1.0 m/s',
+      speed: '0.5 m/s – 1.0 m/s',
       travel: 'Up to 15 floors',
       operation: 'Push-button or key-switch control',
       doorType: 'Vertical bi-parting / mesh gate',
@@ -497,7 +497,7 @@ export const elevators: Elevator[] = [
     ],
     faqs: [
       { question: 'What is the difference between a goods lift and a freight elevator?', answer: 'Goods lifts are generally smaller platforms (500 kg to 5000 kg) for hand-loaded goods, while freight elevators handle heavier loads with fork-truck loading.' },
-      { question: 'Can goods lifts be operated without a dedicated operator?', answer: 'Yes, goods lifts feature simple push-button operation suitable for staff without specialized training.' },
+      { question: 'Can goods lifts be operated without a dedicated operator?', answer: 'Yes, goods lifts feature touch push-button operation suitable for staff without specialized training.' },
     ],
     galleryImages: [
       'Goods lift with mesh gate and wall-mounted controls',

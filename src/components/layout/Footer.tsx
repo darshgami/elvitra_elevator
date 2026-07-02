@@ -1,6 +1,7 @@
 
 import { useNavigate, useLocation } from 'react-router-dom'
 import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react'
+import { FaFacebook, FaInstagram } from 'react-icons/fa'
 import { company, contact, categories, services } from '../../data/brochure'
 
 export default function Footer() {
@@ -33,6 +34,26 @@ export default function Footer() {
             <p className="mt-4 text-sm leading-relaxed text-elvitra-text-light">
               {company.description}
             </p>
+            <div className="mt-6 flex gap-3">
+              {[
+                { label: 'Facebook', href: contact.social.facebook, icon: FaFacebook },
+                { label: 'Instagram', href: contact.social.instagram, icon: FaInstagram },
+              ].map((link, index) => {
+                const Icon = link.icon
+                return (
+                  <a
+                    key={index}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.label}
+                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-elvitra-silver/20 bg-elvitra-dark text-elvitra-text-light transition-colors duration-300 hover:border-elvitra-pink-dark hover:bg-elvitra-pink-dark/10 hover:text-elvitra-pink-dark"
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                )
+              })}
+            </div>
           </div>
 
           {/* Column 2: Navigation (Elevators & Services) */}

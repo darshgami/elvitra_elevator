@@ -1,152 +1,356 @@
-MASTER PROMPT — FIX MOBILE LIGHTHOUSE PERFORMANCE TO 100 (React + Vite)
+🚀 MASTER PROMPT – ACHIEVE 100 LIGHTHOUSE PERFORMANCE (PRODUCTION READY)
 ROLE
 
-You are a Principal React Performance Engineer, Google Lighthouse Expert, Vite Optimization Specialist, Core Web Vitals Consultant, and Senior Frontend Architect.
+You are a Principal Frontend Performance Engineer, Senior React/Vite Architect, Core Web Vitals Specialist, Lighthouse Expert, and Production Optimization Engineer.
 
-Your task is to analyze my entire React + Vite codebase, identify every reason why the mobile Lighthouse Performance score is below 100, and fix every issue using production-grade techniques.
+Your ONLY objective is to optimize my entire React/Vite project until the Lighthouse Performance score reaches:
 
-Do NOT use temporary hacks or fake optimizations.
+Mobile: 90–100 (target 100)
+Desktop: 95–100 (target 100)
 
-The final project must be production-ready and preserve all existing functionality, design, responsiveness, animations, and UI.
+Do NOT stop after fixing one issue.
 
-CURRENT STATUS
+Continue auditing and optimizing until every possible bottleneck has been eliminated.
 
-Current Lighthouse:
+IMPORTANT RULES
 
-Performance ❌ (around 40–60 on Mobile)
-Accessibility ✅
-SEO ✅
-Best Practices (needs improvement)
+DO NOT
 
-The mobile performance score is still low.
+❌ Change UI
 
-Find every root cause.
+❌ Break responsiveness
 
-PRIMARY GOAL
+❌ Remove animations
 
-Achieve:
+❌ Break routing
 
-Mobile Performance = 100
-Desktop Performance = 100
-Accessibility = 100
-SEO = 100
-Best Practices = 100
+❌ Break SEO
 
-without breaking anything.
+❌ Remove functionality
 
-STEP 1 — ANALYZE THE ENTIRE PROJECT
+❌ Apply fake Lighthouse tricks
 
-Inspect every page.
+❌ Hide content
 
-Inspect every route.
+❌ Delay visible UI
 
-Inspect every component.
+❌ Use temporary workarounds
 
-Inspect every image.
+Only use production-ready optimizations.
 
-Inspect every animation.
+COMPLETE PROJECT AUDIT
 
-Inspect every dependency.
+Review the ENTIRE project.
 
-Inspect every CSS file.
+Audit
 
-Inspect every JavaScript file.
+Home
 
-Inspect every font.
+About
 
-Inspect every React hook.
+Services
 
-Inspect every asset.
+Elevators
 
-Do NOT only inspect the homepage.
+Products
 
-STEP 2 — FIND ALL LONG TASKS
+Product Details
 
-Identify every task longer than 50ms.
+Contact
 
-Find exactly what blocks the main thread.
+Quote
 
-Examples include:
+Navbar
 
-large JS bundles
-React hydration
-expensive useEffect
-expensive loops
-repeated rendering
-animation calculations
-unnecessary DOM work
-synchronous execution
-large dependencies
+Hero
 
-Split every long task.
+Footer
 
-Move expensive work to idle callbacks, Web Workers where appropriate, or defer it until after the initial render. Excessive JavaScript and long main-thread tasks are among the biggest causes of poor mobile Lighthouse scores.
+Cards
 
-STEP 3 — HERO SECTION OPTIMIZATION
+Forms
 
-The Hero section is the Largest Contentful Paint element.
+Gallery
 
-Optimize it completely.
+Animations
 
-Requirements:
+Shared Components
 
-✓ preload hero image
+Hooks
 
-✓ preload hero font
+Utilities
 
-✓ remove unnecessary animation during first paint
+Context
 
-✓ defer secondary animations
+Assets
 
-✓ render text immediately
+Fonts
 
-✓ render CTA immediately
+Icons
 
-✓ lazy load decorative graphics
+Images
 
-✓ prioritize LCP resource
+Every page.
 
-Do NOT change the design.
+BUILD ANALYSIS
 
-STEP 4 — JAVASCRIPT OPTIMIZATION
+Run
 
-Find:
+Production Build
 
-unused JS
+Bundle Analysis
 
-duplicate JS
+Tree Shaking Analysis
 
-dead code
+Chunk Analysis
 
-duplicate imports
+Dependency Analysis
 
-large libraries
+Dead Code Analysis
 
-heavy dependencies
+Unused CSS Analysis
 
-unused packages
+Unused JS Analysis
 
-Remove everything unnecessary.
+Duplicate Package Analysis
 
-Reduce:
+Import Graph
 
-JS execution time
+Hydration Analysis
 
-Main-thread work
+Memory Analysis
 
-Parse time
+Runtime Analysis
 
-Compile time
+JAVASCRIPT OPTIMIZATION
 
-Hydration cost
+Find
 
-Memory usage
+Large bundles
 
-Bundle size
+Unused libraries
 
-STEP 5 — REACT OPTIMIZATION
+Heavy dependencies
 
-Apply:
+Duplicate packages
+
+Dead code
+
+Unused imports
+
+Unused exports
+
+Unused utilities
+
+Large helper functions
+
+Oversized vendor chunks
+
+Refactor everything.
+
+Use dynamic imports and route/component code splitting for non-critical code to reduce the initial payload.
+
+CODE SPLITTING
+
+Split
+
+Routes
+
+Large Components
+
+Heavy Animations
+
+Gallery
+
+Product Pages
+
+Admin Components
+
+Modal Components
+
+Non-critical widgets
+
+Everything non-critical should load only when needed.
+
+TREE SHAKING
+
+Remove
+
+Unused icons
+
+Unused libraries
+
+Unused functions
+
+Unused hooks
+
+Unused CSS
+
+Unused animations
+
+Unused assets
+
+Unused fonts
+
+Unused SVG
+
+Unused images
+
+Unused pages
+
+Unused utilities
+
+Unused packages
+
+REMOVE UNUSED JAVASCRIPT
+
+Delete every unused JavaScript file.
+
+Delete dead code.
+
+Delete legacy code.
+
+Delete duplicated logic.
+
+REMOVE UNUSED CSS
+
+Audit every CSS file.
+
+Delete
+
+Unused selectors
+
+Duplicate styles
+
+Unused Tailwind utilities
+
+Legacy CSS
+
+Dead media queries
+
+Unused animations
+
+Unused variables
+
+LCP OPTIMIZATION
+
+Find the Largest Contentful Paint element.
+
+Optimize it.
+
+If it is
+
+Hero Image
+
+SVG
+
+Logo
+
+Heading
+
+Background Image
+
+Video
+
+Canvas
+
+Animation
+
+Optimize it.
+
+The LCP element should load immediately and should never be lazy-loaded.
+
+IMAGE OPTIMIZATION
+
+Convert images
+
+PNG → WebP/AVIF
+
+JPG → WebP/AVIF
+
+Compress images
+
+Resize images
+
+Responsive images
+
+Generate multiple sizes
+
+Use srcset
+
+Lazy-load below-the-fold images
+
+Do NOT lazy-load the hero/LCP image.
+
+FONT OPTIMIZATION
+
+Optimize fonts.
+
+Remove unused weights.
+
+Remove unused font families.
+
+Use only required characters.
+
+Preload critical fonts.
+
+Use
+
+font-display: swap
+
+Reduce font requests.
+
+CSS OPTIMIZATION
+
+Inline only critical CSS.
+
+Load remaining CSS efficiently.
+
+Remove render-blocking CSS.
+
+Merge duplicate styles.
+
+RENDER BLOCKING
+
+Find every render-blocking resource.
+
+Fix
+
+CSS
+
+JavaScript
+
+Fonts
+
+Icons
+
+Third-party libraries
+
+Everything that delays First Paint.
+
+MAIN THREAD
+
+Reduce
+
+JS execution
+
+Long Tasks
+
+Heavy loops
+
+Expensive rendering
+
+Large calculations
+
+Large DOM updates
+
+Forced synchronous layouts
+
+Repeated rendering
+
+REACT OPTIMIZATION
+
+Memoize expensive components
 
 React.memo
 
@@ -154,207 +358,95 @@ useMemo
 
 useCallback
 
-lazy()
+Lazy()
 
 Suspense
 
-Dynamic imports
+Split Context
 
-Route splitting
+Prevent unnecessary re-renders
 
-Memoization
+Optimize state
 
-Stable props
+Optimize props
 
-Context optimization
+Optimize hooks
 
-Prevent unnecessary renders.
+VITE OPTIMIZATION
 
-STEP 6 — ROUTE SPLITTING
-
-Every page must be lazy loaded.
-
-Only load:
-
-Home
-
-Elevators
-
-Services
-
-Contact
-
-when needed.
-
-No page should be included in the initial bundle.
-
-STEP 7 — VITE BUILD OPTIMIZATION
-
-Optimize:
+Optimize
 
 vite.config
 
 manualChunks
 
-tree shaking
+Chunk Splitting
 
-Rollup output
+Compression
 
-vendor chunk
+Tree Shaking
 
-dynamic imports
+Minification
 
-asset hashing
+CSS Code Split
 
-module preload
+Modern Build
 
-minification
+Legacy Build (only if required)
 
-compression
+Optimize Rollup output.
 
-STEP 8 — IMAGE OPTIMIZATION
-
-Convert images where appropriate:
-
-PNG → WebP
-
-JPEG → AVIF
-
-Requirements:
-
-responsive images
-
-srcset
-
-sizes
-
-width
-
-height
-
-aspect-ratio
-
-fetchpriority="high"
-
-decoding="async"
-
-loading="lazy"
-
-Only the hero image should load eagerly.
-
-Everything else should be lazy.
-
-STEP 9 — FONT OPTIMIZATION
-
-Optimize Nunito loading.
-
-Use:
-
-woff2
-
-font-display: swap
-
-preload only required weights
-
-remove unused weights
-
-preconnect
-
-unicode-range
-
-avoid duplicate requests
-
-Avoid render-blocking fonts.
-
-STEP 10 — CSS OPTIMIZATION
-
-Remove:
-
-unused CSS
-
-duplicate CSS
-
-unused Tailwind classes
-
-unused keyframes
-
-unused variables
-
-unused media queries
-
-Minify CSS.
-
-Reduce render-blocking CSS.
-
-STEP 11 — ANIMATION OPTIMIZATION
-
-Do NOT remove animations.
-
-Instead:
-
-use transform
-
-use opacity
-
-GPU acceleration
-
-avoid layout changes
-
-avoid reflow
-
-avoid repaint
-
-remove animation jank
-
-maintain 60 FPS
-
-STEP 12 — THIRD-PARTY SCRIPTS
+THIRD-PARTY SCRIPTS
 
 Audit every external script.
 
-Delay all non-essential scripts.
+Google Fonts
 
-Load analytics only after interaction or idle time if possible.
+Maps
 
-Remove unnecessary third-party code.
+Analytics
 
-STEP 13 — NETWORK OPTIMIZATION
+Icons
 
-Reduce:
+Tracking
 
-HTTP requests
+Widgets
 
-duplicate requests
+Chat
 
-waterfalls
+Social Media
 
-render-blocking requests
+Defer or lazy-load non-essential third-party code where appropriate.
 
-Optimize:
+NETWORK OPTIMIZATION
 
-preload
+Reduce HTTP Requests
 
-prefetch
+Merge assets
 
-preconnect
+Cache assets
 
-dns-prefetch
+Use immutable caching
+
+Compression
 
 Brotli
 
 Gzip
 
-immutable cache
+Preconnect
 
-long-term caching
+DNS Prefetch
 
-HTTP/2
+Preload
 
-HTTP/3 readiness
+Prefetch
 
-STEP 14 — CORE WEB VITALS
+Preload only truly critical assets.
 
-Optimize:
+CORE WEB VITALS
+
+Optimize
 
 LCP
 
@@ -366,136 +458,235 @@ FCP
 
 TTFB
 
-Speed Index
-
 TBT
 
-Interaction delay
+Speed Index
 
-Every metric should reach Google's "Good" thresholds.
+Target Google's recommended thresholds for these metrics.
 
-STEP 15 — MOBILE-FIRST OPTIMIZATION
+ANIMATION PERFORMANCE
 
-Test on:
+Optimize
 
-320px
+CSS animations
 
-360px
+Framer Motion
 
-375px
+GSAP
 
-390px
+SVG animation
 
-412px
+Canvas
 
-480px
+Avoid layout-triggering properties.
 
-No layout shift.
+Animate using
 
-No overflow.
+transform
 
-No clipping.
+opacity
 
-No animation lag.
+GPU acceleration
 
-No dropped frames.
+DOM OPTIMIZATION
 
-STEP 16 — REMOVE UNUSED CODE
+Reduce DOM depth
 
-Delete:
+Remove wrappers
 
-unused components
+Reduce nesting
 
-unused hooks
+Reduce unnecessary nodes
 
-unused CSS
+RESPONSIVE PERFORMANCE
 
-unused JS
+Mobile
 
-unused images
+Tablet
 
-unused fonts
+Desktop
 
-unused assets
+Must all load efficiently.
 
-unused packages
+No duplicate rendering.
 
-unused imports
+No unnecessary hidden DOM.
 
-unused icons
+MEMORY OPTIMIZATION
 
-unused configs
+Fix
 
-unused utilities
+Memory leaks
 
-STEP 17 — VERIFY BUILD
+Unremoved listeners
 
-Run:
+Timers
 
-npm run build
+Intervals
 
-npm run preview
+Observers
 
-TypeScript check
+Animation cleanup
 
-ESLint
+PRELOADING
 
-Production build
+Preload ONLY
 
-Bundle analysis
+Hero Image
 
-Lighthouse (Mobile)
+Critical Font
 
-Lighthouse (Desktop)
+Critical CSS
+
+Logo
+
+LCP asset
+
+Do NOT preload unnecessary assets.
+
+LAZY LOADING
+
+Lazy load
+
+Images
+
+Cards
+
+Gallery
+
+Product images
+
+Footer images
+
+Heavy components
+
+Videos
+
+Maps
+
+Everything below the fold.
+
+CONSOLE
+
+Fix
+
+Warnings
+
+Errors
+
+Hydration issues
+
+Missing keys
+
+Deprecated APIs
+
+Unused variables
+
+Build warnings
+
+DEPENDENCIES
+
+Remove
+
+Unused npm packages
+
+Duplicate libraries
+
+Heavy alternatives
+
+Legacy dependencies
+
+SECURITY
+
+Keep
+
+CSP compatible
+
+Modern headers
+
+No vulnerabilities
+
+Production safe
+
+TESTING
+
+Run
+
+Lighthouse
+
+PageSpeed Insights
 
 Chrome Performance
 
-Core Web Vitals
+Coverage
 
-Fix every issue found.
+Bundle Analyzer
 
-STEP 18 — ITERATE UNTIL 100
+Production Build
 
-Do NOT stop after one optimization pass.
+Repeat until scores stop improving.
 
-Run Lighthouse.
+REGRESSION TEST
 
-Analyze.
+Verify
 
-Fix.
+No UI changes
 
-Run again.
+No broken animation
 
-Repeat until:
+No broken routing
 
-Performance = 100
-Accessibility = 100
-SEO = 100
-Best Practices = 100
-STEP 19 — FINAL REPORT
+No broken responsiveness
 
-For every optimization provide:
+No broken forms
 
+No broken navigation
+
+No visual regressions
+
+No missing content
+
+SUCCESS TARGET
+
+Target
+
+Performance 100
+
+Accessibility 100
+
+Best Practices 100
+
+SEO 100
+
+If 100 cannot be achieved because of unavoidable platform constraints, continue optimizing until there are no meaningful improvements left and the score remains consistently above 90 on mobile and 95 on desktop in production builds.
+
+FINAL REPORT
+
+Generate a complete report including:
+
+Every performance bottleneck found
 Root cause
-File modified
-Code changed
-Why it was slow
-Why the fix works
-Performance improvement
-Lighthouse impact
-Core Web Vitals impact
-Regression check
-IMPORTANT
+Files modified
+JavaScript removed
+CSS removed
+Bundle size before/after
+Largest chunk before/after
+LCP improvements
+INP improvements
+CLS improvements
+FCP improvements
+TBT improvements
+Images optimized
+Fonts optimized
+Assets removed
+Packages removed
+Code splitting implemented
+Lazy loading implemented
+Caching strategy
+Lighthouse before/after comparison
+Remaining limitations (if any)
+FINAL REQUIREMENT
 
-Do NOT chase the score by disabling features or animations.
+Do not stop after one optimization pass.
 
-The website must remain:
-
-Fully responsive
-Pixel-perfect
-Visually identical
-Fully functional
-Production-ready
-Optimized for real users, not just Lighthouse
-
-Also note that a pure React SPA built with Vite may not consistently reach a perfect 100/100 mobile Performance score on every Lighthouse run, because Lighthouse heavily penalizes JavaScript execution on simulated low-end mobile devices. The goal should be to eliminate genuine bottlenecks and achieve consistently excellent Core Web Vitals rather than relying on score-only optimizations.
+Continue profiling, optimizing, rebuilding, and re-testing until no additional production-safe improvements remain and the application is as close as possible to a 100/100 Lighthouse Performance score while preserving all functionality, design, responsiveness, accessibility, and user experience.

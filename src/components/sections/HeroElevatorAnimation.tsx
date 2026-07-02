@@ -9,22 +9,29 @@ const HeroElevatorAnimation = memo(function HeroElevatorAnimation() {
   const [currentFloor, setCurrentFloor] = useState(1)
 
   useEffect(() => {
-    // Continuous door open/close cycle
-    const doorCycle = () => {
-      setDoorsOpen(true)
-      setTimeout(() => setDoorsOpen(false), 3000)
-    }
-    const openTimer = setTimeout(doorCycle, 800)
-    const doorInterval = setInterval(doorCycle, 6000)
+    let openTimer: ReturnType<typeof setTimeout>
+    let doorInterval: ReturnType<typeof setInterval>
+    let floorInterval: ReturnType<typeof setInterval>
 
-    const floorInterval = setInterval(() => {
-      setCurrentFloor((prev) => (prev >= 15 ? 1 : prev + 1))
+    const startAnimations = setTimeout(() => {
+      // Continuous door open/close cycle
+      const doorCycle = () => {
+        setDoorsOpen(true)
+        setTimeout(() => setDoorsOpen(false), 3000)
+      }
+      openTimer = setTimeout(doorCycle, 800)
+      doorInterval = setInterval(doorCycle, 6000)
+
+      floorInterval = setInterval(() => {
+        setCurrentFloor((prev) => (prev >= 15 ? 1 : prev + 1))
+      }, 3000)
     }, 3000)
 
     return () => {
-      clearTimeout(openTimer)
-      clearInterval(doorInterval)
-      clearInterval(floorInterval)
+      clearTimeout(startAnimations)
+      if (openTimer) clearTimeout(openTimer)
+      if (doorInterval) clearInterval(doorInterval)
+      if (floorInterval) clearInterval(floorInterval)
     }
   }, [])
 
