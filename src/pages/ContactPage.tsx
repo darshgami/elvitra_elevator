@@ -15,7 +15,7 @@ export default function ContactPage() {
   })
 
   return (
-    <main className="flex min-h-screen flex-col bg-elvitra-pearl pt-24 md:pt-28">
+    <main className="flex min-h-screen flex-col">
       <ContactHero />
       <ContactInfoCards />
       <ContactFormSection />

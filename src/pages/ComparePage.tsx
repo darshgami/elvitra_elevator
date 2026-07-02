@@ -59,7 +59,7 @@ export default function ComparePage() {
   })
 
   return (
-    <main className="min-h-screen bg-elvitra-pearl pt-24 md:pt-28">
+    <main className="min-h-screen bg-elvitra-white">
       <section className="relative overflow-hidden bg-elvitra-dark px-6 py-20 lg:py-24">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.04]"
